@@ -1,9 +1,10 @@
-# Jekyll
+# SASS
+.sass-cache
 
+# Jekyll
 _site/
 
 # OS X
-
 .DS_Store
 Icon
 
