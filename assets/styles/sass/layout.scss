@@ -36,12 +36,50 @@ footer {
 	margin-top: -$footer-height; // negative value of footer height
 	position: relative;
 	clear: both;
+	color: $footer-text-color;
 
-	p{
+	p {
 		margin: 0; // necessary hack to get sticky footer working without pushing too far down.
 		padding-top: 30px; // use padding instead of margins for above hack
 		padding-left: 1em;
 
-		color: $footer-text-color;
+	}
+
+	nav {
+		visibility: hidden;
+		display: none;
+	}
+
+	@media handheld, only screen and (max-width: 320px) {
+		height: auto; 
+		
+		nav {
+			visibility: visible;
+			display: block;
+		}
+	}
+}
+
+.site-header {
+	float: left;
+}
+
+.site-navigation {
+	padding-top: 19px;
+	float: right;
+
+	nav {
+		ul {
+			list-style-type: none;
+		}
+
+		li {
+			display: inline;
+		}
+	}
+
+	@media handheld, only screen and (max-width: 320px) {
+		visibility: hidden;
+		display: none;
 	}
 }
