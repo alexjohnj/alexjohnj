@@ -1,3 +1,5 @@
+@import "variables";
+
 // Sticky footer stuff (http://www.cssstickyfooter.com)
 
 html {
@@ -25,13 +27,13 @@ body {
 .main {
 	margin-bottom: 0;
 	overflow: auto;
-	padding-bottom: 70px;
+	padding-bottom: $footer-height;
 }
 
 footer {
-	background-color: red;
-	height: 70px;
-	margin-top: -70px; // negative value of footer height
+	background-color: $footer-background-color;
+	height: $footer-height;
+	margin-top: -$footer-height; // negative value of footer height
 	position: relative;
 	clear: both;
 
