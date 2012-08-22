@@ -1,6 +1,11 @@
+# Jekyll
+
+_site/
+
+# OS X
+
 .DS_Store
 Icon
-
 
 # Thumbnails
 ._*
