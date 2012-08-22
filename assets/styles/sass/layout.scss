@@ -41,5 +41,7 @@ footer {
 		margin: 0; // necessary hack to get sticky footer working without pushing too far down.
 		padding-top: 30px; // use padding instead of margins for above hack
 		padding-left: 1em;
+
+		color: $footer-text-color;
 	}
 }
