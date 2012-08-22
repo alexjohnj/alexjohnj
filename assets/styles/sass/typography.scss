@@ -1,0 +1,16 @@
+@import "variables";
+
+body {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 15px;
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+		color: $link-color-hover;
+	}
+}
