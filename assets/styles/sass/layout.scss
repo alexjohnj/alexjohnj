@@ -1,0 +1,41 @@
+// Sticky footer stuff (http://www.cssstickyfooter.com)
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+
+	&:before { /* Fix for Opera */ 
+		content: "";
+		height: 100%;
+		float: left;
+		width: 0;
+		margin-top: -32767px;
+	}
+}
+
+.wrap {
+	min-height: 100%;
+}
+
+.main {
+	margin-bottom: 0;
+	overflow: auto;
+	padding-bottom: 70px;
+}
+
+footer {
+	background-color: red;
+	height: 70px;
+	margin-top: -70px; // negative value of footer height
+	position: relative;
+	clear: both;
+
+	p{
+		margin: 0; // necessary hack to get sticky footer working without pushing too far down.
+		padding-top: 30px; // use padding instead of margins for above hack
+		padding-left: 1em;
+	}
+}

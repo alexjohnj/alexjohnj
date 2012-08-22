@@ -15,12 +15,46 @@
 	<!-- Some crazy JavaScript for enabling media queries on older browsers. I _so_ did not write this -->
 	<script type="text/javascript" src="assets/js/css3-mediaqueries.min.js"></script>
 
+	<!--This makes even more shit "work" with Internet Explorer-->
+	<!--[if !IE 7]><style type="text/css">#wrap {display:table;height:100%}</style><![endif]-->
+
+
 </head>
-
 <body>
+	<div class="wrap">
+		<div class="container header">
+			<div class="row">
 
-	{{ content }}
+				<div class="site-title-container">
+					<div class="tencol">
+						<h1>Hello, World!</h1>
+					</div>
+				</div><!--end site-title-container-->
 
+				<div class="site-navigation-container">
+					<div class="twocol last">
+						<p>Navigation</p>
+					</div>
+				</div> <!--end site-navigation-container-->
+
+			</div> <!--end row -->
+		</div> <!--end container header-->
+
+		<div class="container main">
+			<div class="row">
+
+				<div class="twelvecol last">
+					<article>
+						{{ content }}
+					</article>
+				</div>
+
+			</div><!--end row-->
+		</div><!--end container main -->
+	</div><!--end wrap-->
+
+	<footer>
+		<p>Hello, World!</p>
+	</footer>
 </body>
-
 </html>
