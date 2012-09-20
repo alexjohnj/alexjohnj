@@ -478,6 +478,12 @@ h1 small {
   font-size: .67em;
   color: #999; }
 
+h2 small {
+  font-style: italic;
+  font-weight: normal;
+  font-size: .67em;
+  color: #999; }
+
 .site-header h1 a {
   color: #73541a; }
 .site-header h1 a:hover {
