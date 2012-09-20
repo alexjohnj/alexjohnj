@@ -19,11 +19,22 @@ a {
 	}
 }
 
-h1{
-	small{
+h1 {
+	small {
 		font-style: italic;
 		font-weight: normal;
 		font-size: .67em;
 		color: #999;
+	}
+}
+
+.site-header {
+	h1 {
+		a {
+			color: $header-text-color;
+		}
+		a:hover {
+			color: $header-text-color;
+		}
 	}
 }
