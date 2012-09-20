@@ -2,6 +2,6 @@
 layout: default
 ---
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris arcu quam, vehicula sed tristique eu, volutpat placerat tellus. Sed dapibus mollis pellentesque. Phasellus ac urna ligula. Sed sit amet ligula non augue posuere lacinia. Ut sollicitudin gravida velit, egestas porttitor mauris fermentum vulputate. Donec condimentum ipsum arcu. Nulla gravida leo et orci ornare mollis. Nulla facilisi. Cras aliquam, mi nec accumsan ornare, augue diam porttitor urna, id vehicula ante nunc quis nisl. Suspendisse vehicula urna nulla. Proin eget nulla nisi. Sed consectetur, urna fermentum egestas sodales, mauris turpis commodo magna, ac tincidunt tellus mauris et eros. Mauris adipiscing ullamcorper ipsum sed tincidunt. Curabitur massa quam, auctor et ornare a, cursus et dui. Vestibulum ante <a href="#">ipsum</a> primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras rutrum tellus non justo vestibulum sit amet iaculis arcu venenatis.</p>
-
-<p>Sed at lacus leo, ut sagittis diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tristique sem venenatis turpis convallis eget porttitor mi adipiscing. Nullam ornare, enim eu bibendum bibendum, turpis lectus iaculis sapien, a convallis magna eros in nisi. Donec a augue orci. Integer ac tellus neque. Cras sodales, metus nec laoreet sagittis, justo sem rutrum lectus, ac vehicula ipsum purus eu sapien. Proin laoreet ultrices lorem sed vehicula. Suspendisse potenti. Nam sed condimentum justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer sit amet massa ipsum, auctor venenatis sem. Donec lacinia erat quis magna luctus hendrerit ac at orci. Duis eleifend tortor eros. Phasellus molestie posuere viverra.</p>
+{% for post in site.posts %}
+<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+{% endfor %} 
