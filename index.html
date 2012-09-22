@@ -2,11 +2,10 @@
 layout: default
 ---
 
-{% for post in site.posts %}
-{% capture current_date %}{{ post.date | date: "%m-%Y" }}{% endcapture %}
-{% if current_date != old_date %}
-<h2>{{ post.date | date: "%B %Y" }}
-{% endif %}
+{% for post in site.posts limit:10 %}
+{% if forloop.index0 == 9 %}
+<p>You can see more posts in the <a href="/archive/">Archive</a></p>
+{% else %}
 <h2><a href="{{ post.url }}">{{ post.title }}</a><small> {{ post.date | date_to_string }}</small>  </h2>
-{% capture old_date %}{{ post.date | date: "%m-%Y" }}{% endcapture %}
-{% endfor %} 
+{% endif %}
+{% endfor %}
