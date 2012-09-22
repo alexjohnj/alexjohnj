@@ -1,0 +1,20 @@
+---
+layout: post
+title: "SymSteam"
+---
+
+I've just released a new project on GitHub. It's called [SymSteam](https://github.com/alexjohnj/symsteam) and it's for everybody who likes to play games on their MacBook Airs (or other SSD based Macs). MacBook Airs are really quite powerful machines. There not pure gaming machines but with an Intel Core i5/i7 processor and a reasonably decent GPU they good enough for playing many of the games available for Mac OS X. The problem is, games are big and SSDs are small. The base MacBook air only has 64GB of storage space. The largest available configuration is 256GB and even then, you can't fit that many games (and everything else you have on your SSD) on there. The solution that many people use is to store their games on an external hard drive. By creating a symbolic link to the folder on your external hard drive where steam expects to find your games, you can play games off of the hard drive when you've got the hard drive with you. And that's the problem. This technique's pretty awesome for games like Left 4 Dead, where you probably wouldn't want to play the game while your on the go, but say you've got a more casual game like World Of Goo. This game's really small (something like 70MB) and isn't too demanding, so it would be playable while you're on the go. The problem is you've put all of your Steam games on an external hard drive and you're probably not going to be carrying that around with you. 
+
+<!-- more -->
+
+## Enter SymSteam
+
+The solution to this is to have two steam game folders (called SteamApps, by the way). One that's a symbolic link and the other that's a file stored on the SSD. This isn't too hard to do. Create your symbolic link called *SteamAppsSym* and create another folder called *SteamAppsLoc*. When you wan't to play games off of your (internal) SSD, rename *SteamAppsLoc* to SteamApps. When you want to do the same off your external hard drive, just rename *SteamAppsSym* to SteamApps. Simple, but sort of tedious. You've got to remember to rename these folders before launching Steam, otherwise you're going to be wasting time getting errors off of Steam about a missing library. You've also got to remember where these folders are (~/Library/Application Support/Steam/SteamApps) and how to get them (OS X Lion hides the Library folder from the user now). This is where SymSteam comes in.
+
+SymSteam runs in the background. It doesn't have a dock icon or a menu bar icon. It doesn't have any windows apart from a first run setup window. It's not going to get in your way. SymSteam watches your computer for when you plug in a usb device. Especially a hard drive. It then scans said device to see if it can find an SteamApps folder. If it doesn't, nothing happens. If it does though, it will rename your SteamApps symbolic link so that it is called SteamApps and it will rename your local SteamApps folder to something else. When it detects a drive being unplugged. It'll rename the folders so that the local folder is called SteamApps and the symbolic link is called something else. Easy. 
+
+SymSteam is really immature at the moment. It works, but only just. I'm running it on my system because it's handy and I'll continue to work on it for now. Currently, I want to get some sort of preferences window and growl notifications implemented. There's also a lot of bugs that need fixing. 
+
+If you're a developer, or want the latest, cutting edge build, you can get SymSteam from its GitHub repository [here](https://github.com/alexjohnj/symsteam).
+
+If you're just interested in downloading a ready to use, reasonably/partly stable version, get it from [here](https://github.com/alexjohnj/symsteam/downloads).
