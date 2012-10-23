@@ -423,15 +423,15 @@ body {
   padding-bottom: 70px; }
 
 footer {
-  background-color: #35260c;
-  height: 70px;
-  margin-top: -70px;
   position: relative;
+  margin-top: -70px;
+  height: 70px;
   clear: both;
+  background-color: #35260c;
   color: white; }
   footer p {
     margin: 0;
-    padding-top: 30px;
+    padding-top: 10px;
     padding-left: 1em; }
   footer nav {
     visibility: hidden;

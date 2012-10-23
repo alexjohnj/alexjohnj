@@ -31,18 +31,18 @@ body {
 }
 
 footer {
-	background-color: $footer-background-color;
-	height: $footer-height;
-	margin-top: -$footer-height; // negative value of footer height
 	position: relative;
+	margin-top: -($footer-height);
+	height: $footer-height;
 	clear: both;
+
+	background-color: $footer-background-color;
 	color: $footer-text-color;
 
 	p {
-		margin: 0; // necessary hack to get sticky footer working without pushing too far down.
-		padding-top: 30px; // use padding instead of margins for above hack
+		margin:0; // Having any margins will mess up the footer.
+		padding-top: 10px;
 		padding-left: 1em;
-
 	}
 
 	nav {
