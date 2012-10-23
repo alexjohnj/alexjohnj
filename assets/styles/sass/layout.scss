@@ -44,20 +44,6 @@ footer {
 		padding-top: 10px;
 		padding-left: 1em;
 	}
-
-	nav {
-		visibility: hidden;
-		display: none;
-	}
-
-	@media handheld, only screen and (max-width: 320px) {
-		height: auto; 
-		
-		nav {
-			visibility: visible;
-			display: block;
-		}
-	}
 }
 
 .site-header {
@@ -81,5 +67,13 @@ footer {
 	@media handheld, only screen and (max-width: 320px) {
 		visibility: hidden;
 		display: none;
+	}
+}
+
+#post-header-container{
+	border-bottom: 3px #b18228 solid;
+
+	h1 {
+		margin-bottom: 2px;
 	}
 }
