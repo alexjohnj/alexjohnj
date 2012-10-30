@@ -456,6 +456,17 @@ footer {
   #post-header-container h1 {
     margin-bottom: 2px; }
 
+#more-posts-box {
+  border-top: 1px #cc7722 dashed;
+  border-bottom: 1px #cc7722 dashed;
+  margin-bottom: 10px; }
+  #more-posts-box p {
+    margin-top: 7px;
+    margin-bottom: 7px; }
+  #more-posts-box h4 {
+    margin-top: 7px;
+    margin-bottom: 2px; }
+
 body {
   font-family: "Helvetica", "Arial", sans-serif;
   font-size: 15px; }
