@@ -11,7 +11,7 @@ body {
 	background: url(/assets/images/top_pattern.png);
 	background-repeat: repeat-x;
 
-	&:before { /* Fix for Opera */ 
+	&:before { /* Fix for Opera */
 		content: "";
 		height: 100%;
 		float: left;
@@ -76,7 +76,7 @@ footer {
 }
 
 #post-header-container{
-	border-bottom: 3px #b18228 solid;
+	border-bottom: 3px $underline-color solid;
 
 	h1 {
 		margin-bottom: 2px;

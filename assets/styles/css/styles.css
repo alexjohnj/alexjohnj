@@ -427,7 +427,7 @@ footer {
   margin-top: -40px;
   height: 40px;
   clear: both;
-  background-color: #9c7324;
+  background-color: #7b3f00;
   color: #f3e5ca; }
   footer a, footer a:hover {
     color: inherit;
@@ -453,7 +453,7 @@ footer {
       display: none; } }
 
 #post-header-container {
-  border-bottom: 3px #b18228 solid; }
+  border-bottom: 3px #cc7722 solid; }
   #post-header-container h1 {
     margin-bottom: 2px; }
 
@@ -465,11 +465,11 @@ p {
   line-height: 1.5em; }
 
 a {
-  color: #b18228;
+  color: #cc7722;
   text-decoration: none; }
   a:hover {
     text-decoration: none;
-    color: #73541a; }
+    color: #b7410e; }
 
 h1 small {
   font-style: italic;
