@@ -16,7 +16,7 @@ future:      true
 lsi:         false
 pygments:    false
 markdown:    maruku
-permalink:   date
+permalink:   /:month/:title/
 
 maruku:
   use_tex:    false
