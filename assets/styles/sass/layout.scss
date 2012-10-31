@@ -28,6 +28,10 @@ body {
 	margin-bottom: 0;
 	overflow: auto;
 	padding-bottom: $footer-height;
+
+	@media handeld, only screen and (max-width: 320px) {
+		padding-bottom: $footer-height * 1.5;
+	}
 }
 
 footer {
@@ -47,6 +51,11 @@ footer {
 	p {
 		margin:0; // Having any margins will mess up the footer.
 		padding-top: 10px;
+	}
+
+	@media handheld, only screen and (max-width: 320px) {
+		height: $footer-height * 1.5;
+		margin-top: -($footer-height * 1.5);
 	}
 }
 
