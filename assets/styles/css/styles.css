@@ -330,7 +330,7 @@ body {
 
 #wrap {
   min-height: 100%;
-  width: 92%;
+  max-width: 92%;
   margin-right: auto;
   margin-left: auto; }
 
