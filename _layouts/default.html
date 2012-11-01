@@ -20,49 +20,28 @@
 
 </head>
 <body>
-	<div class="wrap">
-		<div class="container header">
-			<div class="row">
-				<div class="twelvecol last">
-					<div class="site-header">
-						<h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
-					</div>
-					<div class="site-navigation">
-						<nav>
-							<ul>
-								<li><a href="{{ site.baseurl }}">Home</a></li>
-								<li>About</li>
-								<li><a href="/archive/">Archive</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div> <!--end row -->
-		</div> <!--end container header-->
 
-		<div class="main">
-			<div class="container">
-				<div class="row">
+	<div id="wrap">
+		<div id="site-header">
+			<header><h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1></header>
+			<nav>
+				<ul>
+					<li><a href="{{ site.baseurl }}">Home</a></li>
+					<li>About</li>
+					<li><a href="/archive/">Archive</a></li>
+				</ul>
+			</nav>
+		</div> <!--end site-header-->
 
-					<div class="twelvecol last">
-						<article>
-							{{ content }}
-						</article>
-					</div>
-
-				</div><!--end row-->
-			</div><!--end container -->
-		</div><!--end main-->
-	</div><!--end wrap-->
+		<div id="content">
+			<article>
+				{{ content }}
+			</article>
+		</div><!--end content-->
+	</div> <!--end wrap-->
 
 	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="twelvecol last">
 <p>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, <a href="http://sass-lang.com/">Sass</a> &amp; the <a href="http://cssgrid.net/">1140 Grid System</a>.</p>
-				</div>
-			</div> <!--end row-->
-		</div><!--end container-->
 	</footer>
 </body>
 </html>
