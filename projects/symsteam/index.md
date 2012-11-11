@@ -6,7 +6,9 @@ version: Beta 2
 
 # SymSteam ({{ page.version }})
 
-<img src="symsteam-icon.png" class="project-icon"/>
+<div class="project-icon">
+	<div class="sprite-icons-symsteam-icon-256"></div>
+</div>
 
 <div id="project-header-links" markdown="1">
 
