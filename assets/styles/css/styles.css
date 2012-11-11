@@ -446,3 +446,22 @@ code {
   color: #73541a; }
 #site-header h1 a:hover {
   color: #73541a; }
+
+.project-icon {
+  display: block;
+  margin-right: auto;
+  margin-left: auto; }
+
+#screenshot-carousel {
+  border: 1px #cc7722 dotted;
+  width: 99%;
+  height: 320px;
+  overflow: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap; }
+  #screenshot-carousel .screenshot {
+    padding-right: 20px;
+    text-align: center;
+    height: 300px;
+    display: inline-block; }

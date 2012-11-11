@@ -1,0 +1,22 @@
+.project-icon {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#screenshot-carousel {
+   border: 1px $underline-color dotted;
+   width: 99%;
+   height: 320px;
+   overflow: scroll;
+   overflow-y: hidden;
+   -webkit-overflow-scrolling: touch;
+   white-space: nowrap;
+
+   .screenshot {
+      padding-right: 20px;
+      text-align: center;
+      height: 300px;
+      display: inline-block;
+   }
+}
