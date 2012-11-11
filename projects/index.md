@@ -1,6 +1,6 @@
 ---
 title: Projects
-layout: page
+layout: default
 ---
 
 ## SymSteam
