@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SmySteam Beta 1 Released"
+title: SymSteam Beta 1 Released
 ---
 
 Good news! Just the other day, SymSteam, my small pet project, received a pretty major update.  In fact, this update is so major, I've labelled it Beta 1. Pretty much everything to do with SymSteam has changed.
