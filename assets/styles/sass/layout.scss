@@ -94,6 +94,18 @@ footer {
 	}
 }
 
+hr {
+	background: #333;
+	border: 0;
+    height: 1px;
+
+	background-image: linear-gradient(left, #ffdcce, $underline-color, #ffdcce);
+	background-image: -webkit-linear-gradient(left, #ffdcce, $underline-color, #ffdcce); 
+    background-image: -moz-linear-gradient(left, #ffdcce, $underline-color, #ffdcce); 
+    background-image: -ms-linear-gradient(left, #ffdcce, $underline-color, #ffdcce); 
+    background-image: -o-linear-gradient(left, #ffdcce, $underline-color, #ffdcce); 
+}
+
 #post-header-container {
 	border-bottom: 3px $underline-color solid;
 

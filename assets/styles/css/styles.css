@@ -382,6 +382,16 @@ footer {
       height: 4.005em;
       margin-top: -4.005em; } }
 
+hr {
+  background: #333;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(left, #ffdcce, #cc7722, #ffdcce);
+  background-image: -webkit-linear-gradient(left, #ffdcce, #cc7722, #ffdcce);
+  background-image: -moz-linear-gradient(left, #ffdcce, #cc7722, #ffdcce);
+  background-image: -ms-linear-gradient(left, #ffdcce, #cc7722, #ffdcce);
+  background-image: -o-linear-gradient(left, #ffdcce, #cc7722, #ffdcce); }
+
 #post-header-container {
   border-bottom: 3px #cc7722 solid; }
   #post-header-container h1 {
