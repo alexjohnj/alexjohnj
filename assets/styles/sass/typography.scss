@@ -20,20 +20,22 @@ a {
 }
 
 h1 {
+	font-weight: inherit;
 	small {
 		font-style: italic;
-		font-weight: normal;
+		font-weight: 100;
 		font-size: .67em;
-		color: #999;
+		color: #878787;
 	}
 }
 
 h2 {
+	font-weight: inherit;
 	small {
 		font-style: italic;
-		font-weight: normal;
+		font-weight: 100;
 		font-size: .67em;
-		color: #999;
+		color: #878787;
 	}
 }
 

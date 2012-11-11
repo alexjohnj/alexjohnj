@@ -11,6 +11,7 @@ body {
 	width: 100%;
 	background: url(/assets/images/top_pattern.png);
 	background-repeat: repeat-x;
+	font-weight: 300;
 
 	&:before { /* Fix for Opera */
 		content: "";
@@ -103,7 +104,6 @@ footer {
 
 #more-posts-box {
 	border-top: 1px $underline-color dashed;
-	border-bottom: 1px $underline-color dashed;
 	margin-bottom: 10px;
 
 	p {
