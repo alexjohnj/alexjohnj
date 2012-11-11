@@ -2,6 +2,25 @@
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
+   width: 256px;
+}
+
+#project-grid {
+   width: 100%;
+   height: auto;
+   text-align: center;
+   line-height: 5em;
+   .item {
+      text-align: center;
+      height: 290px;
+      display: inline-block;
+      width: 256px;
+   }
+
+   img {
+      display: block;
+      width: 100%;
+   }
 }
 
 #screenshot-carousel {
@@ -15,7 +34,6 @@
 
    .screenshot {
       padding-right: 20px;
-      text-align: center;
       height: 300px;
       display: inline-block;
    }
