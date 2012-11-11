@@ -465,3 +465,7 @@ code {
     text-align: center;
     height: 300px;
     display: inline-block; }
+
+#project-header-links {
+  width: 100%;
+  text-align: center; }
