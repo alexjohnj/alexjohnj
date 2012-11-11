@@ -409,7 +409,8 @@ hr {
 
 body {
   font-family: "Helvetica", "Arial", sans-serif;
-  font-size: 15px; }
+  font-size: 15px;
+  text-rendering: optimizeLegibility; }
 
 p {
   line-height: 1.5em; }
@@ -436,6 +437,10 @@ h2 {
     font-weight: 100;
     font-size: .67em;
     color: #878787; }
+
+code {
+  font-family: "Source Code Pro";
+  font-size: .85em; }
 
 #site-header h1 a {
   color: #73541a; }
