@@ -4,7 +4,7 @@ title: Geography AS Notes
 ---
 
 <div id="screenshot-carousel">
-	<div class="screenshot sprite-icons-geographyas-icon-256"></div>
+	<div class="screenshot first"><div class="sprite-icons-geographyas-icon-256"></div></div>
 	<div class="screenshot">
 		<img src="images/geographyas-notes-screenshot-1.png" />
 	</div>
