@@ -415,6 +415,9 @@ body {
 p {
   line-height: 1.5em; }
 
+ul, ol {
+  line-height: 1.5em; }
+
 a {
   color: #cc7722;
   text-decoration: none; }
