@@ -459,8 +459,8 @@ code {
 #project-grid {
   width: 100%;
   height: auto;
-  text-align: center;
-  line-height: 5em; }
+  line-height: 5em;
+  text-align: center; }
   #project-grid .item {
     text-align: center;
     height: 290px;
@@ -469,6 +469,9 @@ code {
   #project-grid img {
     display: block;
     width: 100%; }
+  @media handheld, only screen and (min-width: 1000px) {
+    #project-grid {
+      text-align: default; } }
 
 #screenshot-carousel {
   border: 1px #cc7722 dotted;
