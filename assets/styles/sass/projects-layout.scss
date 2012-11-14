@@ -33,7 +33,8 @@
    white-space: nowrap;
 
    .screenshot {
-      padding-right: 20px;
+      margin-top: 20px;
+      margin-right: 20px;
       height: 300px;
       display: inline-block;
       
@@ -41,6 +42,10 @@
          height: 100%;
       }
    }
+}
+
+.first {
+   margin-left: 20px;
 }
 
 #project-header-links {

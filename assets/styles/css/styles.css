@@ -476,11 +476,15 @@ code {
   -webkit-overflow-scrolling: touch;
   white-space: nowrap; }
   #screenshot-carousel .screenshot {
-    padding-right: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
     height: 300px;
     display: inline-block; }
     #screenshot-carousel .screenshot img {
       height: 100%; }
+
+.first {
+  margin-left: 20px; }
 
 #project-header-links {
   width: 100%;
