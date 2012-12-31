@@ -43,7 +43,7 @@ Please remember that SymSteam is in beta. While I've been using the application 
 - [Documentation][symsteam-documentation]
 
 [github-project-page]: https://github.com/alexjohnj/symsteam
-[application-download-link]: https://github.com/alexjohnj/symsteam/downloads
+[application-download-link]: http://application-downloads.s3.amazonaws.com/SymSteam-Beta-2.zip
 [symsteam-documentation]: documentation/
 [symsteam-changelog]: http://alexjohnj.github.com/symsteam/changelog.html
 
