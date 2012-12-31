@@ -343,11 +343,7 @@ body {
     float: left; }
   #site-header nav {
     float: right;
-    padding-top: 19px;
-    /*    @media handheld, only screen and (max-width: 320px) {
-          visibility: hidden;
-          display: none;
-        }*/ }
+    padding-top: 19px; }
     #site-header nav ul {
       list-style-type: none; }
     #site-header nav li {
@@ -377,10 +373,6 @@ footer {
   footer a, footer a:hover {
     color: inherit;
     text-decoration: none; }
-  footer p {
-    margin: 0;
-    margin-left: 5%;
-    padding-top: 10px; }
   @media handheld, only screen and (max-width: 320px) {
     footer {
       height: 4.005em;
@@ -424,6 +416,23 @@ hr {
   width: 50%;
   float: right;
   text-align: right; }
+
+#footer-attributions {
+  float: left;
+  margin-left: 4%;
+  padding-top: 10px; }
+  #footer-attributions p {
+    margin: 0;
+    padding: 0; }
+
+#footer-social-stuff {
+  float: right;
+  margin-right: 4%;
+  padding-top: 10px;
+  text-align: right; }
+  #footer-social-stuff p {
+    margin: 0;
+    padding: 0; }
 
 body {
   font-family: "Lustria", "Arial", sans-serif;

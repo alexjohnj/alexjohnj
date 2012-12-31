@@ -48,11 +48,6 @@ body {
     li {
       display: inline;
     }
-
-/*    @media handheld, only screen and (max-width: 320px) {
-      visibility: hidden;
-      display: none;
-    }*/
   }
 }
 
@@ -87,13 +82,7 @@ footer {
   a, a:hover {
     color: inherit;
     text-decoration: none;
-  }
-
-  p {
-    margin:0; // Having any margins will mess up the footer.
-    margin-left: 5%;
-    padding-top: 10px;
-  }
+	}
 
   @media handheld, only screen and (max-width: 320px) {
     height: $footer-height * 1.5;
@@ -151,4 +140,25 @@ hr {
   width: 50%;
   float: right;
   text-align: right;
+}
+
+#footer-attributions {
+  float: left;
+  margin-left: 4%;
+  padding-top: 10px;
+    p {
+    margin:0; // Having any margins will mess up the footer.
+    padding: 0;
+  }
+}
+
+#footer-social-stuff {
+  float: right;
+  margin-right: 4%;
+  padding-top: 10px;
+  text-align: right;
+  p {
+    margin: 0;
+    padding: 0;
+  }
 }
