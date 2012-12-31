@@ -462,6 +462,9 @@ code {
   font-family: "Source Code Pro", monospace;
   font-size: .85em; }
 
+blockquote {
+  font-style: italic; }
+
 #site-header h1 a {
   color: #73541a; }
 #site-header h1 a:hover {
