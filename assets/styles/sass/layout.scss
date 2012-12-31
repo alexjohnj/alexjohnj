@@ -153,12 +153,19 @@ hr {
 }
 
 #footer-social-stuff {
+  height: $footer-height;
   float: right;
   margin-right: 4%;
-  padding-top: 10px;
   text-align: right;
+  border-left: 1px dotted $underline-color;
   p {
     margin: 0;
     padding: 0;
+  }
+
+  #rss-social-button, #twitter-social-button {
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 10px;
   }
 }

@@ -426,13 +426,18 @@ hr {
     padding: 0; }
 
 #footer-social-stuff {
+  height: 2.67em;
   float: right;
   margin-right: 4%;
-  padding-top: 10px;
-  text-align: right; }
+  text-align: right;
+  border-left: 1px dotted #cc7722; }
   #footer-social-stuff p {
     margin: 0;
     padding: 0; }
+  #footer-social-stuff #rss-social-button, #footer-social-stuff #twitter-social-button {
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 10px; }
 
 body {
   font-family: "Lustria", "Arial", sans-serif;
