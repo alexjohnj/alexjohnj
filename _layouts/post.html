@@ -8,8 +8,11 @@ layout: default
 {{ content }} 
 <div id="more-posts-box">
 	<h4> More:</h4>
-	<p> <!-- this is all rendered on one line -->
-			{% if page.previous.url %} <a href="{{ page.previous.url }}"> &laquo; {{ page.previous.title }} &laquo;</a> {% endif %} 
-			{% if page.next.url %} <a href="{{ page.next.url }}">&raquo; {{ page.next.title }} &raquo;</a> {% endif %}
-	</p>
+	<div id="previous-post-box">
+		{% if page.previous.url %} <a href="{{ page.previous.url }}"> &laquo; {{ page.previous.title }} </a> {% endif %} 
+	</div>
+
+	<div id="next-post-box">
+		{% if page.next.url %} <a href="{{ page.next.url }}"> {{ page.next.title }} &raquo;</a> {% endif %}
+	</div>
 </div>
