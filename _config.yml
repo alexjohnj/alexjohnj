@@ -1,12 +1,12 @@
 title:       Alex J
-author:	     Alex Jackson
+author:      Alex Jackson
 
 safe:        false
 auto:        true
 server:      false
 server_port: 4000
 baseurl:    /
-url: http://localhost:4000
+url: http://www.alexj.me 
 
 source:      .
 destination: ./_site
