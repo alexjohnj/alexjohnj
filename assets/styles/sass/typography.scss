@@ -1,61 +1,61 @@
 @import "variables";
 
 body {
-	font-family: "Helvetica", "Arial", sans-serif;
-	font-size: 15px;
-	 text-rendering: optimizeLegibility;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
 }
 
 p {
-	line-height: 1.5em;
+  line-height: 1.5em;
 }
 
 ul, ol {
-	line-height: 1.5em;
+  line-height: 1.5em;
 }
 
 a {
-	color: $link-color;
-	text-decoration: none;
+  color: $link-color;
+  text-decoration: none;
 
-	&:hover {
-		text-decoration: none;
-		color: $link-color-hover;
-	}
+  &:hover {
+    text-decoration: none;
+    color: $link-color-hover;
+  }
 }
 
 h1 {
-	font-weight: inherit;
-	small {
-		font-style: italic;
-		font-weight: 100;
-		font-size: .67em;
-		color: #878787;
-	}
+  font-weight: inherit;
+  small {
+    font-style: italic;
+    font-weight: 100;
+    font-size: .67em;
+    color: #878787;
+  }
 }
 
 h2 {
-	font-weight: inherit;
-	small {
-		font-style: italic;
-		font-weight: 100;
-		font-size: .67em;
-		color: #878787;
-	}
+  font-weight: inherit;
+  small {
+    font-style: italic;
+    font-weight: 100;
+    font-size: .67em;
+    color: #878787;
+  }
 }
 
 code {
-    font-family: "Source Code Pro", monospace;
-	font-size: .85em;
+  font-family: "Source Code Pro", monospace;
+  font-size: .85em;
 }
 
 #site-header {
-	h1 {
-		a {
-			color: $header-text-color;
-		}
-		a:hover {
-			color: $header-text-color;
-		}
-	}
+  h1 {
+    a {
+      color: $header-text-color;
+    }
+    a:hover {
+      color: $header-text-color;
+    }
+  }
 }

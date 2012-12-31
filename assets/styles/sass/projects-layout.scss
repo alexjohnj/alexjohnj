@@ -2,59 +2,59 @@
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
-   width: 256px;
+  width: 256px;
 }
 
 #project-grid {
-   width: 100%;
-   height: auto;
-   line-height: 5em;
-   text-align: center;
-   .item {
-      text-align: center;
-      height: 290px;
-      display: inline-block;
-      width: 256px;
-   }
+  width: 100%;
+  height: auto;
+  line-height: 5em;
+  text-align: center;
+  .item {
+     text-align: center;
+     height: 290px;
+     display: inline-block;
+     width: 256px;
+  }
 
-   img {
-      display: block;
-      width: 100%;
-   }
+  img {
+     display: block;
+     width: 100%;
+  }
 
-   @media handheld, only screen and (min-width: 1000px) {
-      text-align: default;
-   }
+  @media handheld, only screen and (min-width: 1000px) {
+     text-align: default;
+  }
 }
 
 #screenshot-carousel {
-   border: 1px $underline-color dotted;
-   width: 99%;
-   height: 320px;
-   overflow: scroll;
-   overflow-y: hidden;
-   -webkit-overflow-scrolling: touch;
-   white-space: nowrap;
+  border: 1px $underline-color dotted;
+  width: 99%;
+  height: 320px;
+  overflow: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
 
-   .screenshot {
-      margin-top: 20px;
-      margin-right: 20px;
-      height: 300px;
-      display: inline-block;
-      
-      img {
-         height: 100%;
-      }
-   }
+  .screenshot {
+     margin-top: 20px;
+     margin-right: 20px;
+     height: 300px;
+     display: inline-block;
+     
+     img {
+        height: 100%;
+     }
+  }
 }
 
 .first {
-   margin-left: 20px;
+  margin-left: 20px;
 }
 
 #project-header-links {
-   width: 100%;
-   text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 // Sprite Icons
