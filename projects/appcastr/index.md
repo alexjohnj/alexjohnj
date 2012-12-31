@@ -48,6 +48,8 @@ Yup, you can find the source code [on GitHub][github-project-page] and it's rele
 - [Changelog][changelog]
 - [GitHub Project Page][github-project-page]
 
+---
+
 [^1]: Version 0.2 still isn't complete. It's got quite a few UI bugs and several features haven't been fully implemented.
 
 [changelog]: http://alexjohnj.github.com/appcastr/changelog.html
