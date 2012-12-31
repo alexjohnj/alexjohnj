@@ -3,141 +3,145 @@
 // Sticky footer stuff (http://www.cssstickyfooter.com)
 
 html {
-	height: 100%;
+  height: 100%;
 }
 
 body {
-	height: 100%;
-	width: 100%;
-	background: url(/assets/images/top_pattern.png);
-	background-repeat: repeat-x;
-	font-weight: 300;
+  height: 100%;
+  width: 100%;
+  background: url(/assets/images/top_pattern.png);
+  background-repeat: repeat-x;
+  font-weight: 300;
 
-	&:before { /* Fix for Opera */
-		content: "";
-		height: 100%;
-		float: left;
-		width: 0;
-		margin-top: -32767px;
-	}
+  &:before { /* Fix for Opera */
+    content: "";
+    height: 100%;
+    float: left;
+    width: 0;
+    margin-top: -32767px;
+  }
 }
 
 #wrap {
-	min-height: 100%;
-	max-width: 92%;
-	margin-right: auto;
-	margin-left: auto;
+  min-height: 100%;
+  max-width: 92%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #site-header {
-	width: 100%;
-	height: 70px;
+  width: 100%;
+  height: 70px;
 
-	header {
-		min-width: 30%;
-		max-width: 70%;
-		float: left;
-	}
+  header {
+    min-width: 30%;
+    max-width: 70%;
+    float: left;
+  }
 
-	nav {
-		float: right;
-		padding-top: 19px;
-		ul {
-			list-style-type: none;
-		}
+  nav {
+    float: right;
+    padding-top: 19px;
+    ul {
+      list-style-type: none;
+    }
 
-		li {
-			display: inline;
-		}
+    li {
+      display: inline;
+    }
 
-		@media handheld, only screen and (max-width: 320px) {
-			visibility: hidden;
-			display: none;
-		}
-	}
+    @media handheld, only screen and (max-width: 320px) {
+      visibility: hidden;
+      display: none;
+    }
+  }
 }
 
 #content {
-	width: 100%;
-	margin-bottom: 0;
-	overflow: auto;
-	padding-bottom: $footer-height;
+  width: 100%;
+  margin-bottom: 0;
+  overflow: auto;
+  padding-bottom: $footer-height;
 
-	@media handeld, only screen and (max-width: 320px) {
-		padding-bottom: $footer-height * 1.5;
-	}
+  @media handeld, only screen and (max-width: 320px) {
+    padding-bottom: $footer-height * 1.5;
+  }
 }
 
 footer {
-	width: 100%;
-	margin-top: -($footer-height);
-	height: $footer-height;
-	clear: both;
+  width: 100%;
+  margin-top: -($footer-height);
+  height: $footer-height;
+  clear: both;
 
-	background-color: $footer-background-color;
-	color: $footer-text-color;
+  background-color: $footer-background-color;
+  color: $footer-text-color;
 
-	a, a:hover {
-		color: inherit;
-		text-decoration: none;
-	}
+  a, a:hover {
+    color: inherit;
+    text-decoration: none;
+  }
 
-	p {
-		margin:0; // Having any margins will mess up the footer.
-		margin-left: 5%;
-		padding-top: 10px;
-	}
+  p {
+    margin:0; // Having any margins will mess up the footer.
+    margin-left: 5%;
+    padding-top: 10px;
+  }
 
-	@media handheld, only screen and (max-width: 320px) {
-		height: $footer-height * 1.5;
-		margin-top: -($footer-height * 1.5);
-	}
+  @media handheld, only screen and (max-width: 320px) {
+    height: $footer-height * 1.5;
+    margin-top: -($footer-height * 1.5);
+  }
 }
 
 hr {
-	background: #333;
-	border: 0;
-    height: 1px;
+  background: #333;
+  border: 0;
+  height: 1px;
 
-	background-image: linear-gradient(left, #ffdcce, $underline-color, #ffdcce);
-	background-image: -webkit-linear-gradient(left, #ffdcce, $underline-color, #ffdcce); 
+  background-image: linear-gradient(left, #ffdcce, $underline-color, #ffdcce);
+  background-image: -webkit-linear-gradient(left, #ffdcce, $underline-color, #ffdcce); 
     background-image: -moz-linear-gradient(left, #ffdcce, $underline-color, #ffdcce); 
     background-image: -ms-linear-gradient(left, #ffdcce, $underline-color, #ffdcce); 
-    background-image: -o-linear-gradient(left, #ffdcce, $underline-color, #ffdcce); 
+      background-image: -o-linear-gradient(left, #ffdcce, $underline-color, #ffdcce); 
 }
 
 #post-header-container {
-	border-bottom: 3px $underline-color solid;
+  border-bottom: 3px $underline-color solid;
 
-	h1 {
-		margin-bottom: 2px;
-	}
+  h1 {
+    margin-bottom: 2px;
+  }
 }
 
 #more-posts-box {
-	border-top: 1px $underline-color dashed;
-	margin-bottom: 30px;
-	width :100%;
+  border-top: 1px $underline-color dashed;
+  margin-bottom: 30px;
+  width :100%;
 
-	p {
-		margin-top: 7px;
-		margin-bottom: 7px;
-	}
+  p {
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
 
-	h4 {
-		margin-top: 7px;
-		margin-bottom: 2px;
-	}
+  h4 {
+    margin-top: 7px;
+    margin-bottom: 2px;
+  }
+
+  @media handheld, only screen and (max-width: 320px){
+    margin-bottom: 60px;
+  } 
 }
 
 #previous-post-box {
-	width: 50%;
-	float: left;
-	text-align: left;
+  width: 50%;
+  float: left;
+  text-align: left;
 }
 
 #next-post-box {
-	width: 50%;
-	float: right;
-	text-align: right;
+  width: 50%;
+  float: right;
+  text-align: right;
 }
