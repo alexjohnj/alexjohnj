@@ -11,7 +11,6 @@ body {
   width: 100%;
   background: url(/assets/images/top_pattern.png);
   background-repeat: repeat-x;
-  font-weight: 300;
 
   &:before { /* Fix for Opera */
     content: "";
