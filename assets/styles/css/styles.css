@@ -407,6 +407,9 @@ hr {
   #more-posts-box h4 {
     margin-top: 7px;
     margin-bottom: 2px; }
+  @media handheld, only screen and (max-width: 320px) {
+    #more-posts-box {
+      margin-bottom: 60px; } }
 
 #previous-post-box {
   width: 50%;
@@ -453,7 +456,7 @@ h2 {
     color: #878787; }
 
 code {
-  font-family: "Source Code Pro";
+  font-family: "Source Code Pro", monospace;
   font-size: .85em; }
 
 #site-header h1 a {
