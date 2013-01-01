@@ -519,13 +519,13 @@ blockquote {
 #screenshot-carousel {
   border: 1px #cc7722 dotted;
   width: 99%;
-  height: 320px;
-  overflow: scroll;
-  overflow-y: hidden;
+  height: 350px;
+  overflow-x: scroll;
+  overflow-y: hidden !important;
   -webkit-overflow-scrolling: touch;
   white-space: nowrap; }
   #screenshot-carousel .screenshot {
-    margin-top: 20px;
+    padding-top: 20px;
     margin-right: 20px;
     height: 300px;
     display: inline-block; }
