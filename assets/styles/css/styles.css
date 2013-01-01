@@ -425,9 +425,13 @@ hr {
   #footer-attributions p {
     margin: 0;
     padding: 0; }
+  @media handeld, only screen and (max-width: 320px) {
+    #footer-attributions {
+      width: 96%;
+      float: none;
+      padding-top: 0; } }
 
 #footer-social-stuff {
-  height: 2.67em;
   float: right;
   margin-right: 4%;
   text-align: right; }
@@ -438,6 +442,19 @@ hr {
     display: inline-block;
     padding-top: 10px;
     padding-left: 10px; }
+    @media handeld, only screen and (max-width: 320px) {
+      #footer-social-stuff #rss-social-button, #footer-social-stuff #twitter-social-button {
+        padding-left: 0;
+        padding-right: 10px;
+        padding-top: 0; } }
+  @media handeld, only screen and (max-width: 320px) {
+    #footer-social-stuff {
+      float: none;
+      width: 96%;
+      margin-right: 0;
+      margin-left: 4%;
+      text-align: left;
+      padding-top: 10px; } }
 
 body {
   font-family: "Lustria", "Arial", sans-serif;
