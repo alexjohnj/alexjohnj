@@ -47,6 +47,7 @@ body {
 
     li {
       display: inline;
+      padding-left: 10px;
     }
   }
 }
@@ -157,7 +158,7 @@ hr {
   float: right;
   margin-right: 4%;
   text-align: right;
-  border-left: 1px dotted $underline-color;
+//  border-left: 1px dotted $underline-color;
   p {
     margin: 0;
     padding: 0;

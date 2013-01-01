@@ -347,7 +347,8 @@ body {
     #site-header nav ul {
       list-style-type: none; }
     #site-header nav li {
-      display: inline; }
+      display: inline;
+      padding-left: 10px; }
 
 #content {
   width: 100%;
@@ -429,8 +430,7 @@ hr {
   height: 2.67em;
   float: right;
   margin-right: 4%;
-  text-align: right;
-  border-left: 1px dotted #cc7722; }
+  text-align: right; }
   #footer-social-stuff p {
     margin: 0;
     padding: 0; }
