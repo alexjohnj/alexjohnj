@@ -1,69 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>{{ page.title }}</title>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
 
-	<!-- Enable all the media queries! -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<script type="text/javascript" src="/assets/js/css3-mediaqueries.min.js"></script> <!-- Ninja script _so_ not by me -->
+  <!-- Enable all the media queries! -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="text/javascript" src="/assets/js/css3-mediaqueries.min.js"></script> <!-- Ninja script _so_ not by me -->
 
-	<!-- Groovy stylesheets -->
-	<link rel="stylesheet" type="text/css" href="/assets/styles/css/styles.css" media="screen">
+  <!-- Groovy stylesheets -->
+  <link rel="stylesheet" type="text/css" href="/assets/styles/css/styles.css" media="screen">
 
-	<!-- Get the beautiful Source Code Pro font -->
-	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <!-- Get the beautiful Source Code Pro font -->
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 
-	<!-- Also get the beautiful Lustria font -->
-	<link href='http://fonts.googleapis.com/css?family=Lustria' rel='stylesheet' type='text/css'>
+  <!-- Also get the beautiful Lustria font -->
+  <link href='http://fonts.googleapis.com/css?family=Lustria' rel='stylesheet' type='text/css'>
 
-	<!-- This makes even more shit "work" with Internet Explorer -->
-	<!--[if !IE 7]><style type="text/css">#wrap {display:table;height:100%}</style><![endif]-->
+  <!-- This makes even more shit "work" with Internet Explorer -->
+  <!--[if !IE 7]><style type="text/css">#wrap {display:table;height:100%}</style><![endif]-->
 
-    <!-- A link to the RSS feed -->
-    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
+  <!-- A link to the RSS feed -->
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
 
-	<!-- Some meta tags, whether these do anything is beyond me -->
-	<meta name="author" content="{{ site.author }}">
-	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+  <!-- Some meta tags, whether these do anything is beyond me -->
+  <meta name="author" content="{{ site.author }}">
+  {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 
-	<!-- And finally, some evil tracking code so I can sell all of your information to Skynet -->
-	<script type="text/javascript">
-	var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-29192170-1"]);_gaq.push(["_trackPageview"]);(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
-	</script>
+  <!-- And finally, some evil tracking code so I can sell all of your information to Skynet -->
+  <script type="text/javascript">
+  var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-29192170-1"]);_gaq.push(["_trackPageview"]);(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+  </script>
 </head>
 <body>
-	<div id="wrap">
-		<div id="site-header">
-			<header><h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1></header>
-			<nav>
-				<ul>
-					<li><a href="/projects/">Projects</a></li>
-					<li><a href="/archive/">Archive</a></li>
-				</ul>
-			</nav>
-		</div> <!--end site-header-->
-
-		<div id="content">
-			<article>
-				{{ content }}
-			</article>
-		</div><!--end content-->
-	</div> <!--end wrap-->
-
-	<footer>
-        <div id="footer-social-stuff">
-            <div id="twitter-social-button">
-                <p><a href="https://twitter.com/alexjohnj">Twitter</a></p>
-            </div>
-            <div id="rss-social-button">
-                <p><a href="/atom.xml">RSS</a></p>
-            </div>
+  <div id="wrapper">
+    <div id="site-header">
+      <header><h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1></header>
+      <nav>
+        <ul>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/archive/">Archive</a></li>
+        </ul>
+      </nav>
+    </div> <!--end site-header-->
+  
+    <div id="content">
+      <article>
+        {{ content }}
+      </article>
+    </div><!--end content-->
+    
+    <footer>
+      <div id="footer-social-stuff">
+        <div id="twitter-social-button">
+          <p><a href="https://twitter.com/alexjohnj">Twitter</a></p>
         </div>
-        <div id="footer-attributions">
-            <p>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> and <a href="http://sass-lang.com/">Sass</a>.</p>
+        <div id="rss-social-button">
+          <p><a href="/atom.xml">RSS</a></p>
         </div>
-	</footer>
+      </div>
+      <div id="footer-attributions">
+        <p>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> and <a href="http://sass-lang.com/">Sass</a>.</p>
+      </div>
+    </footer>
+  </div> <!-- end wrapper -->
 </body>
 </html>
-

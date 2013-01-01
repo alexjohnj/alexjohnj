@@ -1,9 +1,9 @@
 @import "variables";
 
-// Sticky footer stuff (http://www.cssstickyfooter.com)
-
-html {
+html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -11,29 +11,21 @@ body {
   width: 100%;
   background: url(/assets/images/top_pattern.png);
   background-repeat: repeat-x;
-
-  &:before { /* Fix for Opera */
-    content: "";
-    height: 100%;
-    float: left;
-    width: 0;
-    margin-top: -32767px;
-  }
 }
 
-#wrap {
+#wrapper {
   min-height: 100%;
-  max-width: 92%;
-  margin-right: auto;
-  margin-left: auto;
+  position: relative;
 }
 
 #site-header {
-  width: 100%;
+  width: 92%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
   height: 70px;
-
+    
   header {
-    min-width: 30%;
     max-width: 70%;
     float: left;
   }
@@ -41,6 +33,7 @@ body {
   nav {
     float: right;
     padding-top: 19px;
+    
     ul {
       list-style-type: none;
     }
@@ -53,8 +46,10 @@ body {
 }
 
 #content {
-  width: 100%;
-  margin-bottom: 0;
+  width: 92%;
+  margin-right: auto;
+  margin-left: auto;
+  
   overflow: auto;
   padding-bottom: $footer-height;
 
@@ -71,11 +66,15 @@ body {
   } 
 } 
 
+// Footer Stuff
+
 footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
   width: 100%;
-  margin-top: -($footer-height);
   height: $footer-height;
-  clear: both;
 
   background-color: $footer-background-color;
   color: $footer-text-color;
@@ -87,7 +86,54 @@ footer {
 
   @media handheld, only screen and (max-width: 320px) {
     height: $footer-height * 1.5;
-    margin-top: -($footer-height * 1.5);
+  }
+}
+
+#footer-attributions {
+  float: left;
+  margin-left: 4%;
+  padding-top: 10px;
+    p {
+    margin:0; // Having any margins will mess up the footer.
+    padding: 0;
+  }
+
+   @media handeld, only screen and (max-width: 320px) {
+    width: 96%;
+    float: none;
+    padding-top: 0;
+  }
+}
+
+#footer-social-stuff {
+  float: right;
+  margin-right: 4%;
+  text-align: right;
+  
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  #rss-social-button, #twitter-social-button {
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 10px;
+
+     @media handeld, only screen and (max-width: 320px) {
+      padding-left: 0;
+      padding-right: 10px;
+      padding-top: 0;
+    }
+  }
+
+  @media handeld, only screen and (max-width: 320px) {
+    float: none;
+    width: 96%;
+    margin-right: 0;
+    margin-left: 4%;
+    text-align: left;
+    padding-top: 10px;
   }
 }
 
@@ -113,7 +159,7 @@ hr {
 
 #more-posts-box {
   border-top: 1px $underline-color dashed;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   width :100%;
 
   p {
@@ -125,10 +171,6 @@ hr {
     margin-top: 7px;
     margin-bottom: 2px;
   }
-
-  @media handheld, only screen and (max-width: 320px){
-    margin-bottom: 60px;
-  } 
 }
 
 #previous-post-box {
@@ -141,53 +183,4 @@ hr {
   width: 50%;
   float: right;
   text-align: right;
-}
-
-#footer-attributions {
-  float: left;
-  margin-left: 4%;
-  padding-top: 10px;
-    p {
-    margin:0; // Having any margins will mess up the footer.
-    padding: 0;
-  }
-  
-   @media handeld, only screen and (max-width: 320px) {
-    width: 96%;
-    float: none;
-    padding-top: 0;
-  }
-}
-
-#footer-social-stuff {
-//  height: $footer-height;
-  float: right;
-  margin-right: 4%;
-  text-align: right;
-//  border-left: 1px dotted $underline-color;
-  p {
-    margin: 0;
-    padding: 0;
-  }
-
-  #rss-social-button, #twitter-social-button {
-    display: inline-block;
-    padding-top: 10px;
-    padding-left: 10px;
-    
-     @media handeld, only screen and (max-width: 320px) {
-      padding-left: 0;
-      padding-right: 10px;
-      padding-top: 0;
-    }
-  }
-
-  @media handeld, only screen and (max-width: 320px) {
-    float: none;
-    width: 96%;
-    margin-right: 0;
-    margin-left: 4%;
-    text-align: left;
-    padding-top: 10px;
-  }
 }
