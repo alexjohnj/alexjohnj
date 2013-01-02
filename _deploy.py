@@ -140,8 +140,7 @@ if __name__ == "__main__":
     
     print_message("Getting Bucket Name...")
     bucket_name = get_s3_bucket_name()
-    print_message("Success, will upload to bucket %s" % bucket_name)
-    
-    print_message("Deploying to s3...")
+        
+    print_message("Deploying to %s..." % bucket_name)
     deploy_to_s3(bucket_name, dry=False)
     print_message("Successfully Deployed Site!")
