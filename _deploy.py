@@ -10,9 +10,24 @@ try:
 except ImportError:
     sys.exit("The PyYaml library isn't available. Please run 'pip install pyyaml' to install it.")
     
-def get_s3_bucket_name():
+path_to_sass_file = "assets/styles/sass/styles.scss"
+sass_compile_path = "assets/styles/css/styles.css"
+
+def print_message(message):
+    """ Prints a string with n asterixes above and below it where n is the length of the string.
+    
+    Keyword Arguments:
+    
+    message -- The string to print
+    
+    Returns: None
+    
     """
-    Opens an _config.yml file that is in the root of the directory that the script is in and returns the value of the s3bucket key.
+    length = len(message)
+    print(length*'*' + "\n" + message + "\n" + length*'*')
+
+def get_s3_bucket_name():
+    """ Opens an _config.yml file that is in the root of the directory that the script is in and returns the value of the s3bucket key.
     
     Returns: String 
     
@@ -28,9 +43,29 @@ def get_s3_bucket_name():
     except IOError as e:
         sys.exit("I/O error({0}): {1}".format(e.errno, e.strerror))
         
-def generate_site():
+def compile_sass(input_file, output_file, minify=True):
+    """ Runs sass on the input file and outputs it to the output file. 
+    
+    Keyword Arguments:
+    
+    input_file -- the path to the .scss file
+    output_file -- the path to the .css file
+    minify -- if True (default), outputted css is minified
+              if False, no minification takes place on the css
+              
+    Returns: None
+    
     """
-    Runs jekyll --no-auto to generate the site.
+    command = "sass " + path_to_sass_file + ":" + sass_compile_path
+    if minify:
+        command = command + " --style compressed"
+    try:
+        subprocess.check_call(command, shell=True)
+    except subprocess.CalledProcessError:
+        print("Something went wrong compiling your sass files.")
+        
+def generate_site():
+    """ Runs jekyll --no-auto to generate the site.
     
     Returns: None
     
@@ -52,51 +87,68 @@ def gzip_files():
                 os.rename(os.path.join(root, f) + ".gz", os.path.join(root, f)) # Rename file to original
             
         
-def deploy_to_s3(bucket):
-    """
-    Runs s3cmd sync -P _site/ s3://bucket-name to deploy the site to Amazon S3
+def deploy_to_s3(bucket, dry=False):
+    """ Runs s3cmd sync -P _site/ s3://bucket-name to deploy the site to Amazon S3
     
     Key Arguments:
     
     bucket -- The name of the s3 bucket to upload to in the format s3://bucket-name
+    dry -- if False (default), The site is deployed to the s3 bucket
+           if True, The result of uploading the site to the s3 bucket is shown but no files are actually uploaded 
     
     Returns: None
     
     """
     try: # Upload all uncompressed files
         print("Uploading uncompressed files")
-        command = "s3cmd sync -P --exclude '*.html' --exclude '*.js' --exclude '*.css' _site/ " + bucket
+        command = ""
+        if not dry:
+            command = "s3cmd sync -P --exclude '*.html' --exclude '*.js' --exclude '*.css' _site/ " + bucket
+        else:
+           command = "s3cmd sync -P --exclude '*.html' --exclude '*.js' --exclude '*.css' _site/ --dry-run " + bucket 
         subprocess.call(command, shell=True)
     except subprocess.CalledProcessError:
         sys.exit("Something went wrong deploying the site to s3.")
     
     try: # Upload all compressed files and add an appropriate header
         print("Uploading compressed files")
-        command = "s3cmd sync -P --add-header='Content-Encoding: gzip' --exclude '*.*' --include '*.html' --include '*.js' --include '*.css' _site/ " + bucket
+        command = ""
+        if not dry:
+            command = "s3cmd sync -P --add-header='Content-Encoding: gzip' --exclude '*.*' --include '*.html' --include '*.js' --include '*.css' _site/ " + bucket
+        else:
+            command = "s3cmd sync -P --add-header='Content-Encoding: gzip' --exclude '*.*' --include '*.html' --include '*.js' --include '*.css' --dry-run _site/ " + bucket
         subprocess.check_call(command, shell=True)
     except subprocess.CalledProcessError:
         sys.exit("Something went wrong setting the content encoding on the files deployed to s3")
 
     try:
         print("Removing any files not present in _site/ from the bucket")
-        command = "s3cmd sync -P --delete-removed _site/ " + bucket
+        command = ""
+        if not dry:
+            command = "s3cmd sync -P --delete-removed _site/ " + bucket
+        else:
+            command = "s3cmd sync -P --delete-removed --dry-run _site/ " + bucket
         subprocess.check_call(command, shell=True)
     except subprocess.CalledProcessError:
         sys.exit("Something went wrong removing files from the bucket")
 
-if __name__ == "__main__":    
-    print("**************\nRunning Jekyll\n**************")
+if __name__ == "__main__":
+    global path_to_sass_file, sass_compile_path
+    
+    if len(path_to_sass_file) > 0 or len(sass_compile_path) > 0:
+        print_message("Compiling Sass Files.")
+        compile_sass(path_to_sass_file, sass_compile_path, minify=True)
+    
+    print_message("Running Jekyll.")
     generate_site()
     
-    print("**********\nGzipping Files\n**************")
+    print_message("Gzipping File")
     gzip_files()
-    print("**********\nSuccessfully Compressed Files\n*************")
     
-    print("*******************\nGetting Bucket Name\n*******************")
+    print_message("Getting Bucket Name")
     bucket_name = get_s3_bucket_name()
-    print("Success, will upload to bucket \033[94m%s\033[0m" % bucket_name)
+    print_message("Success, will upload to bucket \033[94m%s\033[0m" % bucket_name)
     
-    print("***************\nDeploying to s3\n***************")
-    deploy_to_s3(bucket_name)
-    print("**************************\nSuccessfully Deployed Site\n**************************")
-   
+    print_message("Deploying to s3")
+    deploy_to_s3(bucket_name, dry=True)
+    print_message("Successfully Deployed Site")
