@@ -8,11 +8,11 @@ import os
 try:
     import yaml
 except ImportError:
-    sys.exit("PyYaml not available, Exiting")
+    sys.exit("The PyYaml library isn't available. Please run 'pip install pyyaml' to install it.")
     
 def get_s3_bucket_name():
     """
-    Opens an _config.yml file that is in the root of the directory that the script is in and return the value of the s3bucket key
+    Opens an _config.yml file that is in the root of the directory that the script is in and returns the value of the s3bucket key.
     
     Returns: String 
     
@@ -23,7 +23,7 @@ def get_s3_bucket_name():
             try:
                 return config_file["s3bucket"]
             except KeyError:
-                sys.exit("Error, no s3 bucket was specified in _config.yml. Make sure you add a \"s3bucket\" key to your _config.yml file.")
+                sys.exit("Error, no S3 bucket was specified in _config.yml. Make sure you add a 's3bucket' key to your _config.yml file.")
                 
     except IOError as e:
         sys.exit("I/O error({0}): {1}".format(e.errno, e.strerror))
@@ -38,7 +38,7 @@ def generate_site():
     try: 
         subprocess.check_call(["jekyll", "--no-auto"])
     except subprocess.CalledProcessError:
-        sys.exit("Something went wrong generating the site")
+        sys.exit("Something went wrong generating the site with Jekyll.")
         
 def gzip_files():
     for root, dirs, files in os.walk("_site/"): # Traverse the _site/ directory
@@ -74,9 +74,15 @@ def deploy_to_s3(bucket):
         print("Uploading compressed files")
         command = "s3cmd sync -P --add-header='Content-Encoding: gzip' --exclude '*.*' --include '*.html' --include '*.js' --include '*.css' _site/ " + bucket
         subprocess.check_call(command, shell=True)
-        
     except subprocess.CalledProcessError:
-        sys.exit("Something went wrong setting the content encoding on the files deployed to s3.")
+        sys.exit("Something went wrong setting the content encoding on the files deployed to s3")
+
+    try:
+        print("Removing any files not present in _site/ from the bucket")
+        command = "s3cmd sync -P --delete-removed _site/ " + bucket
+        subprocess.check_call(command, shell=True)
+    except subprocess.CalledProcessError:
+        sys.exit("Something went wrong removing files from the bucket")
 
 if __name__ == "__main__":    
     print("**************\nRunning Jekyll\n**************")
