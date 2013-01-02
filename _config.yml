@@ -1,5 +1,6 @@
 title:       Alex J
 author:      Alex Jackson
+s3bucket:    s3://www.alexj.me
 
 safe:        false
 auto:        true
