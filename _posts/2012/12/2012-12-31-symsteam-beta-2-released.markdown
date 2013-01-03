@@ -3,13 +3,9 @@ title: SymSteam Beta 2 Released
 layout: post
 ---
 
-It may have taken nearly 9 months but beta 2 of SymSteam is finally available for download. This is a _huge_ update for SymSteam that completely changes how it works and fixes many bugs as a result. SymSteam no longer manages drives based on their names, rather, it relies on the UUID of a drive to determine if the drive is the Steam drive. This makes SymSteam more reliable in situations where you have drives with the same name but it does introduce a new requirement. The drive you're storing your games on must have a UUID which essentially means that the drive must be HFS+ formatted[^1]. 
+It may have taken nearly 9 months but beta 2 of SymSteam is finally available for download. This is a _huge_ update for SymSteam that completely changes how it works and fixes many bugs as a result. SymSteam no longer manages drives based on their names, rather, it relies on the UUID of a drive to determine if the drive is the Steam drive. This makes SymSteam more reliable in situations where you have drives with the same name but it does introduce a new requirement. The drive you're storing your games on must have a UUID which essentially means that the drive must be HFS+ formatted[^1].
 
-In addition to this major change, lots of small changes have also been made that make SymSteam easier to use and more reliable. The error correction performed on your Steam folders when SymSteam is launched is far more reliable now and SymSteam can fix incorrect folder setups in many more cases, reducing the number of situations where SymSteam will fail to work. 
-
-In terms of usability, SymSteam's preferences window has been redesigned so that it looks like a standard OS X preferences window and the preferences window can now be accessed by holding down the option (&#x2325;) key when launching SymSteam. Preferences have been added to start SymSteam on login, to use Notification Center in Mountain Lion and a button has been added to the preferences window that allows you to reset SymSteam in case things have gone wrong. 
-
-The setup process has been rewritten so that it is much simpler and setup is more aware of previous installations of SymSteam and will remove any files left over. 
+In addition to this major change, lots of small changes have also been made that make SymSteam easier to use and more reliable. The error correction performed on your Steam folders when SymSteam is launched is far more reliable now and SymSteam can fix incorrect folder setups in many more cases, reducing the number of situations where SymSteam will fail to work. The setup process has been rewritten to make it much simpler to use and also to make it less likely to fail. The preferences window has been expanded upon too, providing more in-depth options for notifications and an option to start SymSteam on login. Oh, SymSteam finally has an icon too! It's not amazing but it's better than the generic app icon that SymSteam had before the update.
 
 The full changelog for beta 2 can be found [here][symsteam-changelog].
 
