@@ -2,7 +2,11 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  {% if page.title %}
   <title>{{ page.title }}</title>
+  {% else %}
+  <title>{{ site.title }}</title>
+  {% endif %}
 
   <!-- Groovy stylesheets -->
   <link rel="stylesheet" type="text/css" href="/assets/styles/css/styles.css" media="screen">
