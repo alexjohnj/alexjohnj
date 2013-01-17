@@ -1,6 +1,7 @@
 ---
 title: Deploying This Jekyll Site to S3
 layout: post
+date: 2013-01-17 21:22
 ---
 
 If you’re the type of person who likes to read the footers of websites (who doesn’t?) you’ll have seen that this website is "powered” by Jekyll. In case you haven’t heard, Jekyll is a static site generator that is especially useful for generating static blogs. That is, you run the Jekyll program on a computer, point it at a “source” directory for your website and let it generate a load of HTML files that you can upload to practically any web server that serves files. There’s no need to install PHP or Rails and no need to get a fancy server that can run them. Jekyll is a really awesome utility and that is a terrible description of what it does. You’re better off checking out the [GitHub page][jekyll-github-page] and seeing how that describes Jekyll.
