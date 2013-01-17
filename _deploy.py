@@ -1,22 +1,20 @@
 #! /usr/local/bin/python3
 
+""" Requirements: PyYaml library, s3cmd, jekyll, gzip & sass. 
+
+To use, you'll need to edit your site's _config.yml file and add the following:
+
+s3bucket: s3://bucket-name
+
+Remember to change the path_to_sass_file & sass_compile_path variables if you want to compile sass files. If you don't want to compile sass files, comment out the call to the compile_sass() function.
+
+"""
+
 import yaml
 import gzip
 import os
 from subprocess import PIPE, check_call, CalledProcessError
 from sys import exit
-
-def print_message(message):
-    """ Prints a string in blue.
-    
-    Keyword Arguments:
-    
-    message -- The string to print
-    
-    Returns: None
-    
-    """
-    print("\033[94m" + message + "\033[0m")
 
 def get_s3_bucket_name():
     """ Opens an _config.yml file that is in the root of the directory that the script is in and returns the value of the s3bucket key.
@@ -126,21 +124,21 @@ def deploy_to_s3(bucket, dry=False):
 
 if __name__ == "__main__":
     
-    path_to_sass_file = "assets/styles/sass/styles.scss"
-    sass_compile_path = "assets/styles/css/styles.css"
+    path_to_sass_file = "assets/styles/sass/styles.scss" # Change to your path
+    sass_compile_path = "assets/styles/css/styles.css" # Change to your path
     
-    print_message("Compiling Sass Files...")
-    compile_sass(path_to_sass_file, sass_compile_path, minify=True)
+    print("Compiling Sass Files...")
+    compile_sass(path_to_sass_file, sass_compile_path, minify=True) # Comment out this line if you don't want to compile any sass files
     
-    print_message("Running Jekyll...")
+    print("Running Jekyll...")
     generate_site()
     
-    print_message("Gzipping File...")
+    print("Gzipping File...")
     gzip_files()
     
-    print_message("Getting Bucket Name...")
+    print("Getting Bucket Name...")
     bucket_name = get_s3_bucket_name()
         
-    print_message("Deploying to %s..." % bucket_name)
+    print("Deploying to %s..." % bucket_name)
     deploy_to_s3(bucket_name, dry=False)
-    print_message("Successfully Deployed Site!")
+    print("Successfully Deployed Site!")
