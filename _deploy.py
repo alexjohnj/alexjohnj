@@ -10,28 +10,17 @@ Remember to change the path_to_sass_file & sass_compile_path variables if you wa
 
 """
 
-import yaml
 import gzip
 import os
 from subprocess import PIPE, check_call, CalledProcessError
 from sys import exit
 
 def get_s3_bucket_name():
-    """ Opens an _config.yml file that is in the root of the directory that the script is in and returns the value of the s3bucket key.
-    
-    Returns: String 
-    
-    """
-    try:
-        with open("_config.yml") as f:
-            config_file = yaml.load(f)
-            try:
-                return config_file["s3bucket"]
-            except KeyError:
-                exit("Error, no S3 bucket was found in _config.yml.")
-                
-    except IOError as e:
-        exit("I/O error({0}): {1}".format(e.errno, e.strerror))
+    with open("_config.yml") as f:
+        for line in f:
+            if line.split(':')[0] == "s3bucket":
+                return line.strip("s3bucket:").strip()
+        exit("Error: No bucket was found in the site's _config.yml file")
         
 def compile_sass(input_file, output_file, minify=True):
     """ Runs sass on the input file and outputs it to the output file. 
