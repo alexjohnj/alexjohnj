@@ -45,14 +45,12 @@ def generate_site():
 def gzip_files():
     for root, dirs, files in os.walk("_site/"): # Traverse the _site/ directory
         for f in files:
-            filename, extension = os.path.splitext(f) # Get the extension of the current file
-            if extension == ".html" or extension == ".css" or extension == ".js": # Check to see if it's a compressible extension
-                with open(os.path.join(root, f), 'rb') as f_to_compress: # Open the file
-                    with gzip.open(os.path.join(root, f) + ".gz", 'wb') as f_compressed: # Open a new gzip file
-                        f_compressed.writelines(f_to_compress) # Write the original file into the gzip file
-                os.remove(os.path.join(root, f)) # Remove the original file. 
-                os.rename(os.path.join(root, f) + ".gz", os.path.join(root, f)) # Rename file to original
-            
+            if os.path.splitext(f)[1] in ['.html', '.css', '.js']:
+                current_path = os.path.join(root, f)
+                with open(current_path, 'rb') as f_in:
+                    with gzip.open(current_path + '.gz', 'wb') as f_out:
+                        f_out.writelines(f_in)
+                os.replace(current_path + '.gz', current_path)
         
 def deploy_to_s3(bucket, dry=False):
     """ Runs s3cmd sync -P _site/ s3://bucket-name to deploy the site to Amazon S3
