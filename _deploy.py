@@ -15,6 +15,7 @@ import os
 from subprocess import PIPE, check_call, CalledProcessError
 from sys import exit
 from time import sleep
+import argparse
 
 def get_s3_bucket_name():
     with open("_config.yml") as f:
@@ -73,12 +74,18 @@ def deploy_to_s3_bucket(bucket):
         exit("Something went wrong removing files from the bucket")
 
 if __name__ == "__main__":
-    
+
+    parser = argparse.ArgumentParser(description="Deploy a Jekyll site to Amazon S3")
+    parser.add_argument('-ns', '--no-sass', help="Don't compile Sass files", action='store_true')
+    parser.add_argument('-bs', '--beautiful-sass', help="Don't minify Sass files", action='store_false')
+    args = parser.parse_args()
+
     path_to_sass_file = "assets/styles/sass/styles.scss" # Change to your path
     sass_compile_path = "assets/styles/css/styles.css" # Change to your path
-    
-    print("Compiling Sass Files...")
-    compile_sass(path_to_sass_file, sass_compile_path) # Comment out this line if you don't want to compile any sass files
+
+    if args.no_sass == False:
+        print("Compiling Sass Files...")
+        compile_sass(path_to_sass_file, sass_compile_path, minify=args.beautiful_sass)
     
     print("Running Jekyll...")
     generate_site()
