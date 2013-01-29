@@ -23,18 +23,6 @@ def get_s3_bucket_name():
         exit("Error: No bucket was found in the site's _config.yml file")
         
 def compile_sass(input_file, output_file, minify=True):
-    """ Runs sass on the input file and outputs it to the output file. 
-    
-    Keyword Arguments:
-    
-    input_file -- the path to the .scss file
-    output_file -- the path to the .css file
-    minify -- if True (default), outputted css is minified
-              if False, no minification takes place on the css
-              
-    Returns: None
-    
-    """
     command = "sass " + path_to_sass_file + ":" + sass_compile_path
     if minify:
         command = command + " --style compressed"
@@ -59,7 +47,7 @@ def gzip_files():
         for f in files:
             filename, extension = os.path.splitext(f) # Get the extension of the current file
             if extension == ".html" or extension == ".css" or extension == ".js": # Check to see if it's a compressible extension
-                with open(os.path.join(root, f), 'r') as f_to_compress: # Open the file
+                with open(os.path.join(root, f), 'rb') as f_to_compress: # Open the file
                     with gzip.open(os.path.join(root, f) + ".gz", 'wb') as f_compressed: # Open a new gzip file
                         f_compressed.writelines(f_to_compress) # Write the original file into the gzip file
                 os.remove(os.path.join(root, f)) # Remove the original file. 
@@ -128,6 +116,6 @@ if __name__ == "__main__":
     print("Getting Bucket Name...")
     bucket_name = get_s3_bucket_name()
         
-    print("Deploying to %s..." % bucket_name)
-    deploy_to_s3(bucket_name, dry=False)
+    print("Deploying to %s" % bucket_name)
+    # deploy_to_s3(bucket_name, dry=False)
     print("Successfully Deployed Site!")
