@@ -14,6 +14,7 @@ import gzip
 import os
 from subprocess import PIPE, check_call, CalledProcessError
 from sys import exit
+from time import sleep
 
 def get_s3_bucket_name():
     with open("_config.yml") as f:
@@ -52,47 +53,21 @@ def gzip_files():
                         f_out.writelines(f_in)
                 os.replace(current_path + '.gz', current_path)
         
-def deploy_to_s3(bucket, dry=False):
-    """ Runs s3cmd sync -P _site/ s3://bucket-name to deploy the site to Amazon S3
-    
-    Key Arguments:
-    
-    bucket -- The name of the s3 bucket to upload to in the format s3://bucket-name
-    dry -- if False (default), The site is deployed to the s3 bucket
-           if True, The result of uploading the site to the s3 bucket is shown but no files are actually uploaded 
-    
-    Returns: None
-    
-    """
-    if dry:
-        print("DOING DRY RUN")
-        
+def deploy_to_s3_bucket(bucket):
     try: # Upload all uncompressed files
-        command = ""
-        if not dry:
-            command = "s3cmd sync -P --exclude '*.html' --exclude '*.js' --exclude '*.css' _site/ " + bucket
-        else:
-           command = "s3cmd sync -P --exclude '*.html' --exclude '*.js' --exclude '*.css' _site/ --dry-run " + bucket 
+        command = "s3cmd sync -P --exclude '*.html' --exclude '*.js' --exclude '*.css' _site/ " + bucket
         check_call(command, shell=True, stdout=PIPE)
     except CalledProcessError:
         exit("Something went wrong deploying the site to s3.")
     
     try: # Upload all compressed files and add an appropriate header
-        command = ""
-        if not dry:
-            command = "s3cmd sync -P --add-header='Content-Encoding: gzip' --exclude '*.*' --include '*.html' --include '*.js' --include '*.css' _site/ " + bucket
-        else:
-            command = "s3cmd sync -P --add-header='Content-Encoding: gzip' --exclude '*.*' --include '*.html' --include '*.js' --include '*.css' --dry-run _site/ " + bucket
+        command = "s3cmd sync -P --add-header='Content-Encoding: gzip' --exclude '*.*' --include '*.html' --include '*.js' --include '*.css' _site/ " + bucket
         check_call(command, shell=True, stdout=PIPE)
     except CalledProcessError:
         exit("Something went wrong setting the content encoding on the files deployed to s3")
 
-    try:
-        command = ""
-        if not dry:
-            command = "s3cmd sync -P --delete-removed _site/ " + bucket
-        else:
-            command = "s3cmd sync -P --delete-removed --dry-run _site/ " + bucket
+    try: # Remove any files that have been deleted
+        command = "s3cmd sync -P --delete-removed _site/ " + bucket
         check_call(command, shell=True, stdout=PIPE)
     except CalledProcessError:
         exit("Something went wrong removing files from the bucket")
@@ -103,7 +78,7 @@ if __name__ == "__main__":
     sass_compile_path = "assets/styles/css/styles.css" # Change to your path
     
     print("Compiling Sass Files...")
-    compile_sass(path_to_sass_file, sass_compile_path, minify=True) # Comment out this line if you don't want to compile any sass files
+    compile_sass(path_to_sass_file, sass_compile_path) # Comment out this line if you don't want to compile any sass files
     
     print("Running Jekyll...")
     generate_site()
@@ -113,7 +88,11 @@ if __name__ == "__main__":
     
     print("Getting Bucket Name...")
     bucket_name = get_s3_bucket_name()
-        
-    print("Deploying to %s" % bucket_name)
-    # deploy_to_s3(bucket_name, dry=False)
+
+    for i in reversed(range(1,4)):
+        print("\rDeploying to {0} in {1}".format(bucket_name, i), end='')
+        sleep(1)
+
+    print("\nDeploying...")
+    deploy_to_s3_bucket(bucket_name)
     print("Successfully Deployed Site!")
