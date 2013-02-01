@@ -87,8 +87,8 @@ def deploy_to_s3_bucket(bucket, dry_run=False):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Deploy a Jekyll site to Amazon S3")
-    parser.add_argument('-ns', '--no-sass', help="Don't compile Sass files", action='store_true')
-    parser.add_argument('-bs', '--beautiful-sass', help="Don't minify Sass files", action='store_false')
+    parser.add_argument('-s', '--no-sass', help="Don't compile Sass files", action='store_true')
+    parser.add_argument('-b', '--beautiful-sass', help="Don't minify Sass files", action='store_false')
     parser.add_argument('-n', '--dry-run', help="Perform a dry run when deploying to S3 (akin to running s3cmd with the --dry-run flag)", action='store_true')
     args = parser.parse_args()
 
