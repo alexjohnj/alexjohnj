@@ -1,5 +1,4 @@
 #! /usr/local/bin/python3
-
 """ Requirements: PyYaml library, s3cmd, jekyll, gzip & sass. 
 
 To use, you'll need to edit your site's _config.yml file and add the following:
@@ -34,11 +33,6 @@ def compile_sass(input_file, output_file, minify=True):
         print("Something went wrong compiling sass files.")
         
 def generate_site():
-    """ Runs jekyll --no-auto to generate the site.
-    
-    Returns: None
-    
-    """    
     try:
         check_call(["jekyll", "--no-auto"], stdout=PIPE)
     except CalledProcessError:
@@ -54,21 +48,38 @@ def gzip_files():
                         f_out.writelines(f_in)
                 os.replace(current_path + '.gz', current_path)
         
-def deploy_to_s3_bucket(bucket):
+def deploy_to_s3_bucket(bucket, dry_run=False):
+    if dry_run:
+        print("Doing a dry run!")
+
     try: # Upload all uncompressed files
         command = "s3cmd sync -P --exclude '*.html' --exclude '*.js' --exclude '*.css' _site/ " + bucket
+        if dry_run:
+            command_ls = command.split()
+            command_ls.insert(-2, "--dry-run")
+            command = ' '.join(command_ls)
+
         check_call(command, shell=True, stdout=PIPE)
     except CalledProcessError:
         exit("Something went wrong deploying the site to s3.")
     
     try: # Upload all compressed files and add an appropriate header
         command = "s3cmd sync -P --add-header='Content-Encoding: gzip' --exclude '*.*' --include '*.html' --include '*.js' --include '*.css' _site/ " + bucket
+        if dry_run:
+            command_ls = command.split()
+            command_ls.insert(-2, "--dry-run")
+            command = ' '.join(command_ls)
+
         check_call(command, shell=True, stdout=PIPE)
     except CalledProcessError:
         exit("Something went wrong setting the content encoding on the files deployed to s3")
 
     try: # Remove any files that have been deleted
         command = "s3cmd sync -P --delete-removed _site/ " + bucket
+        if dry_run:
+            command_ls = command.split()
+            command_ls.insert(-2, "--dry-run")
+            command = ' '.join(command_ls)
         check_call(command, shell=True, stdout=PIPE)
     except CalledProcessError:
         exit("Something went wrong removing files from the bucket")
@@ -78,6 +89,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Deploy a Jekyll site to Amazon S3")
     parser.add_argument('-ns', '--no-sass', help="Don't compile Sass files", action='store_true')
     parser.add_argument('-bs', '--beautiful-sass', help="Don't minify Sass files", action='store_false')
+    parser.add_argument('-n', '--dry-run', help="Perform a dry run when deploying to S3 (akin to running s3cmd with the --dry-run flag)", action='store_true')
     args = parser.parse_args()
 
     path_to_sass_file = "assets/styles/sass/styles.scss" # Change to your path
@@ -101,5 +113,5 @@ if __name__ == "__main__":
         sleep(1)
 
     print("\nDeploying...")
-    deploy_to_s3_bucket(bucket_name)
+    deploy_to_s3_bucket(bucket_name, dry_run=args.dry_run)
     print("Successfully Deployed Site!")
