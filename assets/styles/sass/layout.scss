@@ -20,6 +20,7 @@ body {
 
 #site-header {
   width: 92%;
+  max-width: $body-width;
   margin-right: auto;
   margin-left: auto;
   padding: 10px;
@@ -47,6 +48,7 @@ body {
 
 #content {
   width: 92%;
+  max-width: $body-width;
   margin-right: auto;
   margin-left: auto;
   
@@ -65,6 +67,10 @@ body {
     margin: 1em 0px;
   } 
 } 
+
+pre {
+  padding: 0.7em;
+}
 
 // Footer Stuff
 
@@ -89,13 +95,14 @@ footer {
   }
 }
 
-pre {
-  padding: 0.7em;
+#footer-content-wrapper {
+  width: 92%;
+  max-width: $body-width;
+  margin: 0 auto;
 }
 
 #footer-attributions {
   float: left;
-  margin-left: 4%;
   padding-top: 10px;
     p {
     margin:0; // Having any margins will mess up the footer.
@@ -111,7 +118,6 @@ pre {
 
 #footer-social-stuff {
   float: right;
-  margin-right: 4%;
   text-align: right;
   
   p {
@@ -134,8 +140,6 @@ pre {
   @media handeld, only screen and (max-width: 320px) {
     float: none;
     width: 96%;
-    margin-right: 0;
-    margin-left: 4%;
     text-align: left;
     padding-top: 10px;
   }
