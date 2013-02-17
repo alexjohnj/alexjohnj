@@ -1,11 +1,13 @@
 #! /usr/local/bin/python3
 """ Requirements: s3cmd, jekyll, gzip & sass. 
 
-To use, you'll need to edit your site's _config.yml file and add the following:
+Mk 2 of the script
+
+To use this script, you'll need to edit your site's _config.yml file and add the following:
 
 s3bucket: s3://bucket-name
 
-Remember to change the path_to_sass_file & sass_compile_path variables if you want to compile sass files. If you don't want to compile sass files, comment out the call to the compile_sass() function.
+Remember: Change the path_to_sass_file & sass_compile_path variables if you want to compile sass files. If you don't want to compile sass files, comment out the call to the compile_sass() function.
 
 """
 
@@ -20,7 +22,7 @@ def get_s3_bucket_name():
     with open("_config.yml") as f:
         for line in f:
             if line.split(':')[0] == "s3bucket":
-                return line.strip("s3bucket:").strip()
+                return line.strip("s3bucket:").strip() # Remove the s3bucket: part of the line and any white space
         exit("Error: No bucket was found in the site's _config.yml file")
         
 def compile_sass(input_file, output_file, minify=True):
