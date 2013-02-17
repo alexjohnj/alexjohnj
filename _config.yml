@@ -46,4 +46,4 @@ kramdown:
     coderay_css: style
 
 jekyll-press:
-    exclude: '*.xml' 
+    exclude: ['*.xml', '*.css']
