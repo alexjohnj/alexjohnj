@@ -1,5 +1,5 @@
 #! /usr/local/bin/python3
-""" Requirements: PyYaml library, s3cmd, jekyll, gzip & sass. 
+""" Requirements: s3cmd, jekyll, gzip & sass. 
 
 To use, you'll need to edit your site's _config.yml file and add the following:
 
