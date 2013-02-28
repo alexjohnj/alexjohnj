@@ -50,7 +50,7 @@ sudo apt-get remove --purge network-manager
 
 That solved the problem for me. If it does for you, be sure to file a bug report so that this issue hopefully gets fixed in network-manager. 
 
-[wireless-adapter-amazon-page]: http://www.amazon.co.uk/Belkin-N-Wireless-USB-Adapter/dp/B001HO3ZTQ/ref=sr_1_1?ie=UTF8&qid=1356902922&sr=8-1
+[wireless-adapter-amazon-page]: http://www.amazon.co.uk/gp/product/B001HO3ZTQ/ref=as_li_ss_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=B001HO3ZTQ&linkCode=as2&tag=simpl06-21
 [wicd-website]: https://launchpad.net/wicd
 [network-manager-bug-report]: https://bugs.launchpad.net/ubuntu/+source/linux/+bug/621265
 
