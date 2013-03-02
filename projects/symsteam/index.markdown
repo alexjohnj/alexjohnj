@@ -20,7 +20,7 @@ version: Beta 2
 
 ## What is SymSteam?
 
-SymSteam is a Mac application designed to make it easy for laptop users to play Steam games off of both an external and an internal hard drive. SymSteam manages a symbolic link to a Steam game library on an external hard drive so that when an external drive with your games on is connected to your computer, you play games off of the external hard drive. When the drive is unplugged, you play games off of your internal drive. It's ideal for people who like to play games on their MacBook's both at home and on the go. 
+SymSteam is a Mac application designed to make it easy for laptop users to play Steam games off of both an external and an internal hard drive. SymSteam manages a symbolic link to a Steam games library on an external hard drive so that when an external drive with your games on is connected to your computer, you play games off of the external hard drive. When the drive is unplugged, you play games off of your internal drive. It's ideal for people who like to play games on their MacBook's both at home and on the go. 
 
 SymSteam is unobtrusive. It runs in the background and displays (optional) notifications via either Growl or Notification Center[^1] when something happens.
 
@@ -34,7 +34,7 @@ Oh yeah! You can find SymSteam on [GitHub][github-project-page] where you can re
 
 ## A Disclaimer
 
-Please remember that SymSteam is in beta. While I've been using the application for over 6 months without any problems there will be bugs so always have a backup of your Steam games and saves. If something happens involving SymSteam that results in you loosing data, while I'll feel very sorry for you, it's not my fault, so don't try and sue me or anything.
+Please remember that SymSteam is in beta. While I've been using the application for over 6 months without any problems there will be bugs so always have a backup of your Steam games and saves. If something happens involving SymSteam that results in you losing data, while I'll feel very sorry for you, it's not my fault, so don't try and sue me or anything.
 
 ## Some Useful Links
 
