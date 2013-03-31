@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SymSteam
-version: Beta 2
+version: Beta 2.1
 ---
 
 # SymSteam ({{ page.version }})
@@ -43,7 +43,7 @@ Please remember that SymSteam is in beta. While I've been using the application 
 - [Documentation][symsteam-documentation]
 
 [github-project-page]: https://github.com/alexjohnj/symsteam
-[application-download-link]: http://application-downloads.s3.amazonaws.com/SymSteam-Beta-2.zip
+[application-download-link]: http://application-downloads.s3.amazonaws.com/symsteam-beta-2.1.zip
 [symsteam-documentation]: documentation/
 [symsteam-changelog]: http://alexjohnj.github.com/symsteam/changelog.html
 
