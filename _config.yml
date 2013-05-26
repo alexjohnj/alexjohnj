@@ -3,21 +3,19 @@ author:      Alex Jackson
 s3bucket:    s3://www.alexj.me
 
 safe:        false
-auto:        true
-server:      false
-server_port: 4000
+port: 4000
 baseurl:    /
 url: http://www.alexj.me 
 
 source:      .
 destination: ./_site
 plugins:     ./_plugins
-exclude:     sass
+exclude:     [sass]
 
 future:      true
 lsi:         false
 pygments:    true
-markdown:    kramdown
+markdown:    rdiscount
 permalink:   /:month/:title/
 
 maruku:
@@ -28,7 +26,7 @@ maruku:
   png_url:    /images/latex
 
 rdiscount:
-  extensions: []
+  extensions: [footnotes, smart]
 
 kramdown:
   auto_ids: true,
