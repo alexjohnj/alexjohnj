@@ -432,6 +432,9 @@ hr {
   background-image: -ms-linear-gradient(left, #ffdcce, #cc7722, #ffdcce);
   background-image: -o-linear-gradient(left, #ffdcce, #cc7722, #ffdcce); }
 
+.post-link h2 {
+  margin: 0; }
+
 #post-header-container {
   border-bottom: 3px #cc7722 solid; }
   #post-header-container h1 {

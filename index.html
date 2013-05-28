@@ -6,9 +6,12 @@ layout: default
 {% if forloop.index0 == 9 %}
 <p>You can see more posts in the <a href="/archive/">Archive</a></p>
 {% else %}
-<h2><a href="{{ post.url }}">{{ post.title }}</a><small> {{ post.date | date_to_string }}</small></h2>
-<p>{{ post.excerpt }}</p>
-<p><a href="{{ post.url }}">Read more</a></p>
-<hr>
+<div class="post-link">
+	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+	<h2><small> {{ post.date | date_to_string }}</small></h2>
+	<p>{{ post.excerpt }}</p>
+	<p><a href="{{ post.url }}">Read more</a></p>
+	<hr>
+</div>
 {% endif %}
 {% endfor %}
