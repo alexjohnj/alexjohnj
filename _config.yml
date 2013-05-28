@@ -12,6 +12,7 @@ destination: ./_site
 plugins:     ./_plugins
 exclude:     [sass]
 
+paginate: 5
 future:      true
 lsi:         false
 pygments:    true

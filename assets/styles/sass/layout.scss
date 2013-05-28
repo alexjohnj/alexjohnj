@@ -198,7 +198,22 @@ hr {
 }
 
 #next-post-box {
-  width: 50%;
+  width: 25%%;
   float: right;
   text-align: right;
+}
+
+#post-pagination {
+  width: 100%;
+
+  #new-posts {
+    width: 50%;
+    float: right;
+    text-align: right;
+  }
+
+  #old-posts {
+    width: 50%;
+    float: left;
+  }
 }

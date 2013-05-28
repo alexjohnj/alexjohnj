@@ -457,9 +457,19 @@ hr {
   text-align: left; }
 
 #next-post-box {
-  width: 50%;
+  width: 25%%;
   float: right;
   text-align: right; }
+
+#post-pagination {
+  width: 100%; }
+  #post-pagination #new-posts {
+    width: 50%;
+    float: right;
+    text-align: right; }
+  #post-pagination #old-posts {
+    width: 50%;
+    float: left; }
 
 body {
   font-family: "Lustria", "Georgia", serif;
