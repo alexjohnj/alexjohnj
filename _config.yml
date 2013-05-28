@@ -15,7 +15,7 @@ exclude:     [sass]
 future:      true
 lsi:         false
 pygments:    true
-markdown:    rdiscount
+markdown:    kramdown
 permalink:   /:month/:title/
 
 maruku:
