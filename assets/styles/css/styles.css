@@ -346,7 +346,8 @@ body {
     list-style-type: none;
     padding: 0px; }
   #site-header nav li {
-    display: inline; }
+    display: inline;
+    margin: 0px 10px; }
 
 #content {
   width: 92%;
