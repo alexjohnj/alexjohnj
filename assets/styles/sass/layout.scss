@@ -24,24 +24,27 @@ body {
   margin-right: auto;
   margin-left: auto;
   padding: 10px;
-  height: 70px;
-    
+  height: 150px;
+  text-align: center;
+
   header {
-    max-width: 70%;
-    float: left;
+    display: inline-block;
+    width: 100%;
+    font-size: 2em;
+    padding-top: 10px;
+    h1 {
+      line-height: 0em;
+    }
   }
 
   nav {
-    float: right;
-    padding-top: 19px;
-    
     ul {
       list-style-type: none;
+      padding: 0px;
     }
 
     li {
       display: inline;
-      padding-left: 10px;
     }
   }
 }
@@ -51,11 +54,11 @@ body {
   max-width: $body-width;
   margin-right: auto;
   margin-left: auto;
-  
   overflow: auto;
+  
   padding-bottom: $footer-height;
 
-  @media handeld, only screen and (max-width: 320px) {
+  @media only screen and (max-width: 380px) {
     padding-bottom: $footer-height * 1.5;
   }
 }
@@ -90,7 +93,7 @@ footer {
     text-decoration: none;
 	}
 
-  @media handheld, only screen and (max-width: 320px) {
+  @media only screen and (max-width: 380px) {
     height: $footer-height * 1.5;
   }
 }
@@ -109,7 +112,7 @@ footer {
     padding: 0;
   }
 
-   @media handeld, only screen and (max-width: 320px) {
+   @media only screen and (max-width: 380px) {
     width: 96%;
     float: none;
     padding-top: 0;
@@ -130,14 +133,14 @@ footer {
     padding-top: 10px;
     padding-left: 10px;
 
-     @media handeld, only screen and (max-width: 320px) {
+     @media only screen and (max-width: 380px) {
       padding-left: 0;
       padding-right: 10px;
       padding-top: 0;
     }
   }
 
-  @media handeld, only screen and (max-width: 320px) {
+  @media only screen and (max-width: 380px) {
     float: none;
     width: 96%;
     text-align: left;
@@ -167,8 +170,9 @@ hr {
 
 #more-posts-box {
   border-top: 1px $underline-color dashed;
-  padding-bottom: 30px;
+  height: 100px;
   width :100%;
+  padding-bottom: 20px;
 
   p {
     margin-top: 7px;
