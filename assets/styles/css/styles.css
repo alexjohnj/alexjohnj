@@ -359,6 +359,9 @@ body {
   @media only screen and (max-width: 380px) {
     #content {
       padding-bottom: 4.005em; } }
+  @media only screen and (max-width: 260px) {
+    #content {
+      padding-bottom: 5.874em; } }
 
 .footnotes {
   font-size: .82em; }
@@ -382,6 +385,9 @@ footer {
   @media only screen and (max-width: 380px) {
     footer {
       height: 4.005em; } }
+  @media only screen and (max-width: 260px) {
+    footer {
+      height: 5.874em; } }
 
 #footer-content-wrapper {
   width: 92%;
@@ -462,7 +468,8 @@ hr {
   text-align: right; }
 
 #post-pagination {
-  width: 100%; }
+  width: 100%;
+  height: 50px; }
   #post-pagination #new-posts {
     width: 50%;
     float: right;
