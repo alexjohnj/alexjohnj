@@ -531,11 +531,10 @@ blockquote {
 #project-grid {
   width: 100%;
   height: auto;
-  line-height: 5em;
   text-align: center; }
   #project-grid .item {
     text-align: center;
-    height: 290px;
+    height: 340px;
     display: inline-block;
     width: 256px; }
   #project-grid img {
