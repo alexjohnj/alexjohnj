@@ -36,7 +36,7 @@ def compile_sass(input_file, output_file, minify=True):
         
 def generate_site():
     try:
-        check_call(["jekyll", "--no-auto"], stdout=PIPE)
+        check_call(["jekyll", "build"], stdout=PIPE)
     except CalledProcessError:
         exit("Something went wrong generating the site with Jekyll.")
         
