@@ -16,7 +16,7 @@ layout: default
 
   {% if paginator.next_page %}
     <div id="old-posts">
-      <a href="/{{ paginator.next_page_path }}">Older Posts</a>
+      <a href="{{ paginator.next_page_path }}">Older Posts</a>
     </div>
   {% endif %}
 
@@ -25,7 +25,7 @@ layout: default
 		  {% if paginator.previous_page == 1 %}
 		    <a href="/">Newer Posts</a>
 		  {% else %}
-		    <a href="/{{ paginator.previous_page_path }}">Newer Posts</a>
+		    <a href="{{ paginator.previous_page_path }}">Newer Posts</a>
 		  {% endif %}
 		</div>
 	{% endif %}
