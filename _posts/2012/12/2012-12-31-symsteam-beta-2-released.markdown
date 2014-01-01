@@ -13,8 +13,6 @@ SymSteam now has some fairly extensive documentation available on its new [proje
 
 If you already have SymSteam installed then it will prompt you to update (assuming you've allowed it to). If not, you can download beta 2 of SymSteam [here][symsteam-project-page].
 
----
-
 [^1]: There are other filesystems that assign drives a UUID but I don't think any of these have native support in OS X. 
 
 [symsteam-changelog]: http://alexjohnj.github.com/symsteam/changelog.html

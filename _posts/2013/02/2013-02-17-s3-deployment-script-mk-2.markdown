@@ -128,8 +128,6 @@ if __name__ == "__main__":
 
 {% endhighlight %}
 
----
-
 [^1]: At the same time, I've removed half of the comments in the script because most of them were `#increment i by one` style comments. 
 
 [script-github]: https://gist.github.com/alexjohnj/4559517

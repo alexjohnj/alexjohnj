@@ -130,8 +130,6 @@ If you don’t need to compile any sass files, go ahead and comment out[^3] the 
 
 And that’s it. It’s not the most general script in the world but I can see it coming in handy for one or two people who have similar deployment processes to me. If you want to leave some feedback on the script, I’ve created a [Gist on GitHub][script-gist] for the script with some more extensive documentation. 
 
----
-
 [^1]: By one sass file I don’t mean I’ve got all of my sass in one file, I just compile lots of different sass files into one CSS file.
 
 [^2]: I know HTML minification isn’t the safest or best way to boost a site’s performance, you don’t need to tell me.
