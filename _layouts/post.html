@@ -1,19 +1,21 @@
 ---
 layout: default
 ---
+<article>
+	<header id="post-header">
+		<h1>{{ page.title }}</h1>
+		<h2><date datetime="{{ post.date | date:%Y-%m-%dT%H:%M:%S%Z }}" pubdate>{{ page.date | date_to_long_string }}</date></h2>
+	</header>
+	
+	{{ content }} 
 
-<div id="post-header-container">
-	<h1>{{ page.title }}</h1>
-	<h1><small>{{ page.date | date_to_long_string }}</small></h1>
-</div>
-{{ content }} 
-<div id="more-posts-box">
-	<h4> More:</h4>
-	<div id="previous-post-box">
-		{% if page.previous.url %} <a href="{{ page.previous.url }}"> &laquo; {{ page.previous.title }} </a> {% endif %} 
-	</div>
-
-	<div id="next-post-box">
-		{% if page.next.url %} <a href="{{ page.next.url }}"> {{ page.next.title }} &raquo;</a> {% endif %}
-	</div>
-</div>
+	<footer id="post-footer">
+		<h3>More:</h3>
+		<div id="previous-post">
+			{% if page.previous.url %} <a href="{{ page.previous.url }}"> &laquo; {{ page.previous.title }} </a> {% endif %} 
+		</div>
+		<div id="next-post">
+			{% if page.next.url %} <a href="{{ page.next.url }}"> {{ page.next.title }} &raquo;</a> {% endif %}
+		</div>
+	</footer>
+</article>

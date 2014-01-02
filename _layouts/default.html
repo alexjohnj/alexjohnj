@@ -11,11 +11,8 @@
   <!-- Groovy stylesheets -->
   <link rel="stylesheet" type="text/css" href="/assets/styles/css/styles.css" media="screen">
 
-  <!-- Also get the beautiful Lustria & Source Code Pro fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Lustria|Source+Code+Pro' rel='stylesheet' type='text/css'>
-
-  <!-- This makes even more shit "work" with Internet Explorer -->
-  <!--[if !IE 7]><style type="text/css">#wrap {display:table;height:100%}</style><![endif]-->
+  <!-- Also get the beautiful Arvo & Source Code Pro fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,300|Source+Code+Pro' rel='stylesheet' type='text/css'>
 
   <!-- A link to the RSS feed -->
   <link href="http://feeds.uri.lv/alexjohnj" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
@@ -33,38 +30,33 @@
   </script>
 </head>
 <body>
-  <div id="wrapper">
-    <div id="site-header">
-      <header><h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1></header>
-      <nav>
-        <ul>
-          <li><a href="/projects/">Projects</a></li>
-          <li><a href="/archive/">Archive</a></li>
-        </ul>
-      </nav>
-    </div> <!--end site-header-->
-  
-    <div id="content">
-      <article>
-        {{ content }}
-      </article>
-    </div><!--end content-->
-    
-    <footer>
-      <div id="footer-content-wrapper">
-        <div id="footer-social-stuff">
-          <div id="twitter-social-button">
-            <p><a href="https://twitter.com/alexjohnj">Twitter</a></p>
-          </div>
-          <div id="rss-social-button">
-            <p><a href="http://feeds.uri.lv/alexjohnj">RSS</a></p>
-          </div>
-        </div>
-        <div id="footer-attributions">
-          <p>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> and <a href="http://sass-lang.com/">Sass</a>.</p>
-        </div>
-      </div>
-    </footer>
-  </div> <!-- end wrapper -->
+
+<header id="site-header" class="content-margin-wrap">
+  <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+  <nav id="site-navigation">
+    <ul>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/archive/">Archive</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="content" class="content-margin-wrap">
+  {{ content }}
+</div>
+
+<footer id="site-footer">
+  <div class="content-margin-wrap">
+    <div id="footer-social-links">
+      <ul>
+        <li><a href="https://twitter.com/alexjohnj/">Twitter</a></li>
+        <li><a href="https://feeds.uri.lv/alexjohnj/">RSS</a></li>
+      </ul>
+    </div>
+    <div id="footer-attributions">
+      <p>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

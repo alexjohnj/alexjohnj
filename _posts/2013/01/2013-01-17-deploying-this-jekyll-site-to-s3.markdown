@@ -16,7 +16,7 @@ The script is written in Python because I don’t know any other scripting langu
 
 The script basically wraps up five or six commands into one simple `python _deploy.py` command. Any way, enough waffle. The script: 
 
-{% highlight python linenos %}
+{% highlight python %}
 #! /usr/local/bin/python3
 
 import yaml

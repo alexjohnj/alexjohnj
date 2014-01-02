@@ -1,9 +1,8 @@
 @import "variables";
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+html {
+  position: relative;
+  min-height: 100%;
 }
 
 body {
@@ -11,78 +10,39 @@ body {
   width: 100%;
   background: url(/assets/images/top_pattern.png);
   background-repeat: repeat-x;
+  margin: 0 0 $footer-height 0;
 }
 
-#wrapper {
-  min-height: 100%;
-  position: relative;
-}
-
-#site-header {
+.content-margin-wrap {
   width: 92%;
+  margin: 0 auto;
   max-width: $body-width;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 10px;
-  height: 150px;
+}
+
+// Site layout
+
+header#site-header {
+  padding: 10px 0;
   text-align: center;
-
-  header {
-    display: inline-block;
-    width: 100%;
-    font-size: 2em;
-    padding-top: 10px;
-    h1 {
-      line-height: 0em;
-    }
-  }
-
-  nav {
-    ul {
-      list-style-type: none;
-      padding: 0px;
-    }
-
-    li {
-      display: inline;
-      margin: 0px 10px;
-    }
-  }
 }
 
-#content {
-  width: 92%;
-  max-width: $body-width;
-  margin-right: auto;
-  margin-left: auto;
-  overflow: auto;
-  
-  padding-bottom: $footer-height;
-
-  @media only screen and (max-width: 380px) {
-    padding-bottom: $footer-height * 1.5;
+nav#site-navigation {
+  ul {
+    margin: 0;
+    padding: 0;
   }
-
-  @media only screen and (max-width: 260px) {
-    padding-bottom: $footer-height * 2.2;
-  }
-}
-
-.footnotes {
-  font-size: .82em;
-  
   li {
-    margin: 1em 0px;
-  } 
-} 
+    display: inline-block;
+    list-style: none;
+    padding-left: 10px;
 
-pre {
-  padding: 0.7em;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
 }
 
-// Footer Stuff
-
-footer {
+footer#site-footer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -97,64 +57,101 @@ footer {
     color: inherit;
     text-decoration: none;
 	}
-
-  @media only screen and (max-width: 380px) {
-    height: $footer-height * 1.5;
-  }
-
-  @media only screen and (max-width: 260px) {
-    height: $footer-height * 2.2;
-  }
 }
 
-#footer-content-wrapper {
-  width: 92%;
-  max-width: $body-width;
-  margin: 0 auto;
-}
-
-#footer-attributions {
+div#footer-attributions {
   float: left;
-  padding-top: 10px;
-    p {
-    margin:0; // Having any margins will mess up the footer.
-    padding: 0;
-  }
-
-   @media only screen and (max-width: 380px) {
-    width: 96%;
-    float: none;
-    padding-top: 0;
-  }
 }
 
-#footer-social-stuff {
+div#footer-social-links{
   float: right;
   text-align: right;
-  
-  p {
-    margin: 0;
+
+  ul {
     padding: 0;
   }
 
-  #rss-social-button, #twitter-social-button {
+  li {
     display: inline-block;
-    padding-top: 10px;
-    padding-left: 10px;
-
-     @media only screen and (max-width: 380px) {
+    padding-left: 15px;
+    &:first-child {
       padding-left: 0;
-      padding-right: 10px;
-      padding-top: 0;
     }
   }
+}
 
-  @media only screen and (max-width: 380px) {
-    float: none;
-    width: 96%;
-    text-align: left;
-    padding-top: 10px;
+.post-link {
+  h2 {
+    margin: 0;
   }
+}
+
+// Post Layout
+
+footer#post-footer {
+  border-top: 1px $underline-color dashed;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 15px; // Get a bit of clearance from the footer
+}
+
+div#previous-post {
+  width: 50%;
+  float: left;
+  text-align: left;
+}
+
+div#next-post {
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+
+#post-pagination {
+  width: 100%;
+  overflow: hidden;
+  
+  #new-posts {
+    width: 50%;
+    float: right;
+    text-align: right;
+  }
+
+  #old-posts {
+    width: 50%;
+    float: left;
+  }
+}
+
+// Homepage
+
+article.article-excerpt {
+  h1 {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  h2  {
+    margin: 0;
+    & time {
+      font-size: 0.67em;
+      color: #878787;
+      font-style: italic;
+    }
+  }
+}
+
+.footnotes {
+  font-size: .82em;
+  
+  li {
+    margin: 1em 0px;
+  } 
+}
+
+pre {
+  white-space: pre;
+  padding: 12px;
+  overflow-x: auto;
 }
 
 hr {
@@ -167,61 +164,4 @@ hr {
   background-image: -moz-linear-gradient(left, #ffdcce, $underline-color, #ffdcce); 
   background-image: -ms-linear-gradient(left, #ffdcce, $underline-color, #ffdcce); 
   background-image: -o-linear-gradient(left, #ffdcce, $underline-color, #ffdcce); 
-
-}
-
-.post-link {
-  h2 {
-    margin: 0;
-  }
-}
-
-#post-header-container {
-  border-bottom: 3px $underline-color solid;
-  h1 {
-    margin: 0;
-  }
-}
-
-#more-posts-box {
-  border-top: 1px $underline-color dashed;
-  height: 100px;
-  width :100%;
-
-  p {
-    margin-top: 7px;
-    margin-bottom: 7px;
-  }
-
-  h4 {
-    margin-top: 7px;
-    margin-bottom: 2px;
-  }
-}
-
-#previous-post-box {
-  width: 50%;
-  float: left;
-  text-align: left;
-}
-
-#next-post-box {
-  width: 50%;
-  float: right;
-  text-align: right;
-}
-
-#post-pagination {
-  width: 100%;
-  height: 50px;
-  #new-posts {
-    width: 50%;
-    float: right;
-    text-align: right;
-  }
-
-  #old-posts {
-    width: 50%;
-    float: left;
-  }
 }

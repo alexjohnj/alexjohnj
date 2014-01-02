@@ -1,22 +1,40 @@
 @import "variables";
 
 body {
-  font-family: "Lustria", "Georgia", serif;
+  font-family: "Lato", "Georgia", serif;
   font-size: 17px;
   text-rendering: optimizeLegibility;
-  line-height: 1.7em;
+  line-height: 1.6;
 }
 
-p {
-//  line-height: 1.5em;
+header#site-header {
+  h1 {
+    font-size: 4em;
+    margin: 0;
+    a {
+      color: $header-text-color;
+    }
+    a:hover {
+      color: $header-text-color;
+    }
+  }
 }
 
-ul, ol {
-// line-height: 1.5em;
+header#post-header {
+  border-bottom: 3px solid #cc7722;
+  h1, h2 {
+    margin: 0;
+  }
+
+  h2 date {
+    font-size: 0.68em;
+    color: #878787;
+    font-style:italic;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
-	line-height: 1.25;
+  font-weight: 300;
 }
 
 a {
@@ -29,26 +47,6 @@ a {
   }
 }
 
-h1 {
-  font-weight: inherit;
-  small {
-    font-style: italic;
-    font-weight: 100;
-    font-size: .67em;
-    color: #878787;
-  }
-}
-
-h2 {
-  font-weight: inherit;
-  small {
-    font-style: italic;
-    font-weight: 100;
-    font-size: .67em;
-    color: #878787;
-  }
-}
-
 code {
   font-family: "Source Code Pro", monospace;
   font-size: .85em;
@@ -58,13 +56,3 @@ blockquote {
 	font-style: italic;
 }
 
-#site-header {
-  h1 {
-    a {
-      color: $header-text-color;
-    }
-    a:hover {
-      color: $header-text-color;
-    }
-  }
-}
