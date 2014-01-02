@@ -11,9 +11,7 @@ version: Beta 2.1
 </div>
 
 <div id="project-header-links" markdown="1">
-
 	<h1><a href="http://application-downloads.s3.amazonaws.com/symsteam-beta-2.1.zip">Download SymSteam {{ page.version }}</a>, <a href="https://github.com/alexjohnj/symsteam">View it on GitHub</a> or <a href="documentation/">Check out the Documentation</a>.
-
 </div>
 
 ---
