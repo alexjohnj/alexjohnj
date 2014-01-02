@@ -1,62 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  {% if page.title %}
-  <title>{{ page.title }}</title>
-  {% else %}
-  <title>{{ site.title }}</title>
-  {% endif %}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% if page.title %}
+    <title>{{ page.title }}</title>
+    {% else %}
+    <title>{{ site.title }}</title>
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="{{ site.author }}">
 
-  <!-- Groovy stylesheets -->
-  <link rel="stylesheet" type="text/css" href="/assets/styles/css/styles.css" media="screen">
+    <!-- Groovy stylesheets -->
+    <link rel="stylesheet" href="/assets/styles/css/styles.css">
 
-  <!-- Also get the beautiful Arvo & Source Code Pro fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,300|Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <!-- Get the beautiful Lato & Source Code Pro fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,300|Source+Code+Pro' rel='stylesheet' type='text/css'>
 
-  <!-- A link to the RSS feed -->
-  <link href="http://feeds.uri.lv/alexjohnj" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
+    <!-- A link to the RSS feed -->
+    <link href="http://feeds.uri.lv/alexjohnj" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
+  </head>
+  <body>
+    <header id="site-header" class="content-margin-wrap">
+      <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+      <nav id="site-navigation">
+        <ul>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/archive/">Archive</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- Some meta tags, whether these do anything is beyond me -->
-  <meta name="author" content="{{ site.author }}">
-  {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
-  
-  <!-- Enable all the media queries! -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- And finally, some evil tracking code so I can sell all of your information to Skynet -->
-  <script type="text/javascript">
-  var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-29192170-1"]);_gaq.push(["_trackPageview"]);(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
-  </script>
-</head>
-<body>
-
-<header id="site-header" class="content-margin-wrap">
-  <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
-  <nav id="site-navigation">
-    <ul>
-      <li><a href="/projects/">Projects</a></li>
-      <li><a href="/archive/">Archive</a></li>
-    </ul>
-  </nav>
-</header>
-
-<div id="content" class="content-margin-wrap">
-  {{ content }}
-</div>
-
-<footer id="site-footer">
-  <div class="content-margin-wrap">
-    <div id="footer-social-links">
-      <ul>
-        <li><a href="https://twitter.com/alexjohnj/">Twitter</a></li>
-        <li><a href="https://feeds.uri.lv/alexjohnj/">RSS</a></li>
-      </ul>
+    <div id="content" class="content-margin-wrap">
+      {{ content }}
     </div>
-    <div id="footer-attributions">
-      <p>Built with <a href="https://github.com/mojombo/jekyll">Jekyll</a>.</p>
-    </div>
-  </div>
-</footer>
-</body>
+
+    <footer id="site-footer">
+      <div class="content-margin-wrap">
+        <div id="footer-social-links">
+          <ul>
+            <li><a href="https://twitter.com/alexjohnj/">Twitter</a></li>
+            <li><a href="https://feeds.uri.lv/alexjohnj/">RSS</a></li>
+          </ul>
+        </div>
+        <div id="footer-attributions">
+          <p>Built with <a href="https://github.com/mojombo/jekyll">Jekyll</a>.</p>
+        </div>
+      </div>
+    </footer>
+  <!-- GA Code, the optimised version from HTML5 Boilerplate-->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-29192170-1');ga('send','pageview');
+    </script>
+  </body>
 </html>
