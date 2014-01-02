@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Geography AS Notes
 ---
 
@@ -17,7 +17,8 @@ title: Geography AS Notes
 </div>
 
 <div id="project-header-links" markdown="1">
-## [Visit Geography AS Notes][geographyas-notes] or [Check out the Code on GitHub][geographyas-notes-github]
+	<h1><a href="http://geographyas.info">Visit Geography AS Notes</a> or <a href="https://github.com/alexjohnj/geographyas
+"> Check out the Code on GitHub</a></h1>
 </div>
 
 ---
@@ -37,8 +38,6 @@ Of the four topics covered by the website, they're around 95% complete according
 ## Is it Open Source?
 
 As per usual, yes. The website's source code is available on [GitHub][geographyas-notes-github], indeed, the website is hosted on GitHub. While nobody's done it yet, I'll happily accept any additional content that somebody writes and add it to the website[^2] while giving them full credit for what they wrote. 
-
----
 
 [geographyas-notes]: http://geographyas.info/
 [geographyas-notes-github]: https://github.com/alexjohnj/geographyas

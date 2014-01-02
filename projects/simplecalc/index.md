@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: SimpleCalc
 ---
 
@@ -19,7 +19,7 @@ title: SimpleCalc
 </div>
 
 <div id="project-header-links" markdown="1">
-## [View SimpleCalc on GitHub][simplecalc-github]
+	<h1><a href="https://github.com/alexjohnj/SimpleCalc"> View SimpleCalc on GitHub</a></h1>
 </div>
 
 ---

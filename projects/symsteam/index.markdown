@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: SymSteam
 version: Beta 2.1
 ---
@@ -12,7 +12,7 @@ version: Beta 2.1
 
 <div id="project-header-links" markdown="1">
 
-## [Download SymSteam {{ page.version }}][application-download-link], [View it on GitHub][github-project-page] or [Check out the Documentation][symsteam-documentation].
+	<h1><a href="http://application-downloads.s3.amazonaws.com/symsteam-beta-2.1.zip">Download SymSteam {{ page.version }}</a>, <a href="https://github.com/alexjohnj/symsteam">View it on GitHub</a> or <a href="documentation/">Check out the Documentation</a>.
 
 </div>
 
@@ -46,7 +46,5 @@ Please remember that SymSteam is in beta. While I've been using the application 
 [application-download-link]: http://application-downloads.s3.amazonaws.com/symsteam-beta-2.1.zip
 [symsteam-documentation]: documentation/
 [symsteam-changelog]: http://alexjohnj.github.com/symsteam/changelog.html
-
----
 
 [^1]: Requires OS 10.8 Mountain Lion

@@ -1,21 +1,21 @@
 ---
-layout: default
+layout: page
 title: Appcastr
 version: 0.1.1
 ---
 
 <div id="screenshot-carousel">
-        <div class="screenshot first"><div class="sprite-icons-appcastr-icon-256"></div></div>
-        <div class="screenshot">
-                <img src="images/appcastr-screenshot-1.png" />
-        </div>
-        <div class="screenshot">
-                <img src="images/appcastr-screenshot-2.png" />
-        </div>
+    <div class="screenshot first"><div class="sprite-icons-appcastr-icon-256"></div></div>
+	<div class="screenshot">
+	    <img src="images/appcastr-screenshot-1.png" />
+	</div>
+	<div class="screenshot">
+		<img src="images/appcastr-screenshot-2.png" />
+	</div>
 </div>
 
-<div id="project-header-links" markdown="1">
-## [Download Appcastr {{ page.version }}][application-download-link] or [View the Project on GitHub][github-project-page].
+<div id="project-header-links">
+	<h1> Download Appcastr <a href="https://github.com/downloads/alexjohnj/appcastr/Appcastr-0.1.1.zip">{{ page.version }}</a> or <a href="https://github.com/alexjohnj/appcastr"> View the Project on GitHub</a></h1>
 </div>
 
 ---
@@ -47,8 +47,6 @@ Yup, you can find the source code [on GitHub][github-project-page] and it's rele
 
 - [Changelog][changelog]
 - [GitHub Project Page][github-project-page]
-
----
 
 [^1]: Version 0.2 still isn't complete. It's got quite a few UI bugs and several features haven't been fully implemented.
 

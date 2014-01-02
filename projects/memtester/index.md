@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Memtester
 version: 1.0
 ---
@@ -18,7 +18,7 @@ version: 1.0
 </div>
 
 <div id="project-header-links" markdown="1">
-## [Download Memtester {{ page.version }}][application-download-link] or [View it on GitHub][github-project-page].
+	<h1><a href="https://github.com/alexjohnj/memtester-mac/downloads">Download Memtester {{ page.version }}</a> or <a href="https://github.com/alexjohnj/memtester-mac">View it on GitHub</a></h1>
 </div>
 
 ---
