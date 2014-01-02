@@ -23,6 +23,7 @@ rdiscount:
   extensions: 
   - footnotes
   - smart
+  - autolink
 
 jekyll-press:
     exclude: ['*.xml', '*.css']
