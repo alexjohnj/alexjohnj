@@ -10,7 +10,6 @@ url: http://www.alexj.me
 source:      .
 destination: ./_site
 plugins:     ./_plugins
-exclude:     [sass]
 
 paginate: 5
 future:      true
@@ -24,6 +23,3 @@ rdiscount:
   - footnotes
   - smart
   - autolink
-
-jekyll-press:
-    exclude: ['*.xml', '*.css']
