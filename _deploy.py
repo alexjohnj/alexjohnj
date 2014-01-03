@@ -25,15 +25,6 @@ def get_s3_bucket_name():
                 return line.strip("s3bucket:").strip() # Remove the s3bucket: part of the line and any white space
         exit("Error: No bucket was found in the site's _config.yml file")
         
-def compile_sass(input_file, output_file, minify=True):
-    command = "sass " + path_to_sass_file + ":" + sass_compile_path
-    if minify:
-        command = command + " --style compressed"
-    try:
-        check_call(command, shell=True)
-    except CalledProcessError:
-        print("Something went wrong compiling sass files.")
-        
 def generate_site():
     try:
         check_call(["jekyll", "build"], stdout=PIPE)
@@ -89,22 +80,13 @@ def deploy_to_s3_bucket(bucket, dry_run=False):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Deploy a Jekyll site to Amazon S3")
-    parser.add_argument('-s', '--no-sass', help="Don't compile Sass files", action='store_true')
-    parser.add_argument('-b', '--beautiful-sass', help="Don't minify Sass files", action='store_false')
     parser.add_argument('-n', '--dry-run', help="Perform a dry run when deploying to S3 (akin to running s3cmd with the --dry-run flag)", action='store_true')
     args = parser.parse_args()
-
-    path_to_sass_file = "assets/styles/sass/styles.scss" # Change to your path
-    sass_compile_path = "assets/styles/css/styles.css" # Change to your path
-
-    if args.no_sass == False:
-        print("Compiling Sass Files...")
-        compile_sass(path_to_sass_file, sass_compile_path, minify=args.beautiful_sass)
     
-    print("Running Jekyll...")
+    print("Generating Site")
     generate_site()
     
-    print("Gzipping File...")
+    print("Gzipping Files...")
     gzip_files()
     
     print("Getting Bucket Name...")
