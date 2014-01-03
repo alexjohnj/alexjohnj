@@ -12,8 +12,10 @@
     <meta name="author" content="{{ site.author }}">
 
     <!-- Groovy stylesheets -->
-    <link rel="stylesheet" href="/assets/styles/css/styles.css">
-
+    {% css_asset_tag global %}
+    - /_assets/styles/sass/styles.scss
+    {% endcss_asset_tag %}
+    
     <!-- Get the beautiful Lato & Source Code Pro fonts -->
     <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,300|Source+Code+Pro' rel='stylesheet' type='text/css'>
 
