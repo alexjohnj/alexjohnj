@@ -88,6 +88,12 @@ div#footer-social-links{
 
 // Post Layout
 
+header#post-header {
+  h1, h2 {
+    margin: 0;
+  }
+}
+
 footer#post-footer {
   border-top: 1px $underline-color dashed;
   width: 100%;
@@ -120,23 +126,6 @@ div#next-post {
   #old-posts {
     width: 50%;
     float: left;
-  }
-}
-
-// Homepage
-
-article.article-excerpt {
-  h1 {
-    font-size: 1.5em;
-    margin: 0;
-  }
-  h2  {
-    margin: 0;
-    & time {
-      font-size: 0.67em;
-      color: #878787;
-      font-style: italic;
-    }
   }
 }
 

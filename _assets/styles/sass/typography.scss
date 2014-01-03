@@ -1,11 +1,13 @@
 @import "variables";
 
 body {
-  font-family: "Lato", "Georgia", serif;
+  font-family: "Lato", "Helvetica Neue",  "Helvetica", sans-serif;
   font-size: 17px;
   text-rendering: optimizeLegibility;
   line-height: 1.6;
 }
+
+// Site typography
 
 header#site-header {
   h1 {
@@ -20,11 +22,10 @@ header#site-header {
   }
 }
 
+// Article typography
+
 header#post-header {
-  border-bottom: 3px solid #cc7722;
-  h1, h2 {
-    margin: 0;
-  }
+  border-bottom: 3px solid #cc772;
 
   h2 date {
     font-size: 0.68em;
@@ -32,6 +33,24 @@ header#post-header {
     font-style:italic;
   }
 }
+
+// Home page typography
+
+article.article-excerpt {
+  h1 {
+    margin: 0;
+  }
+  h2  {
+    margin: 0;
+    & time {
+      font-size: 0.67em;
+      color: #878787;
+      font-style: italic;
+    }
+  }
+}
+
+// General Elements
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
@@ -54,4 +73,12 @@ code {
 
 blockquote {
 	font-style: italic;
+}
+
+.footnotes {
+  font-size: .82em;
+  
+  li {
+    margin: 1em 0px;
+  } 
 }
