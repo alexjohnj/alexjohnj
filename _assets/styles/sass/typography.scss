@@ -50,6 +50,25 @@ article.article-excerpt {
   }
 }
 
+// Archive Page
+
+section#page-archive {
+  ul {
+    list-style: none;
+  }
+
+  li {
+    font-size: 1.4em;
+    font-weight: 300;
+
+    time {
+      font-size: 0.67em;;
+      color: #878787;
+      font-style: italic;
+    }
+  }
+}
+
 // General Elements
 
 h1, h2, h3, h4, h5, h6 {

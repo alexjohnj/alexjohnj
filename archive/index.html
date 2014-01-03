@@ -2,15 +2,18 @@
 layout: default
 ---
 
-<h1>Archive</h1>
+<section id="page-archive">
+	<h1>Archive</h1>
 
-{% for post in site.posts %}
-{% capture current_date %}{{ post.date | date: "%m-%Y" }}{% endcapture %}
-{% if current_date != old_date %}
-</ul>
-<h2>{{ post.date | date: "%B %Y" }}</h2>
-<ul>
-{% endif %}
-<li><a href="{{ post.url }}">{{ post.title }}</a><small> {{ post.date | date_to_string }}</small></li>
-{% capture old_date %}{{ post.date | date: "%m-%Y" }}{% endcapture %}
-{% endfor %}
+	{% for post in site.posts %}
+	{% capture current_date %}{{ post.date | date: "%m-%Y" }}{% endcapture %}
+	{% if current_date != old_date %}
+	</ul>
+	<h2>{{ post.date | date: "%B %Y" }}</h2>
+	<ul>
+	{% endif %}
+	<li><a href="{{ post.url }}">{{ post.title }}</a><time datetime="{{ page.date | date:%Y-%m-%dT%H:%M:%S%Z }}" pubdate> {{ post.date | date_to_string }}</time></li>
+	{% capture old_date %}{{ post.date | date: "%m-%Y" }}{% endcapture %}
+	{% endfor %}
+
+</section>
