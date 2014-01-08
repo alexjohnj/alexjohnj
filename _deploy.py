@@ -27,7 +27,7 @@ def get_s3_bucket_name():
         
 def generate_site():
     try:
-        check_call(["jekyll", "build"], stdout=PIPE)
+        check_call(["bundle", "exec", "jekyll", "build"], stdout=PIPE)
     except CalledProcessError:
         exit("Something went wrong generating the site with Jekyll.")
         
