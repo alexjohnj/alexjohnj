@@ -22,7 +22,7 @@ The first objective I worked on was improving the HTML semantics. This didn't ta
 
 Speaking of IE, I raised my minimum target from IE 7 to 8[^2]. I was surprised by how painless it was developing for IE 8. All I needed to do was drop in [html5shiv.js][html5shiv-link] and there were no further problems. I've actually had more problems with IE 9/10/11 and their funky way of resizing `<img>` elements with SVG content (which I still haven't fixed).
 
-[html5-shiv]: jksd.cm
+[html5shiv-link]: https://code.google.com/p/html5shiv/
 
 With the site's structure modernised, I started working on how the site looks. I opted for a dark colour scheme with splashes of orange. I think it looks good and it's much better than the old design. Article headers receive more emphasis than they used to while the site's header is less dominant to focus on the content. The new design is more fluid than the old one, relying less on media queries and making extensive use of % dimensions. This kept the SCSS clean.
 
