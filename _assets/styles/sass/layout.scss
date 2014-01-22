@@ -94,6 +94,10 @@ header#post-header {
   }
 }
 
+article {
+  position: relative;
+}
+
 footer#post-footer {
   border-top: 1px $underline-color dashed;
   width: 100%;
