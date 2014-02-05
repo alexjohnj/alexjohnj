@@ -8,12 +8,14 @@ layout: default
 	{% for post in site.posts %}
 	{% capture current_date %}{{ post.date | date: "%m-%Y" }}{% endcapture %}
 	{% if current_date != old_date %}
-	</ul>
+	{% if forloop.first == false %}
+		</ul>
+	{% endif %}
 	<h2>{{ post.date | date: "%B %Y" }}</h2>
 	<ul>
 	{% endif %}
-	<li><a href="{{ post.url }}">{{ post.title }}</a><time datetime="{{ page.date | date:%Y-%m-%dT%H:%M:%S%Z }}" pubdate> {{ post.date | date_to_string }}</time></li>
+	<li><a href="{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date:"%Y-%m-%dT%H:%M:%S%z" }}"> {{ post.date | date_to_string }}</time></li>
 	{% capture old_date %}{{ post.date | date: "%m-%Y" }}{% endcapture %}
 	{% endfor %}
-
+	</ul>
 </section>
