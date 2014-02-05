@@ -1,11 +1,10 @@
 title:       Alex J
 author:      Alex Jackson
-s3bucket:    s3://www.alexj.me
 
 safe:        false
 port: 4000
 baseurl:    /
-url: http://www.alexj.me 
+url: http://alexj.org 
 
 source:      .
 destination: ./_site
