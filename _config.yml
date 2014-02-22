@@ -22,3 +22,7 @@ rdiscount:
   - footnotes
   - smart
   - autolink
+
+assets:
+    css_compressor: sass
+    gzip: false
