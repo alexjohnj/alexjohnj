@@ -2,3 +2,4 @@ User-agent: *
 Disallow: /archive/
 Disallow: /assets/
 Sitemap: http://alexj.org/sitemap.xml
+Host: alexj.org
