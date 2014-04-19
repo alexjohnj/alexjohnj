@@ -80,6 +80,26 @@ div#footer-social-links{
   }
 }
 
+// Footer media queries
+
+@media handheld, only screen and (max-width: 320px) {
+  body {
+    margin: 0 0 ($footer-height*1.50) 0;
+  }
+  footer#site-footer {
+    height: $footer-height * 1.50;
+  }
+
+  div#footer-social-links {
+    float: none;
+    text-align: left;
+  }
+
+  div#footer-attributions {
+    float: none;
+  }
+}
+
 .post-link {
   h2 {
     margin: 0;
