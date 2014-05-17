@@ -2,12 +2,68 @@
 
 body {
   font-family: "Lato", "Helvetica Neue",  "Helvetica", sans-serif;
-  font-size: 17px;
+  font-size: 100%;
   text-rendering: optimizeLegibility;
-  line-height: 1.6;
+  line-height: 1.5;
+  font-size-adjust: 0.5;
 }
 
 // Site typography
+// The typographic scale used here is a slightly modified version of this:
+// http://typecast.com/blog/a-more-modern-scale-for-web-typography
+h1 {
+  font-size: 2em;
+  line-height: 1.5;
+
+  @media (min-width: 43.75em) {
+    font-size: 2.5em;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 56.25em) {
+    font-size: 3em;
+    line-height: 1.5;
+  }
+}
+
+h2 {
+  font-size: 1.625em;
+  line-height: 1.15384615; // maths
+
+  @media (min-width: 43.75em) {
+    font-size: 2em;
+    line-height: 1.25;
+  }
+
+  @media (min-width: 56.25em) {
+    font-size: 2.25em;
+    line-height: 1.25;
+  }
+}
+
+h3 {
+  font-size: 1.375em;
+  line-height: 1.13636364;
+
+  @media (min-width: 43.75em) {
+    font-size: 1.5em;
+    line-height: 1.25;
+  }
+  
+  @media (min-width: 56.25em) {
+    font-size: 1.75em;
+    line-height: 1.25;
+  }
+}
+
+h4 {
+  font-size: 1.125em;
+  line-height: 1.11111111;
+
+  @media (min-width: 43.75em) {
+    line-height: 1.22222222;
+  }
+}
 
 header#site-header {
   h1 {
@@ -35,7 +91,6 @@ header#post-header {
 }
 
 // Home page typography
-
 article.article-excerpt {
   h1 {
     margin: 0;
@@ -51,7 +106,6 @@ article.article-excerpt {
 }
 
 // Archive Page
-
 section#page-archive {
   ul {
     list-style: none;
