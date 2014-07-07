@@ -3,7 +3,7 @@ author:      Alex Jackson
 
 safe:        false
 port: 4000
-baseurl:    /
+baseurl:    ""
 url: http://alexj.org 
 
 source:      .
