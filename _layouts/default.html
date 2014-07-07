@@ -19,10 +19,12 @@
 
     <!-- A link to the RSS feed -->
     <link href="http://feeds.uri.lv/alexjohnj" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">    
   </head>
   <body>
     <header id="site-header" class="content-margin-wrap">
-      <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+      <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
       <nav id="site-navigation">
         <ul>
           <li><a href="/projects/">Projects</a></li>
