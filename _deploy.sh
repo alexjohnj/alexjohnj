@@ -20,7 +20,7 @@ switch (echo $argv[1])
     build_site
   case "remote"
     build_site
-    rsync -avz -e 'ssh -p 49876' --delete-after _site/ alex@95.85.60.211:/var/www/geographyas.info/_site/
+    rsync -avz -e 'ssh -p 49876' --delete-after _site/ alex@95.85.60.211:/var/www/alexj.org/_site/
   case '*'
     printf "\033[31mUnknown argument. Use either `local` or `remote`.\033[0m\n"
 end
