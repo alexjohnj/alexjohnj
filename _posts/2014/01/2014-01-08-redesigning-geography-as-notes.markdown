@@ -6,9 +6,9 @@ date: 2014-01-08 21:45
 
 Just under a month ago, I [wrote about][project-changes] which projects I'd be focusing my time on in the coming year. The main takeaway from the post was that [Geography AS Notes][gas-project-page] was going to get some love. Well, here's my first packet of love[^1], a redesign. 
 
-[project-changes]: {{ site.baseurl }}12/project-updates/
+[project-changes]: {{ site.baseurl }}/12/project-updates/
 
-[gas-project-page]: {{ site.baseurl }}projects/geographyas/
+[gas-project-page]: {{ site.baseurl }}/projects/geographyas/
 
 It's been nearly two years since I last refreshed _Geography AS Notes'_ design and in that time its grown boring and stale. The website's design has never been eye catching---one frequent piece of feedback I get is that the site is boring to look at--- but for the past two years I've taken the function over form approach. This needed to change. 
 
@@ -48,15 +48,15 @@ Ultimately, I offloaded site search to a third party service. I tried [Tapir][ta
 
 The final design ended up looking like this:
 
-<img class="shadow" src="{{ site.baseurl }}post-images/2014/01/geography-as-new.png" alt="Screenshot of the new design" width="100%"/>
+<img class="shadow" src="{{ site.baseurl }}/post-images/2014/01/geography-as-new.png" alt="Screenshot of the new design" width="100%"/>
 
-<img class="shadow" src="{{ site.baseurl }}post-images/2014/01/geography-as-new-article.png" alt="Screenshot of an article with the new design." width="100%" />
+<img class="shadow" src="{{ site.baseurl }}/post-images/2014/01/geography-as-new-article.png" alt="Screenshot of an article with the new design." width="100%" />
 
 For reference, the old design:
 
-<img class="shadow" src="{{ site.baseurl }}post-images/2014/01/geography-as-old.png" alt="Screenshot of the old design" width="100%"/>
+<img class="shadow" src="{{ site.baseurl }}/post-images/2014/01/geography-as-old.png" alt="Screenshot of the old design" width="100%"/>
 
-<img class="shadow" src="{{ site.baseurl }}post-images/2014/01/geography-as-old-article.png" alt="Screenshot of an article with the old design." width="100%" />
+<img class="shadow" src="{{ site.baseurl }}/post-images/2014/01/geography-as-old-article.png" alt="Screenshot of an article with the old design." width="100%" />
 
 I made a few smaller changes while working on the redesign. All the topics now have their own page which can be linked to. In addition, I've made it more obvious that people can edit existing articles and create new ones. All articles have an edit link in their footer and I've [written about][contributing-guide] other ways people can contribute.
 
