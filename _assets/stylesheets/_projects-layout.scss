@@ -18,8 +18,8 @@
   }
 
   img {
-     display: block;
-     width: 100%;
+      display: block;
+      width: 100%;
   }
 
   @media handheld, only screen and (min-width: 1000px) {
@@ -41,10 +41,6 @@
      margin-right: 20px;
      height: 300px;
      display: inline-block;
-     
-     img {
-        height: 100%;
-     }
   }
 }
 

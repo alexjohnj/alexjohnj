@@ -6,13 +6,13 @@ title: Geography AS Notes
 <div id="screenshot-carousel">
 	<div class="screenshot first"><div class="sprite-icons-geographyas-icon-256"></div></div>
 	<div class="screenshot">
-		<img src="images/geographyas-notes-screenshot-1.png" />
+		<img width="503px" height="300px" src="images/geographyas-notes-screenshot-1.png" />
 	</div>
 	<div class="screenshot">
-		<img src="images/geographyas-notes-screenshot-2.png" />
+		<img width="503px" height="300px" src="images/geographyas-notes-screenshot-2.png" />
 	</div>
 	<div class="screenshot">
-		<img src="images/geographyas-notes-screenshot-3.png" />
+		<img width="503px" height="300px" src="images/geographyas-notes-screenshot-3.png" />
 	</div>
 </div>
 
