@@ -1,2 +1,5 @@
 baseurl = "http://alexj.org"
 title = "Alex J"
+
+[permalinks]
+post = "/:month/:filename/"
