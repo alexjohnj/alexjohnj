@@ -1,8 +1,8 @@
 # SASS
 .sass-cache
 
-# Jekyll
-_site/
+# Hugo
+public/
 
 # OS X
 .DS_Store
