@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{{ template "partials/head.html" . }}
+<body>
+  {{ template "partials/header.html" . }}
+  <div id="content" class="content-margin-wrap">
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+    {{ .Content }}
+  </div>
+  {{ template "partials/footer.html" .}}
+</body>
+</html>

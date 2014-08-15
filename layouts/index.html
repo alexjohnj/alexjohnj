@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{{ template "partials/head.html" . }}
+<body>
+  {{ template "partials/header.html" . }}
+  <div id="content" class="content-margin-wrap">
+    {{ range .Data.Pages }}
+    {{ if eq .Type "post" }}
+    <article class="article-excerpt">
+      <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+      <h2>{{ .Date.Format "Jan 2, 2006" }}</h2>
+      {{ .Summary }}
+      <p><a href="{{ .Permalink }}">Read More</a></p>
+    </article>
+    {{ end }}
+    {{ end }}
+  </div>
+  {{ template "partials/footer.html" . }}
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{{ template "partials/head.html" . }}
+<body>
+  {{ template "partials/header.html" . }}
+  <div id="content" class="content-margin-wrap">
+    <article>
+      <header id="post-header">
+        <h1>{{ .Title }}</h1>
+        <h2>{{ .Date.Format "Jan 2, 2006" }}</h2>
+      </header>
+
+      {{ .Content }}
+
+      <footer id="post-footer">
+        <h3>More:</h3>
+        {{ if .Prev }}
+        <div id="previous-post">
+          <p><a href="{{ .Prev.Permalink }}">&laquo; {{ .Prev.Title }}</a></p>
+        </div>
+        {{ end }}
+        {{ if .Next }}
+        <div id="next-post">
+          <p><a href="{{ .Next.Permalink }}">{{ .Next.Title }} &raquo;</a></p>
+        </div>
+        {{ end }}
+      </footer>
+    </article>
+  </div>
+  {{ template "partials/footer.html" . }}
+</body>
+</html>
