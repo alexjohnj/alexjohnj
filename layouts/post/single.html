@@ -13,14 +13,14 @@
 
       <footer id="post-footer">
         <h3>More:</h3>
-        {{ if .Prev }}
+        {{ if .Next }}
         <div id="previous-post">
-          <p><a href="{{ .Prev.Permalink }}">&laquo; {{ .Prev.Title }}</a></p>
+          <p><a href="{{ .Next.Permalink }}">&laquo; {{ .Next.Title }}</a></p>
         </div>
         {{ end }}
-        {{ if .Next }}
+        {{ if .Prev }}
         <div id="next-post">
-          <p><a href="{{ .Next.Permalink }}">{{ .Next.Title }} &raquo;</a></p>
+          <p><a href="{{ .Prev.Permalink }}">{{ .Prev.Title }} &raquo;</a></p>
         </div>
         {{ end }}
       </footer>
