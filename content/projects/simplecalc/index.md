@@ -8,13 +8,13 @@ title: SimpleCalc
 		<div class="sprite-icons-simplecalc-icon-256"></div>
 	</div>
 	<div class="screenshot">
-		<img height="300px" width="328px" src="images/simplecalc-screenshot-1.png" />
+		<img height="300px" width="328px" src="/images/projects/simplecalc/simplecalc-screenshot-1.png" />
 	</div>
 	<div class="screenshot">
-		<img height="300px" width="328px" src="images/simplecalc-screenshot-2.png" />
+		<img height="300px" width="328px" src="/images/projects/simplecalc/simplecalc-screenshot-2.png" />
 	</div>
 	<div class="screenshot">
-		<img height="300px" width="328px" src="images/simplecalc-screenshot-3.png" />
+		<img height="300px" width="328px" src="/images/projects/simplecalc/simplecalc-screenshot-3.png" />
 	</div>
 </div>
 

@@ -7,13 +7,13 @@ version: 1.0
 <div id="screenshot-carousel">
 	<div class="screenshot first"><div class="sprite-icons-memtester-icon-256"></div></div>
 	<div class="screenshot">
-		<img height="300px" width="508px" src="images/memtester-screenshot-1.png" />
+		<img height="300px" width="508px" src="/images/projects/memtester/memtester-screenshot-1.png" />
 	</div>
 	<div class="screenshot">
-		<img height="300px" width="508px" src="images/memtester-screenshot-2.png" />
+		<img height="300px" width="508px" src="/images/projects/memtester/memtester-screenshot-2.png" />
 	</div>
 	<div class="screenshot">
-		<img height="300px" width="508px" src="images/memtester-screenshot-3.png" />
+		<img height="300px" width="508px" src="/images/projects/memtester/memtester-screenshot-3.png" />
 	</div>
 </div>
 

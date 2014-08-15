@@ -7,10 +7,10 @@ version: 0.1.1
 <div id="screenshot-carousel">
     <div class="screenshot first"><div class="sprite-icons-appcastr-icon-256"></div></div>
 	<div class="screenshot">
-	    <img height="300px" width="457px" src="images/appcastr-screenshot-1.png" />
+	    <img height="300px" width="457px" src="/images/projects/appcastr/appcastr-screenshot-1.png" />
 	</div>
 	<div class="screenshot">
-		<img height="300px" width="343px" src="images/appcastr-screenshot-2.png" />
+		<img height="300px" width="343px" src="/images/projects/appcastr/appcastr-screenshot-2.png" />
 	</div>
 </div>
 
