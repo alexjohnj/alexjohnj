@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Fixing Slow Wireless Speeds in Ubuntu 12.10</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Alex Jackson">
+
+
+  
+  <link href="/css/styles.css" rel="stylesheet" type="text/css">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,300|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+  
+  <link href="http://feeds.uri.lv/alexjohnj" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
+
+  
+  <meta name="google-site-verification" content="wfHLjqY4iUR4MRo2m6nyIRXRXSv0j-vFn8ZjLbYVqao" />
+</head>
+
+<body>
+  <header id="site-header" class="content-margin-wrap">
+  <h1><a href="/">Alex J</a></h1>
+  <nav id="site-navigation">
+    <ul>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/archive/">Archive</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <div id="content" class="content-margin-wrap">
+    <article>
+      <header id="post-header">
+        <h1>Fixing Slow Wireless Speeds in Ubuntu 12.10</h1>
+        <h2>Dec 31, 2012</h2>
+      </header>
+
+      
+
+<p>After building a new computer recently I went ahead and installed Ubuntu 12.10 on it alongside Windows. Since the computer doesn&rsquo;t have a wireless card and isn&rsquo;t anywhere near a router, I bought a cheap Wireless USB adapter so that I could connect to my wireless network. I actually bought the adapter several years ago and used it on a computer running Ubuntu 10.04 that was in a similar situation. The adapter I bought was a <a href="http://www.amazon.co.uk/gp/product/B001HO3ZTQ/ref=as_li_ss_tl?ie=UTF8&amp;camp=1634&amp;creative=19450&amp;creativeASIN=B001HO3ZTQ&amp;linkCode=as2&amp;tag=simpl06-21">Belkin F5D8053</a>, the v6 revision. I bought this adapter because I&rsquo;d been told that it had good compatibility with Linux and I remember it working perfectly well in Ubuntu 10.04. I was surprised to find then that when I used the adapter with my new installation of Ubuntu 12.10 it was very unreliable. The adapter worked but after arround five minutes of usage, the connection speed would drop substantially and anything, be it on the internet or my local network, was incredibly slow.</p>
+
+<p>I set about trying to figure out what was up. The first thing I thought was that maybe the driver used for the adapter had been messed up somehow between Ubuntu 10.04 and 12.10. Running <code>lsusb</code> revealed that the adapter used a RTL8191SU chipset by Realtek so I went to Realtek&rsquo;s website and downloaded the source to compile the driver for the adapter. Turns out, something changed in version 3.4 of the Linux Kernel that made compiling these drivers impossible without some minor modifications. Version 3.5 of the Kernel broke even those modifications so compiling new drivers wasn&rsquo;t an option any more.</p>
+
+<p>Some more Googling produced some interesting information. Apparently, there&rsquo;s a <a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/621265">bug</a> in network-manager, the package used by Ubuntu to connect to networks, that results in the connection speed slowing down after a few minutes of use. The solution, install an alternate to network-manager and disable network-manager. I went ahead and installed <a href="https://launchpad.net/wicd">wicd</a> and disabled network-manager and so far, in the past 36 hours of use (around 12 hours continuous use over 3 days), I&rsquo;ve had no drop in connection speed. It would seem that the drop in connection speed is due to network-manager which means that people having similar problems with connection speed could find that replacing network-manager will solve their problems.</p>
+
+<h2 id="toc_0">The Fix</h2>
+
+<p>The fix is quite simple, install wicd and disable network-manager. The steps for doing this are outlined below:</p>
+
+<p>First, install the wicd package:</p>
+
+<p>{% highlight bash %}
+sudo apt-get intall wicd
+{% endhighlight %}</p>
+
+<p>Next, disable network-manager and stop it from starting on startup too:</p>
+
+<p>{% highlight bash %}
+sudo stop network-manager
+sudo mv /etc/init/network-manager.conf /etc/init/network-manager.conf.off
+{% endhighlight %}</p>
+
+<p>Now start the wicd daemon and bring up the GUI tool so you can connect to your wireless network:</p>
+
+<p>{% highlight bash %}
+sudo /etc/init.d/wicd start
+wicd-client
+{% endhighlight %}</p>
+
+<p>And that&rsquo;s it, assuming that network-manager was your problem, you should now have a far more stable wireless connection and wicd should start on login too. If you want to get wicd in Unity&rsquo;s system tray, you&rsquo;ll need to run the following command:</p>
+
+<p>{% highlight bash %}
+gsettings set com.canonical.Unity.Panel systray-whitelist &ldquo;[&lsquo;wicd&rsquo;]&rdquo;
+{% endhighlight %}</p>
+
+<p>Then logout and log back in, you should now have a (fairly ugly) tray icon for wicd. There&rsquo;s replacement icons available, just Google for them.</p>
+
+<p>Once you&rsquo;re certain that wicd has solved your problem and you don&rsquo;t need network-manager anymore, you can go ahead and remove nework-manager. First, revert the changes made to network-manager&rsquo;s upstart job and then remove the package:</p>
+
+<p>{% highlight bash %}
+sudo mv /etc/init/network-manager.conf.off /etc/init/network-manager.conf
+sudo apt-get remove &ndash;purge network-manager
+{% endhighlight %}</p>
+
+<p>That solved the problem for me. If it does for you, be sure to file a bug report so that this issue hopefully gets fixed in network-manager.</p>
+
+
+      <footer id="post-footer">
+        <h3>More:</h3>
+        
+        <div id="previous-post">
+          <p><a href="http://localhost:1313/post/2012/12/2012-12-31-symsteam-beta-2-released">&laquo; SymSteam Beta 2 Released</a></p>
+        </div>
+        
+        
+        <div id="next-post">
+          <p><a href="http://localhost:1313/post/2012/06/2012-06-13-recent-projects">Recent Projects &raquo;</a></p>
+        </div>
+        
+      </footer>
+    </article>
+  </div>
+  <footer id="site-footer">
+  <div class="content-margin-wrap">
+    <div id="footer-social-links">
+        <ul>
+          <li><a href="https://github.com/alexjohnj">GitHub</a></li>
+          <li><a href="https://twitter.com/alexjohnj/">Twitter</a></li>
+          <li><a href="http://feedpress.me/alexjohnj/">RSS</a></li>        
+        </ul>
+    </div>
+    <div id="footer-attributions">
+      <p>Built with <a href="https://github.com/mojombo/jekyll">Jekyll</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(e,t,n,r,i,s,o){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;s=t.createElement(n),o=t.getElementsByTagName(n)[0];s.async=1;s.src=r;o.parentNode.insertBefore(s,o)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-29192170-1","alexj.org");ga("send","pageview")
+</script>
+
+<script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

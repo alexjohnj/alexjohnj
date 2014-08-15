@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SymSteam - Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Alex Jackson">
+
+
+  
+  <link href="/css/styles.css" rel="stylesheet" type="text/css">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,300|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+  
+  <link href="http://feeds.uri.lv/alexjohnj" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
+
+  
+  <meta name="google-site-verification" content="wfHLjqY4iUR4MRo2m6nyIRXRXSv0j-vFn8ZjLbYVqao" />
+</head>
+
+<body>
+  <header id="site-header" class="content-margin-wrap">
+  <h1><a href="/">Alex J</a></h1>
+  <nav id="site-navigation">
+    <ul>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/archive/">Archive</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <div id="content" class="content-margin-wrap">
+    <header>
+      <h1>SymSteam - Documentation</h1>
+    </header>
+    
+
+<h1 id="toc_0">SymSteam Documentation</h1>
+
+<h2 id="toc_1">Setup</h2>
+
+<h3 id="toc_2">Preparing Your Steam Folder</h3>
+
+<ol>
+<li>Connect an external hard drive to your computer that is formatted as a <a href="#verifying-drive-format">HFS+ drive</a>.</li>
+<li>Open a new Finder window and press &#8679;&#8984;G. In the window that appears, enter the following path: <code>~/Library/Application Support/Steam/</code>.</li>
+<li>In the Steam folder, locate a folder called <code>SteamApps</code>. Copy this folder to your external hard drive. This could take a while depending on how many games you have. Go grab a coffee while you&rsquo;re waiting.</li>
+</ol>
+
+<h3 id="toc_3">Configuring SymSteam</h3>
+
+<ol>
+<li>Launch SymSteam. It will prompt you to locate the SteamApps folder on your external hard drive. This is the folder you copied in the last step of “Preparing Your Steam Folder”. Click choose and locate the folder on your external hard drive with all of your games in it. Click next.</li>
+<li>If everything went successfully, SymSteam will ask if you want it to start on login. You&rsquo;ll probably want to select yes.</li>
+<li>If something went wrong, have a look at <a href="#troubleshooting">troubleshooting</a>.</li>
+</ol>
+
+<h2 id="toc_4">Preferences</h2>
+
+<h3 id="toc_5">Accessing SymSteam&rsquo;s Preferences Window {#accessing-preferences-window}</h3>
+
+<p>There are two ways to access SymSteam&rsquo;s preferences window depending on whether or not SymSteam is running. If SymSteam is running:</p>
+
+<ol>
+<li>Find the SymSteam application in your Applications folder. Double click on the application to show the preferences window.</li>
+</ol>
+
+<p>If SymSteam isn&rsquo;t running:</p>
+
+<ol>
+<li>Launch SymSteam as normal while holding down the &#8997; key.</li>
+</ol>
+
+<h3 id="toc_6">Enabling/Disabling Notifications</h3>
+
+<p>If you want to enable/disable the notifications shown by SymSteam when certain events occur:</p>
+
+<ol>
+<li>Open SymSteam&rsquo;s preferences window.</li>
+<li>Under the “General” tab of the preferences window you can toggle notifications by checking/unchecking the “Display Notifications Box”.</li>
+</ol>
+
+<h2 id="toc_7">Troubleshooting</h2>
+
+<h3 id="toc_8">Setup Fails Because the Selected Drive Lacks a UUID</h3>
+
+<p>This is likely because the drive isn&rsquo;t formatted as a HFS+ drive. SymSteam uses the UUID (Universally Unique Identifier) of the drive to distinguish it from drives that don&rsquo;t have your Steam folder on it. HFS+ assigns a UUID to your drive while some other filesystems do not.</p>
+
+<p>To format your drive to HFS+, see <a href="#formatting-drive">Formatting a Drive to HFS+</a>.</p>
+
+<h3 id="toc_9">SymSteam is Telling me to Check the Console</h3>
+
+<p>If something&rsquo;s gone wrong, SymSteam will output a fairly detailed message to the Console explaining what it thinks has gone wrong. This message may include a potential fix to the issue so checking the Console could help you fix a problem you may be having.</p>
+
+<p>To check the Console:</p>
+
+<ol>
+<li>Launch Console.app (Applications &gt; Utilities &gt; Console).</li>
+<li>In the filter field in the top right of the Console window, search for “SymSteam”.</li>
+<li>All of the messages logged by SymSteam will be displayed. Look for the most recent one to see what the problem is and what the fix might be.</li>
+</ol>
+
+<h2 id="toc_10">Resetting SymSteam</h2>
+
+<h3 id="toc_11">Performing a Partial Reset {#symsteam-partial-reset}</h3>
+
+<p>A partial reset will cause SymSteam to forget which drive your Steam games are on and will prompt you to rerun setup when you next launch SymSteam. If you are having issues with SymSteam, a partial reset is a good, nondestructive way to try and fix them.</p>
+
+<p>A partial reset won&rsquo;t delete any of the games you have stored on both your external hard drive or your internal hard drive. SymSteam doesn&rsquo;t touch your games at any stage when performing a partial reset.</p>
+
+<p>To perform a partial reset:</p>
+
+<ol>
+<li>Access SymSteam&rsquo;s <a href="#accessing-preferences-window">preferences window</a>.</li>
+<li>Click the about button in the preferences window.</li>
+<li>While holding down the &#8997; key, click on the quit button.</li>
+<li>SymSteam will ask if you want to reset SymSteam. Click OK.</li>
+</ol>
+
+<p>Now, when you next launch SymSteam setup will be rerun.</p>
+
+<h3 id="toc_12">Performing a Full Reset</h3>
+
+<p>A full reset combines a partial reset and the deletion of some files. A full reset will require you to rerun setup again. A full reset shouldn&rsquo;t delete any of your Steam games unless you delete the wrong files so exercise some care. To perform a full reset:</p>
+
+<ol>
+<li>Perform a <a href="#symsteam-partial-reset">partial reset</a> of SymSteam and ensure that SymSteam has been quit.</li>
+<li>Disconnect your external hard drive.</li>
+<li>Open a Finder window and press &#8679;&#8984;G. In the window that appears, enter the following path: <code>~/Library/Application Support/Steam/</code> and press go.</li>
+<li>Identify the folders/files in the Steam folder called <code>SteamApps</code> &amp; <code>SteamAppsSymb</code>.</li>
+<li>Right click on <code>SteamApps</code> and click “Get Info”. In the window that comes up, if the “Kind” of the item is an alias, delete the file. If not, leave the file.</li>
+<li>Right click on the <code>SteamAppsSymb</code> folder/file and click “Get Info”. If the “Kind” of the item is an alias then delete it, if not, rename the folder to <code>SteamApps</code> (this assumes that the file in the previous step called <code>SteamApps</code> was an alias and has been deleted).</li>
+</ol>
+
+<p>If you can&rsquo;t find any file/folder called <code>SteamApps</code> but do find a folder called <code>SteamAppsLoc</code>, rename <code>SteamAppsLoc</code> to <code>SteamApps</code>.</p>
+
+<h2 id="toc_13">Appendix</h2>
+
+<h3 id="toc_14">Verifying a Drive is HFS+ Formatted {#verifying-drive-format}</h3>
+
+<ol>
+<li>Open Disk Utility (Applications &gt; Utilities &gt; Disk Utility) and connect your external hard drive.</li>
+<li>In the left hand pane of the Disk Utility window, select the partition of your external hard drive that you wish to store your games on.</li>
+<li>At the bottom of the Disk Utility window, look to see what the format of the partition is. If it says &ldquo;Mac OS Extended (Journaled)&rdquo; then you&rsquo;re all good to go. If not, you&rsquo;ll need to <a href="#formatting-drive">reformat the drive</a>.</li>
+</ol>
+
+<h3 id="toc_15">Formatting a Drive to HFS+ {#formatting-drive}</h3>
+
+<p><strong>Warning. Formatting a drive will delete everything on the drive. Make sure you have a backup.</strong></p>
+
+<ol>
+<li>Open Disk Utility (Applications &gt; Utilities &gt; Disk Utility) and connect your external hard drive.</li>
+<li>In the left hand pane of the Disk Utility window, select your external hard drive.</li>
+<li>In the right hand pane of the Disk Utility window, select the erase tab.</li>
+<li>Set the format of the disk to “Mac OS Extended (Journaled)”. Name the disk whatever you wish.</li>
+<li>Click Erase. <strong>Read the alert that appears carefully and verify that the information shown is correct.</strong> If everything is correct, click OK.</li>
+<li>Sit back and let Disk Utility work its magic. It should only take a minute or two.</li>
+</ol>
+
+<h3 id="toc_16">SymSteam Terminology</h3>
+
+<p>There&rsquo;s a few special names I give different folders in SymSteam. This list might come in handy.</p>
+
+<ul>
+<li><code>SteamApps</code> folder. This is the folder that all your Steam games are stored in. Steam looks for this folder and loads games from it.</li>
+<li><code>SteamAppsSymb</code>. This is a symbolic link to a folder called <code>SteamApps</code> on your external hard drive. In English: When Steam looks for a <code>SteamApps</code> folder SymSteam points it to the <code>SteamAppsSymb</code> link which then points to the <code>SteamApps</code> folder on your external hard drive.</li>
+<li><code>SteamAppsLoc</code>. This is the folder on your computer&rsquo;s internal hard drive that houses your games. When your external hard drive isn&rsquo;t plugged in, this folder won&rsquo;t exist and will instead be called <code>SteamApps</code>. As soon as you plug your external hard drive in however, <code>SteamApps</code> gets renamed to <code>SteamAppsLoc</code> so that Steam will ignore this folder and instead pay attention to the folder on your external hard drive.</li>
+</ul>
+
+  </div>
+  <footer id="site-footer">
+  <div class="content-margin-wrap">
+    <div id="footer-social-links">
+        <ul>
+          <li><a href="https://github.com/alexjohnj">GitHub</a></li>
+          <li><a href="https://twitter.com/alexjohnj/">Twitter</a></li>
+          <li><a href="http://feedpress.me/alexjohnj/">RSS</a></li>        
+        </ul>
+    </div>
+    <div id="footer-attributions">
+      <p>Built with <a href="https://github.com/mojombo/jekyll">Jekyll</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(e,t,n,r,i,s,o){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;s=t.createElement(n),o=t.getElementsByTagName(n)[0];s.async=1;s.src=r;o.parentNode.insertBefore(s,o)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-29192170-1","alexj.org");ga("send","pageview")
+</script>
+
+<script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

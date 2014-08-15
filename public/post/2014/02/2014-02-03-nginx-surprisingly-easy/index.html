@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Nginx</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Alex Jackson">
+
+
+  
+  <link href="/css/styles.css" rel="stylesheet" type="text/css">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,300|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+  
+  <link href="http://feeds.uri.lv/alexjohnj" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
+
+  
+  <meta name="google-site-verification" content="wfHLjqY4iUR4MRo2m6nyIRXRXSv0j-vFn8ZjLbYVqao" />
+</head>
+
+<body>
+  <header id="site-header" class="content-margin-wrap">
+  <h1><a href="/">Alex J</a></h1>
+  <nav id="site-navigation">
+    <ul>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/archive/">Archive</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <div id="content" class="content-margin-wrap">
+    <article>
+      <header id="post-header">
+        <h1>Nginx</h1>
+        <h2>Feb 3, 2014</h2>
+      </header>
+
+      
+
+<p>Out of curiosity I spent my Sunday afternoon moving this blog from Amazon S3 to a <a href="https://www.digitalocean.com/?refcode=755d29c48c8c">DigitalOcean</a> VPS (spoiler, that&rsquo;s a referral link). I didn&rsquo;t have a solid reason to do this&mdash;it&rsquo;s both more expensive and more effort&mdash;aside from to learn. I&rsquo;ve never set up a web server from scratch before let alone owned a VPS. I kind of felt I needed one so I could earn some geek cred.</p>
+
+<p>I&rsquo;m running Ubuntu 12.04 LTS on the VPS since Ubuntu&rsquo;s the Linux distribution I have the most experience with[^1]. Nginx is acting as the web server and seems to be fast. It&rsquo;s not like I have anything to compare it with though. The VPS is DigitalOcean&rsquo;s cheapest droplet&mdash;512 MB of RAM and a 20 GB SSD.</p>
+
+<p>Given my lack of experience with web servers, I was expecting Nginx to be a pain to set up. Surprisingly, it wasn&rsquo;t. Within 30 minutes I had a test page up and within an hour I was serving a mirror of this site from a subdomain of this site. Granted, this is a purely static site, so I didn&rsquo;t have to set up the full LEMP stack.</p>
+
+<p>I won&rsquo;t go into detail about how I set up the VPS but I&rsquo;ll share a few resources I found. DigitalOcean&rsquo;s support website has some <a href="https://www.digitalocean.com/community">good documentation</a> on setting up a Linux VPS. There&rsquo;s also a tutorial on <a href="https://www.digitalocean.com/community/articles/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-12-04">setting up a LEMP stack</a> but I&rsquo;m not a fan of it. The tutorial uses the outdated nginx package provided in the Ubuntu repositories. It needs updating with info on getting the latest version of Nginx.</p>
+
+<p>A very useful resource I found for learning about Nginx was <a href="http://blog.martinfjordvald.com">Martin Fjordvald&rsquo;s blog</a>. He&rsquo;s written several useful and interesting articles especially <a href="http://blog.martinfjordvald.com/2010/07/nginx-primer/">&ldquo;Nginx Configuration Primer&rdquo;</a>. He&rsquo;s also <a href="http://blog.martinfjordvald.com/2013/05/my-new-nginx-book-instant-nginx-starter/">written a short book</a> that goes into a bit more detail. It&rsquo;s a quick read and definitely worth the ~£6.00 if you&rsquo;re new to Nginx.</p>
+
+<h2 id="toc_0">Advantages</h2>
+
+<p>More than anything this was a learning exercise but there were a few benefits.</p>
+
+<p>The biggest advantage is native support for root domain names. AWS doesn&rsquo;t support them unless you use their <a href="http://aws.amazon.com/route53/">Route 53</a> service. As a result, I had to use a 3^rd party service to redirect the root domain to the www <code>cname</code> record. This added an extra 200&ndash;300 ms to the DNS look up if somebody used the naked domain. It was a noticeable difference in performance. Now, the homepage loads in ~300 ms regardless of which domain you use.</p>
+
+<p>Another advantage is the extra control I get. With S3, supporting features like gzip compression was an all or nothing choice. If a browser didn&rsquo;t support gzip&mdash;an admittedly rare occurrence&mdash;it&rsquo;d receive nothing but garbled data. With Nginx though I can enable the <code>gzip_static</code> directive and support these browsers.</p>
+
+<p>Going forwards I&rsquo;m probably going to serve <a href="http://geographyas.info">Geography AS Notes</a> from the same DigitalOcean droplet since GitHub pages offers even less control than Amazon S3. I don&rsquo;t see any reason why I can&rsquo;t serve it from the same droplet since this website is such a low volume site, it will have a negligible performance impact. If need be I can get a better DigitalOcean droplet but since Geography AS Notes is strictly not for profit and advertisement free I&rsquo;d have to find some way to subsidise the cost.</p>
+
+<p>[^1]: I&rsquo;ve been running and maintaining Ubuntu on my Grandmother&rsquo;s computer since 8.04. She uses my old MacBook now but had no problems with Ubuntu when she used it.</p>
+
+
+      <footer id="post-footer">
+        <h3>More:</h3>
+        
+        <div id="previous-post">
+          <p><a href="http://localhost:1313/post/2014/03/2014-03-12-some-sexy-new-tlds">&laquo; Some .sexy New TLDs</a></p>
+        </div>
+        
+        
+        <div id="next-post">
+          <p><a href="http://localhost:1313/post/2014/01/2014-01-08-redesigning-geography-as-notes">Redesigning Geography AS Notes &raquo;</a></p>
+        </div>
+        
+      </footer>
+    </article>
+  </div>
+  <footer id="site-footer">
+  <div class="content-margin-wrap">
+    <div id="footer-social-links">
+        <ul>
+          <li><a href="https://github.com/alexjohnj">GitHub</a></li>
+          <li><a href="https://twitter.com/alexjohnj/">Twitter</a></li>
+          <li><a href="http://feedpress.me/alexjohnj/">RSS</a></li>        
+        </ul>
+    </div>
+    <div id="footer-attributions">
+      <p>Built with <a href="https://github.com/mojombo/jekyll">Jekyll</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(e,t,n,r,i,s,o){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;s=t.createElement(n),o=t.getElementsByTagName(n)[0];s.async=1;s.src=r;o.parentNode.insertBefore(s,o)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-29192170-1","alexj.org");ga("send","pageview")
+</script>
+
+<script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

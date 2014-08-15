@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>S3 Deployment Script Mk 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Alex Jackson">
+
+
+  
+  <link href="/css/styles.css" rel="stylesheet" type="text/css">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,300|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+  
+  <link href="http://feeds.uri.lv/alexjohnj" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
+
+  
+  <meta name="google-site-verification" content="wfHLjqY4iUR4MRo2m6nyIRXRXSv0j-vFn8ZjLbYVqao" />
+</head>
+
+<body>
+  <header id="site-header" class="content-margin-wrap">
+  <h1><a href="/">Alex J</a></h1>
+  <nav id="site-navigation">
+    <ul>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/archive/">Archive</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <div id="content" class="content-margin-wrap">
+    <article>
+      <header id="post-header">
+        <h1>S3 Deployment Script Mk 2</h1>
+        <h2>Feb 17, 2013</h2>
+      </header>
+
+      <p>Since releasing the first version of the script I use to deploy this blog to S3, I&rsquo;ve iterated on the script a little bit and made a few changes. Most of the changes in version 2 of the script are syntax changes to the script itself that make it a little bit easier to read[^1] however there are a couple of functionality changes.</p>
+
+<p>The biggest change is the introduction of command line flags. Three flags have been added, <code>-b</code>, <code>-s</code> and <code>-n</code>. These tell the script to not minify sass files, not compile sass files and to perform a dry run respectively. The first two flags speak for themselves while the third, the dry run flag, simply means that the site will be generated as usual but it won&rsquo;t be deployed to S3. It&rsquo;s akin to running <code>s3cmd sync --dry-run src/ s3://bucket</code>.</p>
+
+<p>Another new ‘feature’ is a countdown that is performed before deploying to S3. After generating the site, the script waits three second before pushing the generated site giving you opportunity to cancel the deployment if you forgot to pass the <code>-n</code> flag or realise that you&rsquo;re (somehow) deploying to the wrong bucket. I&rsquo;m sure some people aren&rsquo;t going to like this but seriously, what&rsquo;s waiting 3 seconds compared to the time it&rsquo;d take to fix the mess after deploying your testing site to the wrong bucket?</p>
+
+<p>A couple of the smaller changes to the script relate to Python 3 compatibility. I&rsquo;ve removed the dependency on PyYaml since it isn&rsquo;t compatible with Python 3 and it was a bit of an overkill to get just one line out of the <code>_config.yml</code> file. In addition, I&rsquo;ve fixed a crash that would occur when gzipping files and the script is run under Python 3.</p>
+
+<p>The updated script is below and you can also find the script as a <a href="https://gist.github.com/alexjohnj/4559517">gist on GitHub</a>.</p>
+
+<p>{% highlight python %}</p>
+
+<p>#! /usr/local/bin/python3</p>
+
+<p>import gzip
+import os
+from subprocess import PIPE, check_call, CalledProcessError
+from sys import exit
+from time import sleep
+import argparse</p>
+
+<p>def get_s3_bucket_name():
+    with open(&rdquo;_config.yml&rdquo;) as f:
+        for line in f:
+            if line.split(&rsquo;:&lsquo;)[0] == &ldquo;s3bucket&rdquo;:
+                return line.strip(&ldquo;s3bucket:&ldquo;).strip()
+        exit(&ldquo;Error: No bucket was found in the site&rsquo;s _config.yml file&rdquo;)</p>
+
+<p>def compile_sass(input_file, output_file, minify=True):
+    command = &ldquo;sass &rdquo; + path_to_sass_file + &ldquo;:&rdquo; + sass_compile_path
+    if minify:
+        command = command + &ldquo; &ndash;style compressed&rdquo;
+    try:
+        check_call(command, shell=True)
+    except CalledProcessError:
+        print(&ldquo;Something went wrong compiling sass files.&rdquo;)</p>
+
+<p>def generate_site():
+    try:
+        check_call([&ldquo;jekyll&rdquo;, &ldquo;&ndash;no-auto&rdquo;], stdout=PIPE)
+    except CalledProcessError:
+        exit(&ldquo;Something went wrong generating the site with Jekyll.&rdquo;)</p>
+
+<p>def gzip_files():
+    for root, dirs, files in os.walk(&rdquo;_site/&ldquo;): # Traverse the _site/ directory
+        for f in files:
+            if os.path.splitext(f)[1] in [&lsquo;.html&rsquo;, &lsquo;.css&rsquo;, &lsquo;.js&rsquo;]:
+                current_path = os.path.join(root, f)
+                with open(current_path, &lsquo;rb&rsquo;) as f_in:
+                    with gzip.open(current_path + &lsquo;.gz&rsquo;, &lsquo;wb&rsquo;) as f_out:
+                        f_out.writelines(f_in)
+                os.replace(current_path + &lsquo;.gz&rsquo;, current_path)</p>
+
+<p>def deploy_to_s3_bucket(bucket, dry_run=False):
+    if dry_run:
+        print(&ldquo;Doing a dry run!&rdquo;)</p>
+
+<pre><code>try: # Upload all uncompressed files
+    command = &quot;s3cmd sync -P --exclude '*.html' --exclude '*.js' --exclude '*.css' _site/ &quot; + bucket
+    if dry_run:
+        command_ls = command.split()
+        command_ls.insert(-2, &quot;--dry-run&quot;)
+        command = ' '.join(command_ls)
+
+    check_call(command, shell=True, stdout=PIPE)
+except CalledProcessError:
+    exit(&quot;Something went wrong deploying the site to s3.&quot;)
+
+try: # Upload all compressed files and add an appropriate header
+    command = &quot;s3cmd sync -P --add-header='Content-Encoding: gzip' --exclude '*.*' --include '*.html' --include '*.js' --include '*.css' _site/ &quot; + bucket
+    if dry_run:
+        command_ls = command.split()
+        command_ls.insert(-2, &quot;--dry-run&quot;)
+        command = ' '.join(command_ls)
+
+    check_call(command, shell=True, stdout=PIPE)
+except CalledProcessError:
+    exit(&quot;Something went wrong setting the content encoding on the files deployed to s3&quot;)
+
+try: # Remove any files that have been deleted
+    command = &quot;s3cmd sync -P --delete-removed _site/ &quot; + bucket
+    if dry_run:
+        command_ls = command.split()
+        command_ls.insert(-2, &quot;--dry-run&quot;)
+        command = ' '.join(command_ls)
+    check_call(command, shell=True, stdout=PIPE)
+except CalledProcessError:
+    exit(&quot;Something went wrong removing files from the bucket&quot;)
+</code></pre>
+
+<p>if <strong>name</strong> == &ldquo;<strong>main</strong>&ldquo;:</p>
+
+<pre><code>parser = argparse.ArgumentParser(description=&quot;Deploy a Jekyll site to Amazon S3&quot;)
+parser.add_argument('-s', '--no-sass', help=&quot;Don't compile Sass files&quot;, action='store_true')
+parser.add_argument('-b', '--beautiful-sass', help=&quot;Don't minify Sass files&quot;, action='store_false')
+parser.add_argument('-n', '--dry-run', help=&quot;Perform a dry run when deploying to S3 (akin to running s3cmd with the --dry-run flag)&quot;, action='store_true')
+args = parser.parse_args()
+
+path_to_sass_file = &quot;assets/styles/sass/styles.scss&quot; # Change to your path
+sass_compile_path = &quot;assets/styles/css/styles.css&quot; # Change to your path
+
+if args.no_sass == False:
+    print(&quot;Compiling Sass Files...&quot;)
+    compile_sass(path_to_sass_file, sass_compile_path, minify=args.beautiful_sass)
+
+print(&quot;Running Jekyll...&quot;)
+generate_site()
+
+print(&quot;Gzipping File...&quot;)
+gzip_files()
+
+print(&quot;Getting Bucket Name...&quot;)
+bucket_name = get_s3_bucket_name()
+
+for i in reversed(range(1,4)):
+    print(&quot;\rDeploying to {0} in {1}&quot;.format(bucket_name, i), end='')
+    sleep(1)
+
+print(&quot;\nDeploying...&quot;)
+deploy_to_s3_bucket(bucket_name, dry_run=args.dry_run)
+print(&quot;Successfully Deployed Site!&quot;)
+</code></pre>
+
+<p>{% endhighlight %}</p>
+
+<p>[^1]: At the same time, I&rsquo;ve removed half of the comments in the script because most of them were <code>#increment i by one</code> style comments.</p>
+
+
+      <footer id="post-footer">
+        <h3>More:</h3>
+        
+        <div id="previous-post">
+          <p><a href="http://localhost:1313/post/2013/03/2013-03-31-symsteam-beta-2-1">&laquo; SymSteam Beta 2.1 Released</a></p>
+        </div>
+        
+        
+        <div id="next-post">
+          <p><a href="http://localhost:1313/post/2013/01/2013-01-17-deploying-this-jekyll-site-to-s3">Deploying This Jekyll Site to S3 &raquo;</a></p>
+        </div>
+        
+      </footer>
+    </article>
+  </div>
+  <footer id="site-footer">
+  <div class="content-margin-wrap">
+    <div id="footer-social-links">
+        <ul>
+          <li><a href="https://github.com/alexjohnj">GitHub</a></li>
+          <li><a href="https://twitter.com/alexjohnj/">Twitter</a></li>
+          <li><a href="http://feedpress.me/alexjohnj/">RSS</a></li>        
+        </ul>
+    </div>
+    <div id="footer-attributions">
+      <p>Built with <a href="https://github.com/mojombo/jekyll">Jekyll</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(e,t,n,r,i,s,o){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;s=t.createElement(n),o=t.getElementsByTagName(n)[0];s.async=1;s.src=r;o.parentNode.insertBefore(s,o)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-29192170-1","alexj.org");ga("send","pageview")
+</script>
+
+<script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

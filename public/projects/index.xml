@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Projects on Alex J </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/projects/index.xml</link>
+    
+    
+    
+    <updated>Tue, 01 Jan 2008 00:00:00 UTC</updated>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/projects/simplecalc/documentation</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/projects/simplecalc/documentation</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/projects/memtester/documentation</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/projects/memtester/documentation</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SymSteam</title>
+      <link>http://localhost:1313/projects/symsteam</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/projects/symsteam</guid>
+      <description>
+
+&lt;h1 id=&#34;toc_0&#34;&gt;SymSteam ({{ page.version }})&lt;/h1&gt;
+
+&lt;div class=&#34;project-icon&#34;&gt;
+    &lt;div class=&#34;sprite-icons-symsteam-icon-256&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;project-header-links&#34; markdown=&#34;1&#34;&gt;
+    &lt;h1&gt;&lt;a href=&#34;http://application-downloads.s3.amazonaws.com/symsteam-beta-2.1.zip&#34;&gt;Download SymSteam {{ page.version }}&lt;/a&gt;, &lt;a href=&#34;https://github.com/alexjohnj/symsteam&#34;&gt;View it on GitHub&lt;/a&gt; or &lt;a href=&#34;documentation/&#34;&gt;Check out the Documentation&lt;/a&gt;.
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;What is SymSteam?&lt;/h2&gt;
+
+&lt;p&gt;SymSteam is a Mac application designed to make it easy for laptop users to play Steam games off of both an external and an internal hard drive. SymSteam manages a symbolic link to a Steam games library on an external hard drive so that when an external drive with your games on is connected to your computer, you play games off of the external hard drive. When the drive is unplugged, you play games off of your internal drive. It&amp;rsquo;s ideal for people who like to play games on their MacBook&amp;rsquo;s both at home and on the go.&lt;/p&gt;
+
+&lt;p&gt;SymSteam is unobtrusive. It runs in the background and displays (optional) notifications via either Growl or Notification Center[^1] when something happens.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_2&#34;&gt;What are the System Requirements?&lt;/h2&gt;
+
+&lt;p&gt;SymSteam has been tested on OS 10.8 (Mountain Lion) but should, in theory, work on OS 10.7 (Lion). The external hard drive you use to play your games off of should be formatted to HFS+ but it &lt;em&gt;may&lt;/em&gt; work with other file systems.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_3&#34;&gt;Is it Open Source?&lt;/h2&gt;
+
+&lt;p&gt;Oh yeah! You can find SymSteam on &lt;a href=&#34;https://github.com/alexjohnj/symsteam&#34;&gt;GitHub&lt;/a&gt; where you can report bugs and help out by making some contributions to the code.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_4&#34;&gt;A Disclaimer&lt;/h2&gt;
+
+&lt;p&gt;Please remember that SymSteam is in beta. While I&amp;rsquo;ve been using the application for over 6 months without any problems there will be bugs so always have a backup of your Steam games and saves. If something happens involving SymSteam that results in you losing data, while I&amp;rsquo;ll feel very sorry for you, it&amp;rsquo;s not my fault, so don&amp;rsquo;t try and sue me or anything.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_5&#34;&gt;Some Useful Links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://alexjohnj.github.com/symsteam/changelog.html&#34;&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/alexjohnj/symsteam&#34;&gt;GitHub Project Page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;documentation/&#34;&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[^1]: Requires OS 10.8 Mountain Lion&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:1313/projects</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/projects</guid>
+      <description>&lt;h1&gt;Projects&lt;/h1&gt;
+
+&lt;div id=&#34;project-grid&#34;&gt;
+	&lt;a href=&#34;symsteam/&#34;&gt;&lt;div class=&#34;project-grid item&#34;&gt;
+		&lt;div class=&#34;sprite-icons-symsteam-icon-256&#34;&gt;&lt;/div&gt;
+		&lt;p&gt;SymSteam&lt;/p&gt;
+	&lt;/div&gt;&lt;/a&gt;
+
+	&lt;a href=&#34;appcastr/&#34;&gt;&lt;div class=&#34;project-grid item&#34;&gt;
+		&lt;div class=&#34;sprite-icons-appcastr-icon-256&#34;&gt;&lt;/div&gt;
+		&lt;p&gt;Appcastr&lt;/p&gt;
+	&lt;/div&gt;&lt;/a&gt;
+
+	&lt;a href=&#34;memtester/&#34;&gt;&lt;div class=&#34;project-grid item&#34;&gt;
+		&lt;div class=&#34;sprite-icons-memtester-icon-256&#34;&gt;&lt;/div&gt;
+		&lt;p&gt;Memtester&lt;/p&gt;
+	&lt;/div&gt;&lt;/a&gt;
+
+	&lt;a href=&#34;geographyas/&#34;&gt;&lt;div class=&#34;project-grid item&#34;&gt;
+		&lt;div class=&#34;sprite-icons-geographyas-icon-256&#34;&gt;&lt;/div&gt;
+		&lt;p&gt;Geography AS Notes&lt;/p&gt;
+	&lt;/div&gt;&lt;/a&gt;
+
+	&lt;a href=&#34;simplecalc/&#34;&gt;&lt;div class=&#34;project-grid item&#34;&gt;
+		&lt;div class=&#34;sprite-icons-simplecalc-icon-256&#34;&gt;&lt;/div&gt;
+		&lt;p&gt;SimpleCalc&lt;/p&gt;
+	&lt;/div&gt;&lt;/a&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>SimpleCalc</title>
+      <link>http://localhost:1313/projects/simplecalc</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/projects/simplecalc</guid>
+      <description>
+
+&lt;div id=&#34;screenshot-carousel&#34;&gt;
+    &lt;div class=&#34;screenshot&#34;&gt;
+        &lt;div class=&#34;sprite-icons-simplecalc-icon-256&#34;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;screenshot&#34;&gt;
+        &lt;img height=&#34;300px&#34; width=&#34;328px&#34; src=&#34;images/simplecalc-screenshot-1.png&#34; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;screenshot&#34;&gt;
+        &lt;img height=&#34;300px&#34; width=&#34;328px&#34; src=&#34;images/simplecalc-screenshot-2.png&#34; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;screenshot&#34;&gt;
+        &lt;img height=&#34;300px&#34; width=&#34;328px&#34; src=&#34;images/simplecalc-screenshot-3.png&#34; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;project-header-links&#34; markdown=&#34;1&#34;&gt;
+    &lt;h1&gt;&lt;a href=&#34;https://github.com/alexjohnj/SimpleCalc&#34;&gt; View SimpleCalc on GitHub&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;What is SimpleCalc?&lt;/h2&gt;
+
+&lt;p&gt;SimpleCalc is a simple calculator for OS X that uses forms instead of buttons to input numbers. It&amp;rsquo;s a very basic application that is only here since it&amp;rsquo;s the first application I ever wrote. SimpleCalc can do a very small number of things including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Addition, subtraction, multiplication &amp;amp; division.&lt;/li&gt;
+&lt;li&gt;Finding the square and root of a number.&lt;/li&gt;
+&lt;li&gt;Finding the mean of a set of numbers.&lt;/li&gt;
+&lt;li&gt;Solving a quadratic equation.&lt;/li&gt;
+&lt;li&gt;Finding the factorial of a number.&lt;/li&gt;
+&lt;li&gt;Converting between quite a few different units.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;What Languages is SimpleCalc Available in?&lt;/h2&gt;
+
+&lt;p&gt;SimpleCalc is available in English, Spanish and Italian. The Spanish translation is probably pretty poor since Spanish isn&amp;rsquo;t my first language but the Italian translation is (I assume) very good since it was translated by a native speaker, Pierpaolo Caricato.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_2&#34;&gt;Is SimpleCalc Open Source?&lt;/h2&gt;
+
+&lt;p&gt;Yup. You can find the source code on &lt;a href=&#34;https://github.com/alexjohnj/SimpleCalc&#34;&gt;GitHub&lt;/a&gt; and there&amp;rsquo;s also a GoogleCode page floating around on the internet somewhere. Feel free to fork the project but don&amp;rsquo;t bother making any pull requests since SimpleCalc is no longer actively worked on.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_3&#34;&gt;Credits&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Icon By James Quirk.&lt;/li&gt;
+&lt;li&gt;Italian Translation by Pierpaolo Caricato.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/projects/appcastr/documentation</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/projects/appcastr/documentation</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Memtester</title>
+      <link>http://localhost:1313/projects/memtester</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/projects/memtester</guid>
+      <description>
+
+&lt;div id=&#34;screenshot-carousel&#34;&gt;
+    &lt;div class=&#34;screenshot first&#34;&gt;&lt;div class=&#34;sprite-icons-memtester-icon-256&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&#34;screenshot&#34;&gt;
+        &lt;img height=&#34;300px&#34; width=&#34;508px&#34; src=&#34;images/memtester-screenshot-1.png&#34; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;screenshot&#34;&gt;
+        &lt;img height=&#34;300px&#34; width=&#34;508px&#34; src=&#34;images/memtester-screenshot-2.png&#34; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;screenshot&#34;&gt;
+        &lt;img height=&#34;300px&#34; width=&#34;508px&#34; src=&#34;images/memtester-screenshot-3.png&#34; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;project-header-links&#34; markdown=&#34;1&#34;&gt;
+    &lt;h1&gt;&lt;a href=&#34;https://github.com/alexjohnj/memtester-mac/downloads&#34;&gt;Download Memtester {{ page.version }}&lt;/a&gt; or &lt;a href=&#34;https://github.com/alexjohnj/memtester-mac&#34;&gt;View it on GitHub&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;What is Memtester?&lt;/h2&gt;
+
+&lt;p&gt;Memtester is a native OS X port of a game of the same name that was written in Java. Memtester is a very basic game that tests your ability to remember a series of numbers, letters or other characters depending on the difficulty. It starts off fairly easy but can get hard quickly.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;Where is the Original Project?&lt;/h2&gt;
+
+&lt;p&gt;The original Memtester, written by a friend of mine in Java, Can be found on &lt;a href=&#34;https://code.google.com/p/mem-tester/&#34;&gt;Google Code&lt;/a&gt;. There is both a desktop and Android version available.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_2&#34;&gt;Useful Links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/alexjohnj/memtester-mac&#34;&gt;GitHub Page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://alexjohnj.github.com/memtester-mac/changelog.html&#34;&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.google.com/p/mem-tester/&#34;&gt;Java Version&amp;rsquo;s Google Code Page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Geography AS Notes</title>
+      <link>http://localhost:1313/projects/geographyas</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/projects/geographyas</guid>
+      <description>
+
+&lt;div id=&#34;screenshot-carousel&#34;&gt;
+    &lt;div class=&#34;screenshot first&#34;&gt;&lt;div class=&#34;sprite-icons-geographyas-icon-256&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&#34;screenshot&#34;&gt;
+        &lt;img width=&#34;503px&#34; height=&#34;300px&#34; src=&#34;images/geographyas-notes-screenshot-1.png&#34; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;screenshot&#34;&gt;
+        &lt;img width=&#34;503px&#34; height=&#34;300px&#34; src=&#34;images/geographyas-notes-screenshot-2.png&#34; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;screenshot&#34;&gt;
+        &lt;img width=&#34;503px&#34; height=&#34;300px&#34; src=&#34;images/geographyas-notes-screenshot-3.png&#34; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;project-header-links&#34; markdown=&#34;1&#34;&gt;
+    &lt;h1&gt;&lt;a href=&#34;http://geographyas.info&#34;&gt;Visit Geography AS Notes&lt;/a&gt; or &lt;a href=&#34;https://github.com/alexjohnj/geographyas
+&#34;&gt; Check out the Code on GitHub&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;What is Geography AS Notes?&lt;/h2&gt;
+
+&lt;p&gt;Geography AS Notes is a revision website aimed at students in the UK studying Geography at AS Level. In particular, it&amp;rsquo;s aimed at students taking the AQA course and studying the following four topics:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rivers, Floods &amp;amp; Management&lt;/li&gt;
+&lt;li&gt;Coastal Environments&lt;/li&gt;
+&lt;li&gt;Population Change&lt;/li&gt;
+&lt;li&gt;Health Issues&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I don&amp;rsquo;t cover any extra topics on the AQA specification as I&amp;rsquo;m not experienced with them and wouldn&amp;rsquo;t be able write about them to a high enough standard.&lt;/p&gt;
+
+&lt;p&gt;When the site first launched the content consisted of notes I had made during class. Nowadays the site&amp;rsquo;s content consists of researched, long-form prose. There are still older note style articles on the site but I&amp;rsquo;m slowly rewriting them as long-form articles.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;Is it Actively Maintained?&lt;/h2&gt;
+
+&lt;p&gt;Yes. In early 2014 the site received a major redesign that enhanced readability and made using it much more enjoyable. At the same time, many of the diagrams on the site were redrawn as vector graphics to enhance their quality.&lt;/p&gt;
+
+&lt;p&gt;I update articles as and when I have time. I prioritise fixing mistakes and adding information that is frequently asked for in emails. At the same time, older articles that are still in note-form are being rewritten as long-form content. This is a slow process though because of the extensive research performed for each article[^1].&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_2&#34;&gt;Do You Accept Contributions?&lt;/h2&gt;
+
+&lt;p&gt;Absolutely. There&amp;rsquo;s a &lt;a href=&#34;http://geographyas.info/pages/contributing&#34;&gt;detailed page&lt;/a&gt; on the website about making contributions but the tl;dr is I&amp;rsquo;m open to text and image contributions. Text contributions can be as small as corrections or as big as brand new pages (so long as they&amp;rsquo;re related to the AQA specification). Images can be either photographs or diagrams. The only thing that I ask is you check the license of the image first. I don&amp;rsquo;t want any legal trouble.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re interested in contributing to the site, please read the &lt;a href=&#34;http://geographyas.info/pages/contributing&#34;&gt;information on Geography AS Notes&lt;/a&gt; about the guidelines before doing anything.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_3&#34;&gt;How Strictly Does it Follow the AQA Geography Specification?&lt;/h2&gt;
+
+&lt;p&gt;Of the four topics covered by the website, they&amp;rsquo;re around 95% complete according to the specification. At some point I&amp;rsquo;ll add the information to make them 99% complete but there&amp;rsquo;s a lot of things that need to be done before then.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_4&#34;&gt;Is it Open Source?&lt;/h2&gt;
+
+&lt;p&gt;Yup. As mentioned above, I&amp;rsquo;m open to text and image contributions. In addition, the source code for the site is available on &lt;a href=&#34;https://github.com/alexjohnj/geographyas&#34;&gt;GitHub&lt;/a&gt; for people to learn from and contribute to.&lt;/p&gt;
+
+&lt;p&gt;[^1]: And the extensive number of distractions on the internet.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SymSteam - Documentation</title>
+      <link>http://localhost:1313/projects/symsteam/documentation</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/projects/symsteam/documentation</guid>
+      <description>
+
+&lt;h1 id=&#34;toc_0&#34;&gt;SymSteam Documentation&lt;/h1&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;Setup&lt;/h2&gt;
+
+&lt;h3 id=&#34;toc_2&#34;&gt;Preparing Your Steam Folder&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Connect an external hard drive to your computer that is formatted as a &lt;a href=&#34;#verifying-drive-format&#34;&gt;HFS+ drive&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Open a new Finder window and press &amp;#8679;&amp;#8984;G. In the window that appears, enter the following path: &lt;code&gt;~/Library/Application Support/Steam/&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;In the Steam folder, locate a folder called &lt;code&gt;SteamApps&lt;/code&gt;. Copy this folder to your external hard drive. This could take a while depending on how many games you have. Go grab a coffee while you&amp;rsquo;re waiting.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Configuring SymSteam&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Launch SymSteam. It will prompt you to locate the SteamApps folder on your external hard drive. This is the folder you copied in the last step of “Preparing Your Steam Folder”. Click choose and locate the folder on your external hard drive with all of your games in it. Click next.&lt;/li&gt;
+&lt;li&gt;If everything went successfully, SymSteam will ask if you want it to start on login. You&amp;rsquo;ll probably want to select yes.&lt;/li&gt;
+&lt;li&gt;If something went wrong, have a look at &lt;a href=&#34;#troubleshooting&#34;&gt;troubleshooting&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;toc_4&#34;&gt;Preferences&lt;/h2&gt;
+
+&lt;h3 id=&#34;toc_5&#34;&gt;Accessing SymSteam&amp;rsquo;s Preferences Window {#accessing-preferences-window}&lt;/h3&gt;
+
+&lt;p&gt;There are two ways to access SymSteam&amp;rsquo;s preferences window depending on whether or not SymSteam is running. If SymSteam is running:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Find the SymSteam application in your Applications folder. Double click on the application to show the preferences window.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If SymSteam isn&amp;rsquo;t running:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Launch SymSteam as normal while holding down the &amp;#8997; key.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;Enabling/Disabling Notifications&lt;/h3&gt;
+
+&lt;p&gt;If you want to enable/disable the notifications shown by SymSteam when certain events occur:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Open SymSteam&amp;rsquo;s preferences window.&lt;/li&gt;
+&lt;li&gt;Under the “General” tab of the preferences window you can toggle notifications by checking/unchecking the “Display Notifications Box”.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;toc_7&#34;&gt;Troubleshooting&lt;/h2&gt;
+
+&lt;h3 id=&#34;toc_8&#34;&gt;Setup Fails Because the Selected Drive Lacks a UUID&lt;/h3&gt;
+
+&lt;p&gt;This is likely because the drive isn&amp;rsquo;t formatted as a HFS+ drive. SymSteam uses the UUID (Universally Unique Identifier) of the drive to distinguish it from drives that don&amp;rsquo;t have your Steam folder on it. HFS+ assigns a UUID to your drive while some other filesystems do not.&lt;/p&gt;
+
+&lt;p&gt;To format your drive to HFS+, see &lt;a href=&#34;#formatting-drive&#34;&gt;Formatting a Drive to HFS+&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_9&#34;&gt;SymSteam is Telling me to Check the Console&lt;/h3&gt;
+
+&lt;p&gt;If something&amp;rsquo;s gone wrong, SymSteam will output a fairly detailed message to the Console explaining what it thinks has gone wrong. This message may include a potential fix to the issue so checking the Console could help you fix a problem you may be having.&lt;/p&gt;
+
+&lt;p&gt;To check the Console:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Launch Console.app (Applications &amp;gt; Utilities &amp;gt; Console).&lt;/li&gt;
+&lt;li&gt;In the filter field in the top right of the Console window, search for “SymSteam”.&lt;/li&gt;
+&lt;li&gt;All of the messages logged by SymSteam will be displayed. Look for the most recent one to see what the problem is and what the fix might be.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;toc_10&#34;&gt;Resetting SymSteam&lt;/h2&gt;
+
+&lt;h3 id=&#34;toc_11&#34;&gt;Performing a Partial Reset {#symsteam-partial-reset}&lt;/h3&gt;
+
+&lt;p&gt;A partial reset will cause SymSteam to forget which drive your Steam games are on and will prompt you to rerun setup when you next launch SymSteam. If you are having issues with SymSteam, a partial reset is a good, nondestructive way to try and fix them.&lt;/p&gt;
+
+&lt;p&gt;A partial reset won&amp;rsquo;t delete any of the games you have stored on both your external hard drive or your internal hard drive. SymSteam doesn&amp;rsquo;t touch your games at any stage when performing a partial reset.&lt;/p&gt;
+
+&lt;p&gt;To perform a partial reset:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Access SymSteam&amp;rsquo;s &lt;a href=&#34;#accessing-preferences-window&#34;&gt;preferences window&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Click the about button in the preferences window.&lt;/li&gt;
+&lt;li&gt;While holding down the &amp;#8997; key, click on the quit button.&lt;/li&gt;
+&lt;li&gt;SymSteam will ask if you want to reset SymSteam. Click OK.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Now, when you next launch SymSteam setup will be rerun.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_12&#34;&gt;Performing a Full Reset&lt;/h3&gt;
+
+&lt;p&gt;A full reset combines a partial reset and the deletion of some files. A full reset will require you to rerun setup again. A full reset shouldn&amp;rsquo;t delete any of your Steam games unless you delete the wrong files so exercise some care. To perform a full reset:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Perform a &lt;a href=&#34;#symsteam-partial-reset&#34;&gt;partial reset&lt;/a&gt; of SymSteam and ensure that SymSteam has been quit.&lt;/li&gt;
+&lt;li&gt;Disconnect your external hard drive.&lt;/li&gt;
+&lt;li&gt;Open a Finder window and press &amp;#8679;&amp;#8984;G. In the window that appears, enter the following path: &lt;code&gt;~/Library/Application Support/Steam/&lt;/code&gt; and press go.&lt;/li&gt;
+&lt;li&gt;Identify the folders/files in the Steam folder called &lt;code&gt;SteamApps&lt;/code&gt; &amp;amp; &lt;code&gt;SteamAppsSymb&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Right click on &lt;code&gt;SteamApps&lt;/code&gt; and click “Get Info”. In the window that comes up, if the “Kind” of the item is an alias, delete the file. If not, leave the file.&lt;/li&gt;
+&lt;li&gt;Right click on the &lt;code&gt;SteamAppsSymb&lt;/code&gt; folder/file and click “Get Info”. If the “Kind” of the item is an alias then delete it, if not, rename the folder to &lt;code&gt;SteamApps&lt;/code&gt; (this assumes that the file in the previous step called &lt;code&gt;SteamApps&lt;/code&gt; was an alias and has been deleted).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you can&amp;rsquo;t find any file/folder called &lt;code&gt;SteamApps&lt;/code&gt; but do find a folder called &lt;code&gt;SteamAppsLoc&lt;/code&gt;, rename &lt;code&gt;SteamAppsLoc&lt;/code&gt; to &lt;code&gt;SteamApps&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_13&#34;&gt;Appendix&lt;/h2&gt;
+
+&lt;h3 id=&#34;toc_14&#34;&gt;Verifying a Drive is HFS+ Formatted {#verifying-drive-format}&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Open Disk Utility (Applications &amp;gt; Utilities &amp;gt; Disk Utility) and connect your external hard drive.&lt;/li&gt;
+&lt;li&gt;In the left hand pane of the Disk Utility window, select the partition of your external hard drive that you wish to store your games on.&lt;/li&gt;
+&lt;li&gt;At the bottom of the Disk Utility window, look to see what the format of the partition is. If it says &amp;ldquo;Mac OS Extended (Journaled)&amp;rdquo; then you&amp;rsquo;re all good to go. If not, you&amp;rsquo;ll need to &lt;a href=&#34;#formatting-drive&#34;&gt;reformat the drive&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_15&#34;&gt;Formatting a Drive to HFS+ {#formatting-drive}&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Warning. Formatting a drive will delete everything on the drive. Make sure you have a backup.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Open Disk Utility (Applications &amp;gt; Utilities &amp;gt; Disk Utility) and connect your external hard drive.&lt;/li&gt;
+&lt;li&gt;In the left hand pane of the Disk Utility window, select your external hard drive.&lt;/li&gt;
+&lt;li&gt;In the right hand pane of the Disk Utility window, select the erase tab.&lt;/li&gt;
+&lt;li&gt;Set the format of the disk to “Mac OS Extended (Journaled)”. Name the disk whatever you wish.&lt;/li&gt;
+&lt;li&gt;Click Erase. &lt;strong&gt;Read the alert that appears carefully and verify that the information shown is correct.&lt;/strong&gt; If everything is correct, click OK.&lt;/li&gt;
+&lt;li&gt;Sit back and let Disk Utility work its magic. It should only take a minute or two.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;toc_16&#34;&gt;SymSteam Terminology&lt;/h3&gt;
+
+&lt;p&gt;There&amp;rsquo;s a few special names I give different folders in SymSteam. This list might come in handy.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SteamApps&lt;/code&gt; folder. This is the folder that all your Steam games are stored in. Steam looks for this folder and loads games from it.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SteamAppsSymb&lt;/code&gt;. This is a symbolic link to a folder called &lt;code&gt;SteamApps&lt;/code&gt; on your external hard drive. In English: When Steam looks for a &lt;code&gt;SteamApps&lt;/code&gt; folder SymSteam points it to the &lt;code&gt;SteamAppsSymb&lt;/code&gt; link which then points to the &lt;code&gt;SteamApps&lt;/code&gt; folder on your external hard drive.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SteamAppsLoc&lt;/code&gt;. This is the folder on your computer&amp;rsquo;s internal hard drive that houses your games. When your external hard drive isn&amp;rsquo;t plugged in, this folder won&amp;rsquo;t exist and will instead be called &lt;code&gt;SteamApps&lt;/code&gt;. As soon as you plug your external hard drive in however, &lt;code&gt;SteamApps&lt;/code&gt; gets renamed to &lt;code&gt;SteamAppsLoc&lt;/code&gt; so that Steam will ignore this folder and instead pay attention to the folder on your external hard drive.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Appcastr</title>
+      <link>http://localhost:1313/projects/appcastr</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/projects/appcastr</guid>
+      <description>
+
+&lt;div id=&#34;screenshot-carousel&#34;&gt;
+    &lt;div class=&#34;screenshot first&#34;&gt;&lt;div class=&#34;sprite-icons-appcastr-icon-256&#34;&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&#34;screenshot&#34;&gt;
+        &lt;img height=&#34;300px&#34; width=&#34;457px&#34; src=&#34;images/appcastr-screenshot-1.png&#34; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;screenshot&#34;&gt;
+        &lt;img height=&#34;300px&#34; width=&#34;343px&#34; src=&#34;images/appcastr-screenshot-2.png&#34; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;project-header-links&#34;&gt;
+    &lt;h1&gt; Download Appcastr &lt;a href=&#34;https://github.com/downloads/alexjohnj/appcastr/Appcastr-0.1.1.zip&#34;&gt;{{ page.version }}&lt;/a&gt; or &lt;a href=&#34;https://github.com/alexjohnj/appcastr&#34;&gt; View the Project on GitHub&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;What is Appcastr?&lt;/h2&gt;
+
+&lt;p&gt;Appcastr is a tool for Mac developers that helps simplify the process of publishing updates using the Sparkle update system. To publish an update using Sparkle you need to write an appcast file that is, essentially, an RSS feed. Writing this isn&amp;rsquo;t difficult but it isn&amp;rsquo;t fun either and it could be easier. That&amp;rsquo;s where Appcastr comes in. Appcastr provides a nice GUI that lets you enter in the necessary information for your appcast feed and then spits out an appcast file that you can put on your server.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;What can Appcastr Currently do?&lt;/h2&gt;
+
+&lt;p&gt;Version 0.1.1 of Appcastr supports editing the following attributes of an appcast file:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The update&amp;rsquo;s title, build number, version number, download link, release notes link, signature, update size and publication date.&lt;/li&gt;
+&lt;li&gt;The appcast file&amp;rsquo;s title, link, language and description.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Appcastr also has support for autosave and versions on OS X Lion and above.&lt;/p&gt;
+
+&lt;p&gt;Version 0.2[^1] of Appcastr, which can be compiled by checking out the &lt;code&gt;version-0.2&lt;/code&gt; branch, adds support for editing and adding multiple updates to one appcast file. It also supports specifying a minimum and maximum supported operating system for an update.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_2&#34;&gt;Is it Still Actively Developed?&lt;/h2&gt;
+
+&lt;p&gt;Meeeh, not really. I don&amp;rsquo;t want to call the project dead but I haven&amp;rsquo;t done any work on it in quite some time and, while I still have quite a few ideas for features to add that would make Appcastr super awesome, I just haven&amp;rsquo;t got the time to add them. I would like to do more work on it and maybe some weekend I might “finish” 0.2 but I can&amp;rsquo;t make any guarantees.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_3&#34;&gt;Is it Open Source?&lt;/h2&gt;
+
+&lt;p&gt;Yup, you can find the source code &lt;a href=&#34;https://github.com/alexjohnj/appcastr&#34;&gt;on GitHub&lt;/a&gt; and it&amp;rsquo;s released under a do whatever you like license just leave credit where it&amp;rsquo;s due. Like I said above, I don&amp;rsquo;t really have the time to work on it anymore but should someone create a pull request, I&amp;rsquo;ll definitely look at it and merge it if it&amp;rsquo;s appropriate.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_4&#34;&gt;Useful Links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://alexjohnj.github.com/appcastr/changelog.html&#34;&gt;Changelog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/alexjohnj/appcastr&#34;&gt;GitHub Project Page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[^1]: Version 0.2 still isn&amp;rsquo;t complete. It&amp;rsquo;s got quite a few UI bugs and several features haven&amp;rsquo;t been fully implemented.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

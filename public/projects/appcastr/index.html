@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Appcastr</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Alex Jackson">
+
+
+  
+  <link href="/css/styles.css" rel="stylesheet" type="text/css">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,300|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+  
+  <link href="http://feeds.uri.lv/alexjohnj" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
+
+  
+  <meta name="google-site-verification" content="wfHLjqY4iUR4MRo2m6nyIRXRXSv0j-vFn8ZjLbYVqao" />
+</head>
+
+<body>
+  <header id="site-header" class="content-margin-wrap">
+  <h1><a href="/">Alex J</a></h1>
+  <nav id="site-navigation">
+    <ul>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/archive/">Archive</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <div id="content" class="content-margin-wrap">
+    <header>
+      <h1>Appcastr</h1>
+    </header>
+    
+
+<div id="screenshot-carousel">
+    <div class="screenshot first"><div class="sprite-icons-appcastr-icon-256"></div></div>
+    <div class="screenshot">
+        <img height="300px" width="457px" src="images/appcastr-screenshot-1.png" />
+    </div>
+    <div class="screenshot">
+        <img height="300px" width="343px" src="images/appcastr-screenshot-2.png" />
+    </div>
+</div>
+
+<div id="project-header-links">
+    <h1> Download Appcastr <a href="https://github.com/downloads/alexjohnj/appcastr/Appcastr-0.1.1.zip">{{ page.version }}</a> or <a href="https://github.com/alexjohnj/appcastr"> View the Project on GitHub</a></h1>
+</div>
+
+<hr />
+
+<h2 id="toc_0">What is Appcastr?</h2>
+
+<p>Appcastr is a tool for Mac developers that helps simplify the process of publishing updates using the Sparkle update system. To publish an update using Sparkle you need to write an appcast file that is, essentially, an RSS feed. Writing this isn&rsquo;t difficult but it isn&rsquo;t fun either and it could be easier. That&rsquo;s where Appcastr comes in. Appcastr provides a nice GUI that lets you enter in the necessary information for your appcast feed and then spits out an appcast file that you can put on your server.</p>
+
+<h2 id="toc_1">What can Appcastr Currently do?</h2>
+
+<p>Version 0.1.1 of Appcastr supports editing the following attributes of an appcast file:</p>
+
+<ul>
+<li>The update&rsquo;s title, build number, version number, download link, release notes link, signature, update size and publication date.</li>
+<li>The appcast file&rsquo;s title, link, language and description.</li>
+</ul>
+
+<p>Appcastr also has support for autosave and versions on OS X Lion and above.</p>
+
+<p>Version 0.2[^1] of Appcastr, which can be compiled by checking out the <code>version-0.2</code> branch, adds support for editing and adding multiple updates to one appcast file. It also supports specifying a minimum and maximum supported operating system for an update.</p>
+
+<h2 id="toc_2">Is it Still Actively Developed?</h2>
+
+<p>Meeeh, not really. I don&rsquo;t want to call the project dead but I haven&rsquo;t done any work on it in quite some time and, while I still have quite a few ideas for features to add that would make Appcastr super awesome, I just haven&rsquo;t got the time to add them. I would like to do more work on it and maybe some weekend I might “finish” 0.2 but I can&rsquo;t make any guarantees.</p>
+
+<h2 id="toc_3">Is it Open Source?</h2>
+
+<p>Yup, you can find the source code <a href="https://github.com/alexjohnj/appcastr">on GitHub</a> and it&rsquo;s released under a do whatever you like license just leave credit where it&rsquo;s due. Like I said above, I don&rsquo;t really have the time to work on it anymore but should someone create a pull request, I&rsquo;ll definitely look at it and merge it if it&rsquo;s appropriate.</p>
+
+<h2 id="toc_4">Useful Links</h2>
+
+<ul>
+<li><a href="http://alexjohnj.github.com/appcastr/changelog.html">Changelog</a></li>
+<li><a href="https://github.com/alexjohnj/appcastr">GitHub Project Page</a></li>
+</ul>
+
+<p>[^1]: Version 0.2 still isn&rsquo;t complete. It&rsquo;s got quite a few UI bugs and several features haven&rsquo;t been fully implemented.</p>
+
+  </div>
+  <footer id="site-footer">
+  <div class="content-margin-wrap">
+    <div id="footer-social-links">
+        <ul>
+          <li><a href="https://github.com/alexjohnj">GitHub</a></li>
+          <li><a href="https://twitter.com/alexjohnj/">Twitter</a></li>
+          <li><a href="http://feedpress.me/alexjohnj/">RSS</a></li>        
+        </ul>
+    </div>
+    <div id="footer-attributions">
+      <p>Built with <a href="https://github.com/mojombo/jekyll">Jekyll</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(e,t,n,r,i,s,o){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;s=t.createElement(n),o=t.getElementsByTagName(n)[0];s.async=1;s.src=r;o.parentNode.insertBefore(s,o)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-29192170-1","alexj.org");ga("send","pageview")
+</script>
+
+<script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

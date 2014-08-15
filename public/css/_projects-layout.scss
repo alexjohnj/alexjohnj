@@ -1,0 +1,68 @@
+.project-icon {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+  width: 256px;
+}
+
+#project-grid {
+  width: 100%;
+  height: auto;
+  text-align: center;
+
+  .item {
+     text-align: center;
+     height: 340px;
+     display: inline-block;
+     width: 256px;
+  }
+
+  img {
+      display: block;
+      width: 100%;
+  }
+
+  @media handheld, only screen and (min-width: 1000px) {
+     text-align: default;
+  }
+}
+
+#screenshot-carousel {
+  border: 1px $underline-color dotted;
+  width: 99%;
+  height: 350px;
+  overflow-x: scroll;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+
+  .screenshot {
+    padding-top: 20px;
+     margin-right: 20px;
+     height: 300px;
+     display: inline-block;
+  }
+}
+
+.first {
+  margin-left: 20px;
+}
+
+#project-header-links {
+  width: 100%;
+  text-align: center;
+}
+
+// Sprite Icons
+
+/* glue: 0.2.8.1 hash: 57b8b49796 */
+.sprite-icons-symsteam-icon-256,
+.sprite-icons-simplecalc-icon-256,
+.sprite-icons-memtester-icon-256,
+.sprite-icons-geographyas-icon-256,
+.sprite-icons-appcastr-icon-256{background-image:url('/projects/icons-spritesheet.png');background-repeat:no-repeat}
+.sprite-icons-symsteam-icon-256{background-position:0px 0px;width:256px;height:256px;}
+.sprite-icons-simplecalc-icon-256{background-position:-256px 0px;width:256px;height:256px;}
+.sprite-icons-memtester-icon-256{background-position:0px -256px;width:256px;height:256px;}
+.sprite-icons-geographyas-icon-256{background-position:-256px -256px;width:256px;height:256px;}
+.sprite-icons-appcastr-icon-256{background-position:-512px 0px;width:256px;height:256px;}
