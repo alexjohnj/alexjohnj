@@ -15,12 +15,12 @@
         <h3>More:</h3>
         {{ if .Next }}
         <div id="previous-post">
-          <p><a href="{{ .Next.Permalink }}">&laquo; {{ .Next.Title }}</a></p>
+          <a href="{{ .Next.Permalink }}">&laquo; {{ .Next.Title }}</a>
         </div>
         {{ end }}
         {{ if .Prev }}
         <div id="next-post">
-          <p><a href="{{ .Prev.Permalink }}">{{ .Prev.Title }} &raquo;</a></p>
+          <a href="{{ .Prev.Permalink }}">{{ .Prev.Title }} &raquo;</a>
         </div>
         {{ end }}
       </footer>
