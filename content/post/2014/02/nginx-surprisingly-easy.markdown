@@ -1,5 +1,5 @@
 +++
-title = "Nginx"
+title = "Nginx—Surprisingly Easy"
 date = "2014-02-03"
 +++
 
