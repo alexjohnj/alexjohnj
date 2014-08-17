@@ -153,6 +153,26 @@ div#next-post {
   }
 }
 
+#post-list {
+  padding: 0;
+  font-size: 1.3em;
+
+  li {
+    list-style: none;
+    padding-bottom: 10px;
+  }
+
+  .date-time-meta {
+    float: right;
+
+    color: lighten(#000, 50%);
+
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-style: italic;
+  }
+}
+
 pre {
   white-space: pre;
   padding: 12px;

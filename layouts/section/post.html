@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{{ template "partials/head.html" . }}
+<body>
+  {{ template "partials/header.html" . }}
+  <div id="content" class="content-margin-wrap">
+    <h1>Posts</h1>
+
+    <ul id="post-list">
+    {{ range .Data.Pages }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <div class="date-time-meta">{{ .Date.Format "02 Jan 2006" }}</div>
+      </li>
+    {{ end }}
+    </ul>
+  </div>
+  {{ template "partials/footer.html" . }}
+</body>
+</html>
