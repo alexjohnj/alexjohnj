@@ -3,7 +3,7 @@
 <body>
   {{ template "partials/header.html" . }}
   <div id="content" class="content-margin-wrap">
-    {{ range .Data.Pages }}
+    {{ range first 5 .Data.Pages }}
     {{ if eq .Type "post" }}
     <article class="article-excerpt">
       <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
@@ -13,6 +13,9 @@
     </article>
     {{ end }}
     {{ end }}
+    <div id="all-posts-message">
+      <p><a href="/post/">All Posts</a></p>
+    </div>
   </div>
   {{ template "partials/footer.html" . }}
 </body>

@@ -153,6 +153,12 @@ div#next-post {
   }
 }
 
+#all-posts-message {
+  border-top: 1px solid $underline-color;
+  width: 100%;
+  text-align: center;
+}
+
 #post-list {
   padding: 0;
   font-size: 1.3em;
