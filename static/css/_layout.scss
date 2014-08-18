@@ -19,6 +19,10 @@ body {
   max-width: $body-width;
 }
 
+body > .content-margin-wrap {
+  padding-bottom: 10px;
+}
+
 // Site layout
 
 header#site-header {
