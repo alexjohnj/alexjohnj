@@ -1,9 +1,6 @@
----
-layout: default
-title: SymSteam - Documentation
----
-
-# SymSteam Documentation
++++
+title = "SymSteam Documentation"
++++
 
 ## Setup
 
@@ -21,7 +18,7 @@ title: SymSteam - Documentation
 
 ## Preferences
 
-### Accessing SymSteam's Preferences Window {#accessing-preferences-window}
+### Accessing SymSteam's Preferences Window
 
 There are two ways to access SymSteam's preferences window depending on whether or not SymSteam is running. If SymSteam is running:
 
@@ -58,7 +55,7 @@ To check the Console:
 
 ## Resetting SymSteam
 
-### Performing a Partial Reset {#symsteam-partial-reset}
+### Performing a Partial Reset
 
 A partial reset will cause SymSteam to forget which drive your Steam games are on and will prompt you to rerun setup when you next launch SymSteam. If you are having issues with SymSteam, a partial reset is a good, nondestructive way to try and fix them. 
 
@@ -88,13 +85,13 @@ If you can't find any file/folder called `SteamApps` but do find a folder called
 
 ## Appendix
 
-### Verifying a Drive is HFS+ Formatted {#verifying-drive-format}
+### Verifying a Drive is HFS+ Formatted
 
 1. Open Disk Utility (Applications > Utilities > Disk Utility) and connect your external hard drive.
 2. In the left hand pane of the Disk Utility window, select the partition of your external hard drive that you wish to store your games on. 
 3. At the bottom of the Disk Utility window, look to see what the format of the partition is. If it says "Mac OS Extended (Journaled)" then you're all good to go. If not, you'll need to [reformat the drive](#formatting-drive).
 
-### Formatting a Drive to HFS+ {#formatting-drive}
+### Formatting a Drive to HFS+
 
 **Warning. Formatting a drive will delete everything on the drive. Make sure you have a backup.**
 
