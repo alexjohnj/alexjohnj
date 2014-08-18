@@ -1,5 +1,6 @@
 +++
 title = "SymSteam Documentation"
+url = "/projects/symsteam/documentation/"
 +++
 
 ## Setup
