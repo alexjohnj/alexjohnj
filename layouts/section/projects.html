@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+  {{ template "partials/head.html" . }}
+
+<body>
+  {{ template "partials/header.html" . }}
+  <div class="content-margin-wrap">
+    <h1>{{ .Title }}</h1>
+    <div id="project-grid">
+      {{ range .Data.Pages }}
+        <a href="{{ .Permalink }}">
+          <div class="project-grid item">
+            <div class="{{ .Params.icon_sprite }}"></div>
+            <p>{{ .Title }}</p>
+          </div>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+  {{ template "partials/footer.html" . }}    
+</body>
+
+</html>
