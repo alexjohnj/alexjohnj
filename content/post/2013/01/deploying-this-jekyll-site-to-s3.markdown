@@ -1,7 +1,8 @@
----
-title: Deploying This Jekyll Site to S3
-date: 2013-01-17
----
++++
+title = "Deploying This Jekyll Site to S3"
+date = "2013-01-17"
+syntax_highlighting = true
++++
 
 If you’re the type of person who likes to read the footers of websites (who doesn’t?) you’ll have seen that this website is "powered” by Jekyll. In case you haven’t heard, Jekyll is a static site generator that is especially useful for generating static blogs. That is, you run the Jekyll program on a computer, point it at a “source” directory for your website and let it generate a load of HTML files that you can upload to practically any web server that serves files. There’s no need to install PHP or Rails and no need to get a fancy server that can run them. Jekyll is a really awesome utility and that is a terrible description of what it does. You’re better off checking out the [GitHub page][jekyll-github-page] and seeing how that describes Jekyll.
 
@@ -15,7 +16,7 @@ The script is written in Python because I don’t know any other scripting langu
 
 The script basically wraps up five or six commands into one simple `python _deploy.py` command. Any way, enough waffle. The script: 
 
-{% highlight python %}
+```python
 #! /usr/local/bin/python3
 
 import yaml
@@ -117,13 +118,13 @@ if __name__ == "__main__":
     print("Deploying to %s..." % bucket_name)
     deploy_to_s3(bucket_name, dry=False)
     print("Successfully Deployed Site!")
-{% endhighlight %} 
+```
 
 There’s a few prerequisites for the script. You’ll need to install the [PyYaml][pyyaml-project-page] library for Python, as well as the [sass][sass-project-page] & [s3cmd][s3cmd-project-page] packages. You’ll also need to modify your website’s `_config.yml` file so that it has the name of the s3 bucket you want s3cmd to upload your website to:
 
-{% highlight yaml %}
+```yaml
 s3bucket:    s3://bucketname
-{% endhighlight %}
+```
 
 If you don’t need to compile any sass files, go ahead and comment out[^3] the 6th line of the `__main__` method (that’s where it says `compile_sass(path_to_sass_file, sass_compile_path, minify=True)`). If you do need to compile sass files, modify the `path_to_sass_file` and `sass_compile_path` variables so that they point to where the main sass file is and where you want it to be compiled to.
 

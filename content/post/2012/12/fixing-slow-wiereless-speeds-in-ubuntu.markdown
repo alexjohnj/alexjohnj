@@ -1,7 +1,8 @@
----
-title: "Fixing Slow Wireless Speeds in Ubuntu 12.10"
-date: 2012-12-31
----
++++
+title = "Fixing Slow Wireless Speeds in Ubuntu 12.10"
+date = "2012-12-31"
+syntax_highlighting = true
++++
 
 After building a new computer recently I went ahead and installed Ubuntu 12.10 on it alongside Windows. Since the computer doesn't have a wireless card and isn't anywhere near a router, I bought a cheap Wireless USB adapter so that I could connect to my wireless network. I actually bought the adapter several years ago and used it on a computer running Ubuntu 10.04 that was in a similar situation. The adapter I bought was a [Belkin F5D8053][wireless-adapter-amazon-page], the v6 revision. I bought this adapter because I'd been told that it had good compatibility with Linux and I remember it working perfectly well in Ubuntu 10.04. I was surprised to find then that when I used the adapter with my new installation of Ubuntu 12.10 it was very unreliable. The adapter worked but after arround five minutes of usage, the connection speed would drop substantially and anything, be it on the internet or my local network, was incredibly slow. 
 
@@ -15,38 +16,38 @@ The fix is quite simple, install wicd and disable network-manager. The steps for
 
 First, install the wicd package:
 
-{% highlight bash %}
+```bash
 sudo apt-get intall wicd
-{% endhighlight %}
+```
 
 Next, disable network-manager and stop it from starting on startup too:
 
-{% highlight bash %}
+```bash
 sudo stop network-manager
 sudo mv /etc/init/network-manager.conf /etc/init/network-manager.conf.off
-{% endhighlight %}
+```
 
 Now start the wicd daemon and bring up the GUI tool so you can connect to your wireless network:
 
-{% highlight bash %}
+```bash
 sudo /etc/init.d/wicd start
 wicd-client
-{% endhighlight %}
+```
 
 And that's it, assuming that network-manager was your problem, you should now have a far more stable wireless connection and wicd should start on login too. If you want to get wicd in Unity's system tray, you'll need to run the following command:
 
-{% highlight bash %}
+```bash
 gsettings set com.canonical.Unity.Panel systray-whitelist "['wicd']"
-{% endhighlight %}
+```
 
 Then logout and log back in, you should now have a (fairly ugly) tray icon for wicd. There's replacement icons available, just Google for them. 
 
 Once you're certain that wicd has solved your problem and you don't need network-manager anymore, you can go ahead and remove nework-manager. First, revert the changes made to network-manager's upstart job and then remove the package:
 
-{% highlight bash %}
+```bash
 sudo mv /etc/init/network-manager.conf.off /etc/init/network-manager.conf
 sudo apt-get remove --purge network-manager
-{% endhighlight %}
+```
 
 That solved the problem for me. If it does for you, be sure to file a bug report so that this issue hopefully gets fixed in network-manager. 
 

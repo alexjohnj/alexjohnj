@@ -1,7 +1,8 @@
----
-title: S3 Deployment Script Mk 2
-date: 2013-02-17
----
++++
+title = "S3 Deployment Script Mk 2"
+date = "2013-02-17"
+syntax_highlighting = true
++++
 
 Since releasing the first version of the script I use to deploy this blog to S3, I've iterated on the script a little bit and made a few changes. Most of the changes in version 2 of the script are syntax changes to the script itself that make it a little bit easier to read[^1] however there are a couple of functionality changes.
 
@@ -13,8 +14,7 @@ A couple of the smaller changes to the script relate to Python 3 compatibility. 
 
 The updated script is below and you can also find the script as a [gist on GitHub][script-github]. 
 
-{% highlight python %}
-
+```python
 #! /usr/local/bin/python3
 
 import gzip
@@ -123,9 +123,7 @@ if __name__ == "__main__":
     print("\nDeploying...")
     deploy_to_s3_bucket(bucket_name, dry_run=args.dry_run)
     print("Successfully Deployed Site!")
-
-
-{% endhighlight %}
+```
 
 [^1]: At the same time, I've removed half of the comments in the script because most of them were `#increment i by one` style comments. 
 
