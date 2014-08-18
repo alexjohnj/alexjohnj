@@ -1,20 +1,12 @@
----
-layout: page
-title: SymSteam
-version: Beta 2.1
----
-
-# SymSteam ({{ page.version }})
-
-<div class="project-icon">
-	<div class="sprite-icons-symsteam-icon-256"></div>
-</div>
-
-<div id="project-header-links" markdown="1">
-	<h1><a href="http://application-downloads.s3.amazonaws.com/symsteam-beta-2.1.zip">Download SymSteam {{ page.version }}</a>, <a href="https://github.com/alexjohnj/symsteam">View it on GitHub</a> or <a href="documentation/">Check out the Documentation</a>.
-</div>
-
----
++++
+title = "SymSteam"
+version = "Beta 2.1"
+source_url = "https://github.com/alexjohnj/symsteam/"
+dl_url = "http://application-downloads.s3.amazonaws.com/symsteam-beta-2.1.zip"
+documentation = "documentation/"
+changelog = "https://alexjohnj.github.io/symsteam/changelog.html"
+icon_sprite = "sprite-icons-symsteam-icon-256"
++++
 
 ## What is SymSteam?
 

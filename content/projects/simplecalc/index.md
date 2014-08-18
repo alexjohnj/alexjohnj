@@ -1,28 +1,16 @@
----
-layout: page
-title: SimpleCalc
----
-
-<div id="screenshot-carousel">
-	<div class="screenshot">
-		<div class="sprite-icons-simplecalc-icon-256"></div>
-	</div>
-	<div class="screenshot">
-		<img height="300px" width="328px" src="/images/projects/simplecalc/simplecalc-screenshot-1.png" />
-	</div>
-	<div class="screenshot">
-		<img height="300px" width="328px" src="/images/projects/simplecalc/simplecalc-screenshot-2.png" />
-	</div>
-	<div class="screenshot">
-		<img height="300px" width="328px" src="/images/projects/simplecalc/simplecalc-screenshot-3.png" />
-	</div>
-</div>
-
-<div id="project-header-links" markdown="1">
-	<h1><a href="https://github.com/alexjohnj/SimpleCalc"> View SimpleCalc on GitHub</a></h1>
-</div>
-
----
++++
+title = "SimpleCalc"
+version = "3.3.3"
+source_url = "https://github.com/alexjohnj/SimpleCalc"
+dl_url = "https://code.google.com/p/simple-calc/downloads/detail?name=SimpleCalc_3.3.3.zip&can=2&q="
+changelog = "https://raw.githubusercontent.com/alexjohnj/SimpleCalc/master/Changelog.md"
+icon_sprite = "sprite-icons-simplecalc-icon-256"
+screenshots = [
+	"/images/projects/simplecalc/simplecalc-screenshot-1.png",
+	"/images/projects/simplecalc/simplecalc-screenshot-2.png",
+	"/images/projects/simplecalc/simplecalc-screenshot-3.png"
+]
++++
 
 ## What is SimpleCalc?
 

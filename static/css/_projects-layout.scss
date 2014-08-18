@@ -27,6 +27,38 @@
   }
 }
 
+#project-title {
+  h1,
+  h2 {
+    margin: 0;
+  }
+
+  h2 {
+    margin-bottom: 1em;
+    color: lighten(#000000, 50%);
+    font-size: 1.6rem;
+  }
+}
+
+#project-header-links {
+  text-align: center;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    font-size: 1.4rem;
+
+    li {
+      padding-bottom: 15px;
+    }
+
+    li:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
 #screenshot-carousel {
   border: 1px $underline-color dotted;
   width: 99%;
@@ -46,11 +78,6 @@
 
 .first {
   margin-left: 20px;
-}
-
-#project-header-links {
-  width: 100%;
-  text-align: center;
 }
 
 // Sprite Icons

@@ -1,27 +1,16 @@
----
-layout: page
-title: Memtester
-version: 1.0
----
-
-<div id="screenshot-carousel">
-	<div class="screenshot first"><div class="sprite-icons-memtester-icon-256"></div></div>
-	<div class="screenshot">
-		<img height="300px" width="508px" src="/images/projects/memtester/memtester-screenshot-1.png" />
-	</div>
-	<div class="screenshot">
-		<img height="300px" width="508px" src="/images/projects/memtester/memtester-screenshot-2.png" />
-	</div>
-	<div class="screenshot">
-		<img height="300px" width="508px" src="/images/projects/memtester/memtester-screenshot-3.png" />
-	</div>
-</div>
-
-<div id="project-header-links" markdown="1">
-	<h1><a href="https://github.com/alexjohnj/memtester-mac/downloads">Download Memtester {{ page.version }}</a> or <a href="https://github.com/alexjohnj/memtester-mac">View it on GitHub</a></h1>
-</div>
-
----
++++
+title = "Memtester"
+version = "1.0"
+dl_url = "https://github.com/alexjohnj/memtester-mac/downloads/"
+source_url = "https://github.com/alexjohnj/memtester-mac"
+changelog = "http://alexjohnj.github.com/memtester-mac/changelog.html"
+icon_sprite = "sprite-icons-memtester-icon-256"
+screenshots = [
+	"/images/projects/memtester/memtester-screenshot-1.png",
+	"/images/projects/memtester/memtester-screenshot-2.png",
+	"/images/projects/memtester/memtester-screenshot-3.png"
+]
++++
 
 ## What is Memtester?
 
@@ -33,8 +22,6 @@ The original Memtester, written by a friend of mine in Java, Can be found on [Go
 
 ## Useful Links
 
-- [GitHub Page][github-project-page]
-- [Changelog][memtester-changelog]
 - [Java Version's Google Code Page][memtester-google-code]
 
 [application-download-link]: https://github.com/alexjohnj/memtester-mac/downloads

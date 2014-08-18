@@ -1,24 +1,15 @@
----
-layout: page
-title: Appcastr
-version: 0.1.1
----
-
-<div id="screenshot-carousel">
-    <div class="screenshot first"><div class="sprite-icons-appcastr-icon-256"></div></div>
-	<div class="screenshot">
-	    <img height="300px" width="457px" src="/images/projects/appcastr/appcastr-screenshot-1.png" />
-	</div>
-	<div class="screenshot">
-		<img height="300px" width="343px" src="/images/projects/appcastr/appcastr-screenshot-2.png" />
-	</div>
-</div>
-
-<div id="project-header-links">
-	<h1> Download Appcastr <a href="https://github.com/downloads/alexjohnj/appcastr/Appcastr-0.1.1.zip">{{ page.version }}</a> or <a href="https://github.com/alexjohnj/appcastr"> View the Project on GitHub</a></h1>
-</div>
-
----
++++
+title = "Appcastr"
+version = "0.1.1"
+source_url = "https://github.com/alexjohnj/appcastr/"
+dl_url = "https://github.com/downloads/alexjohnj/appcastr/Appcastr-0.1.1.zip"
+changelog = "https://alexjohnj.github.io/appcastr/changelog.html"
+screenshots = [
+    "/images/projects/appcastr/appcastr-screenshot-1.png",
+    "/images/projects/appcastr/appcastr-screenshot-2.png"
+]
+icon_sprite = "sprite-icons-appcastr-icon-256"
++++
 
 ## What is Appcastr?
 
@@ -41,12 +32,7 @@ Meeeh, not really. I don't want to call the project dead but I haven't done any 
 
 ## Is it Open Source?
 
-Yup, you can find the source code [on GitHub][github-project-page] and it's released under a do whatever you like license just leave credit where it's due. Like I said above, I don't really have the time to work on it anymore but should someone create a pull request, I'll definitely look at it and merge it if it's appropriate.  
-
-## Useful Links
-
-- [Changelog][changelog]
-- [GitHub Project Page][github-project-page]
+Yup, you can find the source code [on GitHub][github-project-page] and it's released under a do whatever you like license just leave credit where it's due. Like I said above, I don't really have the time to work on it anymore but should someone create a pull request, I'll definitely look at it and merge it if it's appropriate.
 
 [^1]: Version 0.2 still isn't complete. It's got quite a few UI bugs and several features haven't been fully implemented.
 

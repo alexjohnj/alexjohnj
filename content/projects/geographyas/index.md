@@ -1,27 +1,14 @@
----
-layout: page
-title: Geography AS Notes
----
-
-<div id="screenshot-carousel">
-	<div class="screenshot first"><div class="sprite-icons-geographyas-icon-256"></div></div>
-	<div class="screenshot">
-		<img width="503px" height="300px" src="/images/projects/geographyas/geographyas-notes-screenshot-1.png" />
-	</div>
-	<div class="screenshot">
-		<img width="503px" height="300px" src="/images/projects/geographyas/geographyas-notes-screenshot-2.png" />
-	</div>
-	<div class="screenshot">
-		<img width="503px" height="300px" src="/images/projects/geographyas/geographyas-notes-screenshot-3.png" />
-	</div>
-</div>
-
-<div id="project-header-links" markdown="1">
-	<h1><a href="http://geographyas.info">Visit Geography AS Notes</a> or <a href="https://github.com/alexjohnj/geographyas
-"> Check out the Code on GitHub</a></h1>
-</div>
-
----
++++
+title = "Geography AS Notes"
+source_url = "https://github.com/alexjohnj/geographyas/"
+screenshots = [
+	"/images/projects/geographyas/geographyas-notes-screenshot-1.png",
+	"/images/projects/geographyas/geographyas-notes-screenshot-2.png",
+	"/images/projects/geographyas/geographyas-notes-screenshot-3.png"
+]
+icon_sprite = "sprite-icons-geographyas-icon-256"
+web_url = "http://geographyas.info"
++++
 
 ## What is Geography AS Notes?
 
