@@ -1,6 +1,6 @@
 ---
 title: Project Updates
-date: 2013-12-11
+date: "2013-12-11T01:22:00Z"
 ---
 
 This is a boring updated on the status of several of my projects. If you don't care about them then just give this post a miss. There'll be a new post in a couple of months which may be more interesting.

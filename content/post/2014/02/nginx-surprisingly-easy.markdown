@@ -1,6 +1,6 @@
 +++
 title = "Nginx—Surprisingly Easy"
-date = "2014-02-03"
+date = "2014-02-03T00:15:00Z"
 +++
 
 Out of curiosity I spent my Sunday afternoon moving this blog from Amazon S3 to a [DigitalOcean][digital-ocean-link] VPS (spoiler, that's a referral link). I didn't have a solid reason to do this---it's both more expensive and more effort---aside from to learn. I've never set up a web server from scratch before let alone owned a VPS. I kind of felt I needed one so I could earn some geek cred.

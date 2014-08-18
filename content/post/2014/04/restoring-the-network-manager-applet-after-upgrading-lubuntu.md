@@ -1,6 +1,6 @@
 +++
 title = "Restoring the Network Manager Applet After Upgrading to Lubuntu 14.04"
-date = "2014-04-19"
+date = "2014-04-19T22:30:00Z"
 syntax_highlighting = true
 +++
 

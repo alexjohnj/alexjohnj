@@ -1,6 +1,6 @@
 ---
 title: SymSteam Beta 2.1 Released
-date: 2013-03-31
+date: "2013-03-31T12:32:00Z"
 ---
 
 This is a _very_ small update for SymSteam that fixes two bugs you probably didn't even know existed. The first, a simple spelling mistake in an error message. The second, a cock-up with pointers that meant that if an error occurred while deleting an old symbolic link an empty error message would be displayed. Not particularly helpful.

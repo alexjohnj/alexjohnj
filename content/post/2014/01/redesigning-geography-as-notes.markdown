@@ -1,6 +1,6 @@
 ---
 title: Redesigning Geography AS Notes
-date: 2014-01-08
+date: "2014-01-08T21:45:00Z"
 ---
 
 Just under a month ago, I [wrote about][project-changes] which projects I'd be focusing my time on in the coming year. The main takeaway from the post was that [Geography AS Notes][gas-project-page] was going to get some love. Well, here's my first packet of love[^1], a redesign. 

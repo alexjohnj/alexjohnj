@@ -1,6 +1,6 @@
 +++
 title = "S3 Deployment Script Mk 2"
-date = "2013-02-17"
+date = "2013-02-17T16:16:00Z"
 syntax_highlighting = true
 +++
 

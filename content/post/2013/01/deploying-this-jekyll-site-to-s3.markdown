@@ -1,6 +1,6 @@
 +++
 title = "Deploying This Jekyll Site to S3"
-date = "2013-01-17"
+date = "2013-01-17T21:22:00Z"
 syntax_highlighting = true
 +++
 

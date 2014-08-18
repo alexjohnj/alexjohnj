@@ -1,6 +1,6 @@
 +++
 title = "Some .sexy New TLDs"
-date = "2014-03-12"
+date = "2014-03-12T21:45:00Z"
 +++
 
 Today I became the proud owner of [alexj.sexy][alex-sexy] following in the footsteps of people like Myke Hurley of [myke.sexy][myke-sexy]. This is possibly the best $25 I've ever spent. 
