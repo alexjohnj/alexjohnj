@@ -8,3 +8,60 @@ body {
 code {
   font-family: "Fira Mono", monospace;
 }
+
+// The typographic scale used here is a slightly modified version of this:
+// http://typecast.com/blog/a-more-modern-scale-for-web-typography
+
+h1 {
+  line-height: 1.5;
+  font-size: 2em;
+
+  @media (min-width: 43.75em) {
+    line-height: 1.5;
+    font-size: 2.5em;
+  }
+
+  @media (min-width: 56.25em) {
+    line-height: 1.5;
+    font-size: 3em;
+  }
+}
+
+h2 {
+  line-height: 1.15384615; // maths
+  font-size: 1.625em;
+
+  @media (min-width: 43.75em) {
+    line-height: 1.25;
+    font-size: 2em;
+  }
+
+  @media (min-width: 56.25em) {
+    line-height: 1.25;
+    font-size: 2.25em;
+  }
+}
+
+h3 {
+  line-height: 1.13636364;
+  font-size: 1.375em;
+
+  @media (min-width: 43.75em) {
+    line-height: 1.25;
+    font-size: 1.5em;
+  }
+  
+  @media (min-width: 56.25em) {
+    line-height: 1.25;
+    font-size: 1.75em;
+  }
+}
+
+h4 {
+  line-height: 1.11111111;
+  font-size: 1.125em;
+
+  @media (min-width: 43.75em) {
+    line-height: 1.22222222;
+  }
+}
