@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     del = require('del'),
     exec = require('child_process').exec,
     gzip = require('gulp-gzip'),
+    rsync = require('rsyncwrapper').rsync,
     htmlmin = require('gulp-htmlmin');
 
 // Build SASS stylesheets, run the built sheet through autoprefixer and then minify it
@@ -53,6 +54,20 @@ gulp.task('gzip', ['hugo', 'htmlmin'], function() {
     .pipe(gulp.dest('./public'))
 });
 
+// Rsync the public directory to my server
+gulp.task('rsync', ['hugo', 'htmlmin', 'gzip'], function(cb) {
+  return rsync({
+    ssh: true,
+    src: './public/',
+    dest: 'alex@stormageddon:/var/www/alexj.org/public/',
+    recursive: true,
+    deleteAll: true
+  }, function(error, stdout, stderr, cmd){
+    console.log(stdout);
+    console.log(stderr);
+  });
+});
+
 // Watch for changes
 gulp.task('watch', function() {
   gulp.watch('./static/css/**/*.scss', ['styles']);
@@ -63,4 +78,11 @@ gulp.task('default', ['clean', 'styles'], function() {
   gulp.start('hugo');
   gulp.start('htmlmin'); // Will not execute until 'hugo' task is done
   gulp.start('gzip'); // Will not execute until 'hugo' and 'htmlmin' tasks are done
+});
+
+gulp.task('deploy', ['clean', 'styles'], function() {
+  gulp.start('hugo');
+  gulp.start('htmlmin');
+  gulp.start('gzip');
+  gulp.start('rsync');
 });
