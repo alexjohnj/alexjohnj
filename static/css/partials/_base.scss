@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  margin: 0 0 $site-footer-height; // Needed for sticky footer to work
+  margin: 0 0 ($site-footer-height + 30); // Needed for sticky footer to work
   background-color: #4a4a4a;
 }
 
