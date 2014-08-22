@@ -30,3 +30,11 @@ body {
 img {
   width: 100%;
 }
+
+// ATTENTION: blackfriday (the Markdown engine that Hugo uses) for some reason
+// wraps <img> elements in a <p> element. As a result, to get full width images
+// you'll need to wrap the <img> element in a <div.full-width-image-wrap> 
+// element. 
+.full-width-image-wrap {
+  width: 100%;
+}
