@@ -8,22 +8,7 @@
         <h1>{{ .Title }}</h1>
         <h2><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time></h2>
       </header>
-
       {{ .Content }}
-
-      <footer id="post-footer">
-        <h3>More:</h3>
-        {{ if .Next }}
-        <div id="previous-post">
-          <a href="{{ .Next.Permalink }}">&laquo; {{ .Next.Title }}</a>
-        </div>
-        {{ end }}
-        {{ if .Prev }}
-        <div id="next-post">
-          <a href="{{ .Prev.Permalink }}">{{ .Prev.Title }} &raquo;</a>
-        </div>
-        {{ end }}
-      </footer>
     </article>
   </div>
   {{ template "partials/footer.html" . }}
