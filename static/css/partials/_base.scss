@@ -17,6 +17,8 @@ body {
   width: 95%;
   max-width: 960px;
 
+  overflow: hidden; // This stops the 100% blockquote background from overflowing
+
   > * {
     margin-right: auto;
     margin-left: auto;

@@ -9,6 +9,36 @@ code {
   font-family: "Fira Mono", monospace;
 }
 
+blockquote {
+  position: relative;
+  background-color: #daecd8;
+  font-style: italic;
+  padding: 10px 0;
+
+  // This lovely little hack makes the background of the blockquote span 100%
+  // of the viewport and then some. To stop the background from spilling over
+  // the parent element, the parent's overflow property needs to be hidden.
+  // See http://css-tricks.com/full-browser-width-bars/ for the basics.
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    background: #daecd8;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &:before {
+    right: 100%;
+  }
+
+  &:after {
+    left: 100%;
+  }
+}
+
 // The typographic scale used here is a slightly modified version of this:
 // http://typecast.com/blog/a-more-modern-scale-for-web-typography
 
