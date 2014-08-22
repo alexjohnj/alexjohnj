@@ -1,0 +1,49 @@
+#site-header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 50);
+  background-color: $dark-lime-green;
+
+  height: 70px;
+
+  text-align: center;
+
+  > h1 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    margin: 0;
+
+    color: #ffffff;
+  }
+}
+
+#hamburger-button {
+  position: relative;
+  top: 50%;
+  float: left;
+  transform: translateY(-50%);
+
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  background-image: none;
+  padding: 0;
+
+  width: 44px;
+  height: 44px;
+}
+
+.hamburger-slice {
+  display: block;
+
+  margin: auto;
+  border-radius: 1px;
+  background-color: #ffffff;
+
+  width: 22px;
+  height: 2px;
+}
+
+.hamburger-slice + .hamburger-slice {
+  margin-top: 4px;
+}
