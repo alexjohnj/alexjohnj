@@ -2,15 +2,20 @@
 {{ template "partials/head.html" . }}
 <body>
   {{ template "partials/header.html" . }}
-  <div id="content" class="content-margin-wrap">
-    <article>
-      <header id="post-header">
-        <h1>{{ .Title }}</h1>
-        <h2><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time></h2>
-      </header>
-      {{ .Content }}
-    </article>
-  </div>
+  <article class="paper-card" id="main-article">
+    <header id="post-header">
+      <h1>{{ .Title }}</h1>
+      <p><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time></p>
+    </header>
+
+    {{ .Content }}
+
+    <footer id="article-footer">
+      <p>Next</p>
+      <p>Previous</p>
+    </footer>
+  </article>
+  
   {{ template "partials/footer.html" . }}
 </body>
 </html>
