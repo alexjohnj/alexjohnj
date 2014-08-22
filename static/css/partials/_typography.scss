@@ -12,8 +12,9 @@ code {
 blockquote {
   position: relative;
   background-color: #daecd8;
-  font-style: italic;
   padding: 10px 0;
+
+  font-style: italic;
 
   // This lovely little hack makes the background of the blockquote span 100%
   // of the viewport and then some. To stop the background from spilling over
