@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 
 // Build SASS stylesheets, run the built sheet through autoprefixer and then minify it
 gulp.task('styles', function() {
-  return gulp.src('./static/css/styles.scss')
+  return gulp.src('./static/css/main.scss')
     .pipe(sass({ style: 'expanded' }))
     .pipe(autoprefixer('last 2 versions', 'ie 9'))
     .pipe(rename({suffix: '.min'}))
