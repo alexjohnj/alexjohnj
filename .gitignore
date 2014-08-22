@@ -1,9 +1,9 @@
 # NodeJS
-
 node_modules
 
 # SASS
 .sass-cache
+static/css/styles.min.css # Generated CSS, build with gulp.js
 
 # Hugo
 public
