@@ -1,8 +1,13 @@
 #post-header {
-  margin-left: 0;
   margin-right: 0;
-  
+  margin-left: 0;
+  padding-top: 20px;
+
   width: 100%;
 
   text-align: center;
+
+  > * {
+    margin: 0;
+  }
 }
