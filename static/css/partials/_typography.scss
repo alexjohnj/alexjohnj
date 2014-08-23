@@ -1,5 +1,5 @@
 body {
-  line-height: 1.5;
+  line-height: 1.6;
   font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
   font-size: 100%;
   font-weight: normal;
@@ -46,6 +46,25 @@ blockquote {
 
   &:after {
     left: 100%;
+  }
+}
+
+a {
+  transition: all 200ms cubic-bezier(0.230, 1, 0.320, 1);
+ 
+  border-bottom: 2px solid $strong-green;
+
+  text-decoration: none;
+  color: $strong-green;
+
+  &:hover {
+    border-color: darken($strong-green, 4%);
+    color: darken($strong-green, 4%);
+  }
+
+  &:active {
+    border-color: darken($strong-green, 6%);
+    color: darken($strong-green, 6%);
   }
 }
 
