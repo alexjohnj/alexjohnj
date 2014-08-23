@@ -46,11 +46,11 @@ table {
 
 tr {
   &:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: $table-odd-color;
   }
 
   &:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: $table-even-color;
   }
 }
 

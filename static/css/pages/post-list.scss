@@ -7,4 +7,17 @@
       border: 0;
     }
   }
+
+  tr:hover {
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+
+    &:nth-child(odd) {
+      background-color: darken($table-odd-color, 3%);
+    }
+
+    &:nth-child(even) {
+      background-color: darken($table-even-color, 3%);
+    }
+  }
 }
