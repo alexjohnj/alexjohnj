@@ -1,39 +1,32 @@
 +++
 date = 2014-08-22T16:11:04Z
 syntax_highlighting = true
+math = true
 title = "Test Page"
 +++
 
-# This is a Test Page
+This page has only one purpose, to demonstrate how different elements look when styled. It's useful for debugging the CSS of the site, especially when combined with [live reload](http://livereload.com/) that automatically refreshes the page when something changes. This page needs to test a few key elements, namely:
 
-The idea of this page is to show what different elements of the site will look like. For example, this is a short paragraph.
+- Paragraphs of text
+    + Styles of text including emphasised and italicised text
+- Headers
+- Images
+- Blockquotes
+- Inline code
+- Blocks of code (with [syntax highlighting](https://highlightjs.org))
+- Lists (see what I'm doing here?)
+- Probably some other stuff too
 
-## This is a h2 element
+## A Paragraph of Text
 
-### This a h3 element
+Do you see what I did there? I used a heading to divide two sections of text. I _also_ used it to test what a `<h2>` element looks like. And, in describing what I just did, I also managed to incorporated _italicised_ text and `inline code`. Pretty neat! Inline code is cool and all but we really need to see a block of code (also known as "code poetry").
 
-#### This is a h4 element
+### Some Code
 
-##### This is a h5 element
+The block of code that follows is some Python code that draws a [Mandelbrot fractal][mandelbrot-fractal] using Python's [turtle module][python-turtle-module].
 
-Do people ever really use `<h5>` elements? Oh hey, that was some _inline code_. **OH** and there's some italicised and bolded text.
-
-Here comes a really long piece of text, the infamous lorem ipsum:
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
-
-Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum. Ut dolor diam, elementum et vestibulum eu, porttitor vel elit. Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id justo. Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper. Aliquam at massa ipsum. Quisque bibendum purus convallis nulla ultrices ultricies. Nullam aliquam, mi eu aliquam tincidunt, purus velit laoreet tortor, viverra pretium nisi quam vitae mi. Fusce vel volutpat elit. Nam sagittis nisi dui.
-
-Lets see how part of the next pargraph looks when used in a `<blockquote>`:
-
-> Suspendisse lectus leo, consectetur in tempor sit amet, placerat quis neque. Etiam luctus porttitor lorem, sed suscipit est rutrum non. Curabitur lobortis nisl a enim congue semper. Aenean commodo ultrices imperdiet. Vestibulum ut justo vel sapien venenatis tincidunt. Phasellus eget dolor sit amet ipsum dapibus condimentum vitae quis lectus.
-
-
-So much boring text, let's see a cute picture of my dog:
-
-![An image of my dog](/images/cute-dog-test-image-2.jpeg)
-
-Let's try out a block of code. Here's a snippet of code that helps find numbers in the Mandelbrot set:
+[mandelbrot-fractal]: https://en.wikipedia.org/wiki/Mandelbrot_set
+[python-turtle-module]: https://docs.python.org/3.4/library/turtle.html
 
 ```python
 import turtle
@@ -82,5 +75,43 @@ if __name__ == '__main__':
     draw_mandelbrot_set_fractal_with_turtle(2)
 ```
 
+That code is very poorly commented and probably doesn't make sense. I wrote it several years ago so please don't ask me to explain it either. Anywho, this is what it produces:
 
+<figure>
+    <img src="/images/mandelbrot-test-image.png" alt="The product of mandelbrot-script.py"/>
+    <figcaption>The output of the above script.</figcaption>
+</figure>
+
+Again, do you see what I did there? I used the code snippet above to "segue" int a new section and test out images that are embedded in a `<figure>` element. This lets me give them a caption and makes them look quite professional. Here's an image that doesn't have a caption:
+
+<div class="full-width-image-wrap">
+    <img src="/images/cute-dog-test-image-2.jpeg" alt="A picture of my dog" />
+</div> 
+
+Notice how that image takes up the full width of the "paper card". These full width images are all the rage right now. They look quite cool, especially on small screens. They don't look quite as good on bigger screens though. To do this I had to wrap the `<img>` element in a `<div>` element because [blackfriday][blackfriday-github] for some reason wraps `<img>` elements in a `<p>` element. This could have something to do with its **Compatibility** feature:
+
+[blackfriday-github]: https://github.com/russross/blackfriday
+
+> **Compatibility**
+>  
+> The Markdown v1.0.3 test suite passes with the `--tidy` option. Without `--tidy`, the differences are mostly in whitespace and entity escaping, where blackfriday is more consistent and cleaner.
+
+Hah, another element tested, the `<blockquote>` element.
+
+## Other Things
+
+Moving swiftly onwards, let's take a look at some tables:
+
+| Voltage (V) | Distance (mm) | Time (s) | Velocity (m/s)                | &Delta;V (m/s)                         |
+| :---------: | :----:        | :------: | :---------------------------: | :------------------------------------: |
+| 183         | 1.5           | 41.148   | 3.65&times;10<sup>-5</sup>    | 1.29&times;10<sup>-6</sup>             |
+| 221         | 1.5           | 46.360   | 3.24&times;10<sup>-5</sup>    | 1.13&times;10<sup>-5</sup>             |
+
+That's a fairly small table. It contains some results from an experiment I did in my first year at university. It's quite a famous experiment, the Millikan Oil Drop experiment. Carrying out the experiment allows you to determine the charge of an electro to a high degree of accuracy. It also provides some evidence to support the idea that the charge on a electron is quantised. It's all based on the Stokes' law:
+
+\\[
+    F_d = 6 \pi \mu R v
+\\]
+
+That should be rendered correctly using _MathJax_.
 
