@@ -25,3 +25,15 @@
   })();
   </script>
 {{ end }}
+
+{{ if .Params.math }}
+  <script type="text/javascript">
+  (function() {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    script.async= 'true';
+    document.body.appendChild(script);
+  })();
+  </script>
+{{ end }}
