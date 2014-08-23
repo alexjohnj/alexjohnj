@@ -12,7 +12,7 @@
 
   text-align: center;
 
-  > h1 {
+  h1 {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -28,6 +28,15 @@
       color: #ffffff;
     }
   }
+}
+
+.site-header-content {
+  position: relative;
+  margin: 0 auto;
+
+  width: 95%;
+  max-width: 960px;
+  height: 100%;
 }
 
 #hamburger-button {
