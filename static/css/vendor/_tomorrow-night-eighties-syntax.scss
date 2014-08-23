@@ -88,6 +88,10 @@ pre {
   background-color: #2d2d2d;
   overflow: visible;
 
+  > code {
+    -webkit-overflow-scrolling: touch;
+  }
+
   &:before,
   &:after {
     content: "";
