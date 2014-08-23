@@ -57,3 +57,10 @@ tr {
 td {
   padding: 10px;
 }
+
+// Wrap a group of floated elements in this class to apply the clearfix
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

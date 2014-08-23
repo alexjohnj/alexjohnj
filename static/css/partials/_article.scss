@@ -15,3 +15,53 @@ article > header {
     color: #4d4d4d;
   }
 }
+
+// A lot of hacks go into making this work.
+// First up, the contents of footer#article-footer are wrapped in a div.clearfix
+// in order to give the footer a height (since its contents are floated).
+// In addition, the :before/:after stuff going on with footer#article-footer is 
+// to stretch the background of the footer outside of the max-width while 
+// applying the max-width to the contents of the footer.
+#article-footer {
+  position: relative;
+  background-color: $strong-green;
+
+  color: #ffffff;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    background: $strong-green;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &:before {
+    right: 100%;
+  }
+
+  &:after {
+    left: 100%;
+  }
+}
+
+#next-post,
+#previous-post {
+  width: 50% !important;
+
+  a {
+    color: #ffffff;
+    border: 0;
+  }
+}
+
+#next-post {
+  float: right;
+  text-align: right;
+}
+
+#previous-post {
+  float: left;
+}

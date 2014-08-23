@@ -11,8 +11,19 @@
     {{ .Content }}
 
     <footer id="article-footer">
-      <p>Next</p>
-      <p>Previous</p>
+      <div class="clearfix">
+        <section id="next-post">
+        {{ if .Prev }}
+          <p><a href="{{ .Prev.Permalink }}">{{ .Prev.Title }} &raquo;</a></p>
+        {{ end }}
+        </section>
+
+        <section id="previous-post">
+        {{ if .Next }}
+          <p><a href="{{ .Next.Permalink }}">&laquo; {{ .Next.Title }}</a></p>
+        {{ end }}
+        </section>
+      </div>
     </footer>
   </article>
   
