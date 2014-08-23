@@ -1,0 +1,17 @@
+#post-list {
+  list-style: none;
+  font-size: 1.3rem;
+
+  > li {
+    padding-bottom: 10px;
+
+    > a {
+      border: 0;
+    }
+
+    > .date-time-meta {
+      float: right;
+      color: #999999;
+    }
+  }
+}
