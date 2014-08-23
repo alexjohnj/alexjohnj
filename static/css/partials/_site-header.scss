@@ -32,6 +32,8 @@
 
 .site-header-content {
   position: relative;
+  z-index: 101;
+
   margin: 0 auto;
 
   width: 95%;
@@ -43,6 +45,7 @@
   position: relative;
   top: 50%;
   float: left;
+  z-index: 102;
   transform: translateY(-50%);
 
   margin: 0 (-$hamburger-button-width) 0 0;
