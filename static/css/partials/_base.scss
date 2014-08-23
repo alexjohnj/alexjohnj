@@ -39,3 +39,21 @@ img {
 .full-width-image-wrap {
   width: 100%;
 }
+
+table {
+  border-collapse: separate;
+}
+
+tr {
+  &:nth-child(odd) {
+    background-color: #ffffff;
+  }
+
+  &:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+}
+
+td {
+  padding: 10px;
+}

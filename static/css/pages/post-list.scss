@@ -1,17 +1,10 @@
-#post-list {
-  list-style: none;
-  font-size: 1.3rem;
+#post-archive-table {
+  margin-bottom: 10px;
+  font-size: 1.3em;
 
-  > li {
-    padding-bottom: 10px;
-
+  td {
     > a {
       border: 0;
-    }
-
-    > .date-time-meta {
-      float: right;
-      color: #999999;
     }
   }
 }
