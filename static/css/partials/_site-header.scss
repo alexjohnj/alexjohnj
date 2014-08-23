@@ -1,7 +1,14 @@
 #site-header {
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   background-color: $dark-lime-green;
 
+  width: 100%;
   height: $site-header-height;
 
   text-align: center;
@@ -54,3 +61,16 @@
 .hamburger-slice + .hamburger-slice {
   margin-top: 4px;
 }
+
+.headroom {
+  transition: opacity 200ms linear;
+}
+
+.headroom--pinned {
+  opacity: 1;
+}
+
+.headroom--unpinned {
+  opacity: 0;
+}
+
