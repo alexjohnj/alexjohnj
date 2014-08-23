@@ -7,6 +7,15 @@ body {
 
 code {
   font-family: "Fira Mono", monospace;
+  
+  p > & {
+    border-radius: 0.3125em;
+
+    background-color: #262626;
+    padding: 0.125em 0.25em;
+
+    color: #cccccc;
+  }
 }
 
 blockquote {
