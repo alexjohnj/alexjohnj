@@ -1,11 +1,13 @@
 +++
 title = "SymSteam"
 version = "Beta 2.1"
+description = "SymSteam is a lightweight utility for Mac gamers that makes playing games off of an external drive easy. It's pretty much redundant now since Steam now supports multiple libraries."
 source_url = "https://github.com/alexjohnj/symsteam/"
 dl_url = "http://application-downloads.s3.amazonaws.com/symsteam-beta-2.1.zip"
 documentation = "documentation/"
 changelog = "https://alexjohnj.github.io/symsteam/changelog.html"
 icon_sprite = "sprite-icons-symsteam-icon-256"
+project_css_class = "project-symsteam"
 +++
 
 ## What is SymSteam?

@@ -1,6 +1,7 @@
 +++
 title = "SimpleCalc"
 version = "3.3.3"
+description = "The first program I ever wrote, SimpleCalc is a form based calculator that can carry out basic arithmetic, calculate averages, solve quadratic equations and perform unit conversions."
 source_url = "https://github.com/alexjohnj/SimpleCalc"
 dl_url = "https://code.google.com/p/simple-calc/downloads/detail?name=SimpleCalc_3.3.3.zip&can=2&q="
 changelog = "https://raw.githubusercontent.com/alexjohnj/SimpleCalc/master/Changelog.md"
@@ -10,6 +11,7 @@ screenshots = [
 	"/images/projects/simplecalc/simplecalc-screenshot-2.png",
 	"/images/projects/simplecalc/simplecalc-screenshot-3.png"
 ]
+project_css_class = "project-simplecalc"
 +++
 
 ## What is SimpleCalc?
