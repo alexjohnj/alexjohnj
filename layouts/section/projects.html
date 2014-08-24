@@ -5,17 +5,21 @@
   <section class="paper-card">
     <h1>{{ .Title }}</h1>
     <div id="project-grid">
-      {{ range .Data.Pages.ByTitle }}
-      <section class="project-grid-entry {{ .Params.project_css_class }}">
+      {{ range $index, $page := .Data.Pages.ByTitle }}
+      {{ if and (eq (add $index 1) (len $.Data.Pages.ByTitle)) (eq (mod $index 2) 0) }}
+      <section class="project-grid-entry {{ $page.Params.project_css_class }} odd-last">
+      {{ else }}
+      <section class="project-grid-entry {{ $page.Params.project_css_class }}">
+      {{ end }}
         <div class="vertical-align-wrap">
-          <h1><a href=" {{.Permalink }}">{{ .Title }}</a></h1>
-          {{ if .Params.version }}<h2>{{ .Params.version }}</h2>{{ end }}
-          <p>{{ .Description }}</p>
+          <h1><a href=" {{ $page.Permalink }}">{{ $page.Title }}</a></h1>
+          {{ if $page.Params.version }}<h2>{{ $page.Params.version }}</h2>{{ end }}
+          <p>{{ $page.Description }}</p>
           <ul class="project-meta-links">
-            <li><a href=" {{ .Permalink }}">More</a></li>
-            {{ if .Params.source_url }}<li><a href="{{ .Params.source_url }}">GitHub</a></li>{{ end }}
-            {{ if .Params.dl_url }}<li><a href="{{ .Params.dl_url }}">Download</a></li>{{ end }}
-            {{ if .Params.web_url }}<li><a href="{{ .Params.web_url }}">Visit</a></li>{{ end }}
+            <li><a href=" {{ $page.Permalink }}">More</a></li>
+            {{ if $page.Params.source_url }}<li><a href="{{ $page.Params.source_url }}">GitHub</a></li>{{ end }}
+            {{ if $page.Params.dl_url }}<li><a href="{{ $page.Params.dl_url }}">Download</a></li>{{ end }}
+            {{ if $page.Params.web_url }}<li><a href="{{ $page.Params.web_url }}">Visit</a></li>{{ end }}
           </ul>
         </div>
       </section>
