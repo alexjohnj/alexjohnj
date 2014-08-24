@@ -1,0 +1,77 @@
+#project-grid {
+  margin: 0;
+  width: 100%;
+
+  a {
+    border-bottom: 0;
+    color: inherit;
+  }
+}
+
+.project-grid-entry {
+  float: left;
+
+  width: 50%;
+  height: 20em;
+
+
+  text-align: center;
+
+  @media handheld, only screen and (max-width: 640px) {
+    float: none;
+    width: 100%;
+  }
+
+  > * {
+    margin: 0 auto;
+    width: 92%;
+    padding-bottom: 10px;
+  }
+
+  > h1 {
+    padding-top: 0.625em;
+  }
+
+  > h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.project-meta-links {
+  padding: 0;
+  list-style: none;
+  
+  > li {
+    display: inline-block;
+    padding-left: 10px;
+
+    &:first-child {
+      padding: 0;
+    }
+  }
+}
+
+// The following is project specific styling
+
+.project-symsteam {
+  background-color: #f8981e;
+}
+
+.project-appcastr {
+  background-color: #062567;
+  color: #ffffff;
+}
+
+.project-simplecalc {
+  background-color: #104d25;
+  color: #ffffff;
+}
+
+.project-memtester {
+  background-color: #91cd26;
+}
+
+.project-geographyas {
+  background-color: #262626;
+  color: #ffffff;
+}

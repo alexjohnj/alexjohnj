@@ -1,22 +1,25 @@
 <!DOCTYPE html>
   {{ template "partials/head.html" . }}
-
 <body>
   {{ template "partials/header.html" . }}
-  <div class="content-margin-wrap">
+  <section class="paper-card">
     <h1>{{ .Title }}</h1>
     <div id="project-grid">
-      {{ range .Data.Pages }}
-        <a href="{{ .Permalink }}">
-          <div class="project-grid item">
-            <div class="{{ .Params.icon_sprite }}"></div>
-            <p>{{ .Title }}</p>
-          </div>
-        </a>
+      {{ range .Data.Pages.ByTitle }}
+      <section class="project-grid-entry {{ .Params.project_css_class }}">
+        <h1><a href=" {{.Permalink }}">{{ .Title }}</a></h1>
+        {{ if .Params.version }}<h2>{{ .Params.version }}</h2>{{ end }}
+        <p>{{ .Description }}</p>
+        <ul class="project-meta-links">
+          <li><a href=" {{ .Permalink }}">More</a></li>
+          {{ if .Params.source_url }}<li><a href="{{ .Params.source_url }}">GitHub</a></li>{{ end }}
+          {{ if .Params.dl_url }}<li><a href="{{ .Params.dl_url }}">Download</a></li>{{ end }}
+          {{ if .Params.web_url }}<li><a href="{{ .Params.web_url }}">Visit</a></li>{{ end }}
+        </ul>
+      </section>
       {{ end }}
     </div>
-  </div>
+  </section>
   {{ template "partials/footer.html" . }}    
 </body>
-
 </html>
