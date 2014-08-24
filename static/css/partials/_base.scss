@@ -1,3 +1,13 @@
+#debug-menu {
+  background-color: #e49087;
+  text-align: center;
+
+  a {
+    border-color: #000000;
+    color: inherit;
+  }
+}
+
 html {
   // Needed for sticky footer to work
   position: relative;
