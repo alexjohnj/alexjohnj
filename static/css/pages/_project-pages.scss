@@ -37,6 +37,13 @@
   }
 }
 
+.vertical-align-wrap {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-bottom: 0;
+}
+
 .project-meta-links {
   padding: 0;
   list-style: none;

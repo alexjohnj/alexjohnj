@@ -7,15 +7,17 @@
     <div id="project-grid">
       {{ range .Data.Pages.ByTitle }}
       <section class="project-grid-entry {{ .Params.project_css_class }}">
-        <h1><a href=" {{.Permalink }}">{{ .Title }}</a></h1>
-        {{ if .Params.version }}<h2>{{ .Params.version }}</h2>{{ end }}
-        <p>{{ .Description }}</p>
-        <ul class="project-meta-links">
-          <li><a href=" {{ .Permalink }}">More</a></li>
-          {{ if .Params.source_url }}<li><a href="{{ .Params.source_url }}">GitHub</a></li>{{ end }}
-          {{ if .Params.dl_url }}<li><a href="{{ .Params.dl_url }}">Download</a></li>{{ end }}
-          {{ if .Params.web_url }}<li><a href="{{ .Params.web_url }}">Visit</a></li>{{ end }}
-        </ul>
+        <div class="vertical-align-wrap">
+          <h1><a href=" {{.Permalink }}">{{ .Title }}</a></h1>
+          {{ if .Params.version }}<h2>{{ .Params.version }}</h2>{{ end }}
+          <p>{{ .Description }}</p>
+          <ul class="project-meta-links">
+            <li><a href=" {{ .Permalink }}">More</a></li>
+            {{ if .Params.source_url }}<li><a href="{{ .Params.source_url }}">GitHub</a></li>{{ end }}
+            {{ if .Params.dl_url }}<li><a href="{{ .Params.dl_url }}">Download</a></li>{{ end }}
+            {{ if .Params.web_url }}<li><a href="{{ .Params.web_url }}">Visit</a></li>{{ end }}
+          </ul>
+        </div>
       </section>
       {{ end }}
     </div>
