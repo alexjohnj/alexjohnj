@@ -8,26 +8,31 @@
 }
 
 .image-carousel-thing {
-  overflow-x: scroll;
-  overflow-y: hidden !important;
-  -webkit-overflow-scrolling: touch;
-
   width: 100%;
   height: 300px;
 
   text-align: center;
   white-space: nowrap;
 
+  overflow-x: scroll;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch;
+
   > .image-container {
     display: inline-block;
+
     width: 100%;
+    height: 100%;
 
     > img {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
       transition: all 350ms ease-in-out;
-      z-index: 200;
 
       width: auto;
       max-width: 100%;
+      height: auto;
       max-height: 100%;
     }
   }
