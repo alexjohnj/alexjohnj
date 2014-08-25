@@ -25,11 +25,12 @@
     height: 100%;
 
     > img {
+      display: block;
       position: relative;
       top: 50%;
       transform: translateY(-50%);
-      transition: all 350ms ease-in-out;
-
+      margin: 0 auto;
+      
       width: auto;
       max-width: 100%;
       height: auto;
