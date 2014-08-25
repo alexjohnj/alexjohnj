@@ -3,58 +3,22 @@
 
 <body>
   {{ template "partials/header.html" . }}
-  <article id="content" class="content-margin-wrap">
-    <header id="project-title">
+  <article class="paper-card">
+    <header id="project-title" class="{{ .Params.project_css_class }}">
       <h1>{{ .Title }}</h1>
       {{ if .Params.version }}<h2>{{ .Params.version }}</h2>{{ end }}
     </header>
-
-    {{ if and (not .Params.screenshots) (.Params.icon_sprite) }}
-      <div class="project-icon">
-        <div class="{{ .Params.icon_sprite }}"></div>
-      </div>
-    {{ end }}
-
     {{ if .Params.screenshots }}
-      <div id="screenshot-carousel">
-        {{ if .Params.icon_sprite }}
-          <div class="screenshot first"><div class="{{ .Params.icon_sprite }}"></div></div>
-          {{ range $screenshot := .Params.screenshots }}
-          <div class="screenshot">
-            <img src="{{ $screenshot }}" />
-          </div>
-          {{ end }}
-        {{ else }}
-          {{ range $screenshot := .Params.screenshots }}
-            <div class="screenshot">
-              <img src="{{ $screenshot }}" />
-            </div>
-          {{ end }} 
-        {{ end }}
-      </div>
-    {{ end }}
-
-    <div id="project-header-links">
-      <ul>
-        {{ if .Params.dl_url }}
-        <li><a href="{{ .Params.dl_url }}">Download {{ .Title }} {{ .Params.version }}</a></li>
-        {{ end }}
-        {{ if .Params.web_url }}
-        <li><a href="{{ .Params.web_url }}">Visit {{ .Title }}</a></li>
-        {{ end }}
-        {{ if .Params.documentation }}
-        <li><a href="{{ .Params.documentation }}">View the documentation</a></li>
-        {{ end }}
-        {{ if .Params.source_url }}
-        <li><a href="{{ .Params.source_url }}">View the source on GitHub</a></li>
-        {{ end }}
-        {{ if.Params.changelog }}
-        <li><a href="{{ .Params.changelog }}">View the changelog</a></li>
-        {{ end }}
-      </ul>
-    </div> <!--End project-header-links-->
+    <div class="image-carousel-thing">
+      {{ range .Params.screenshots }}
+        <div class="image-container">
+          <img src="{{ . }}" />
+        </div>
+      {{ end }}
+    </div>
     {{ .Content }}
-  </article> <!--End content-marign-wrap-->
+    {{ end }}
+  </article>
   {{ template "partials/footer.html" . }}
 </body>
 </html>
