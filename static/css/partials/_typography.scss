@@ -8,8 +8,10 @@ body {
 }
 
 code {
-  font-family: "Fira Mono", monospace;
-  
+  // Although we don't download Inconsolata-dz/Inconsolata-g, 
+  // use them if they're available.
+  font-family: "Inconsolata-g", "Inconsolata-dz", "Inconsolata", monospace; 
+
   p > & {
     border: 1px solid #262626;
     border-radius: 5px;
