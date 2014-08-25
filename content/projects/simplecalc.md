@@ -9,7 +9,8 @@ icon_sprite = "sprite-icons-simplecalc-icon-256"
 screenshots = [
 	"/images/projects/simplecalc/simplecalc-screenshot-1.png",
 	"/images/projects/simplecalc/simplecalc-screenshot-2.png",
-	"/images/projects/simplecalc/simplecalc-screenshot-3.png"
+	"/images/projects/simplecalc/simplecalc-screenshot-3.png",
+    "/images/projects/simplecalc/simplecalc-screenshot-4.png"
 ]
 project_css_class = "project-simplecalc"
 +++
