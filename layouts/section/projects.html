@@ -16,10 +16,10 @@
           {{ if $page.Params.version }}<h2>{{ $page.Params.version }}</h2>{{ end }}
           <p>{{ $page.Description }}</p>
           <ul class="project-meta-links">
-            <li><a href=" {{ $page.Permalink }}">More</a></li>
-            {{ if $page.Params.source_url }}<li><a href="{{ $page.Params.source_url }}">GitHub</a></li>{{ end }}
-            {{ if $page.Params.dl_url }}<li><a href="{{ $page.Params.dl_url }}">Download</a></li>{{ end }}
-            {{ if $page.Params.web_url }}<li><a href="{{ $page.Params.web_url }}">Visit</a></li>{{ end }}
+            <li><a href=" {{ $page.Permalink }}"><span class="icon-text"></span> More</a></li>
+            {{ if $page.Params.source_url }}<li><a href="{{ $page.Params.source_url }}"><span class="icon-github"></span> GitHub</a></li>{{ end }}
+            {{ if $page.Params.dl_url }}<li><a href="{{ $page.Params.dl_url }}"><span class="icon-box-download"></span> Download</a></li>{{ end }}
+            {{ if $page.Params.web_url }}<li><a href="{{ $page.Params.web_url }}"><span class="icon-globe"></span> Visit</a></li>{{ end }}
           </ul>
         </div>
       </section>
