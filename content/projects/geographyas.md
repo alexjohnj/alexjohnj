@@ -3,9 +3,9 @@ title = "Geography AS Notes"
 description = "A revision website for students in the UK. It uses Jekyll, SASS, CoffeeScript, SVG and some other cool things. It also contains quite a lot of Geography."
 source_url = "https://github.com/alexjohnj/geographyas/"
 screenshots = [
-	"/images/projects/geographyas/geographyas-notes-screenshot-1.png",
-	"/images/projects/geographyas/geographyas-notes-screenshot-2.png",
-	"/images/projects/geographyas/geographyas-notes-screenshot-3.png"
+	"/images/projects/geographyas/geographyas-screenshot-1.png",
+	"/images/projects/geographyas/geographyas-screenshot-2.png",
+	"/images/projects/geographyas/geographyas-screenshot-3.png"
 ]
 icon_sprite = "sprite-icons-geographyas-icon-256"
 web_url = "http://geographyas.info"
