@@ -16,8 +16,17 @@
         </div>
       {{ end }}
     </div>
-    {{ .Content }}
     {{ end }}
+
+    <aside class="project-meta-links">
+      <ul>
+        {{ if .Params.dl_url }}<li><a href="{{ .Params.dl_url }}"><span class="icon-box-download"></span> Download</a></li>{{ end }}
+        {{ if .Params.web_url }}<li><a href="{{ .Params.web_url }}"><span class="icon-globe"></span> Visit</a></li>{{ end }}
+        {{ if .Params.source_url }}<li><a href="{{ .Params.source_url }}"><span class="icon-github"></span> GitHub</a></li>{{ end }}
+      </ul>
+    </aside>
+    
+    {{ .Content }}
   </article>
   {{ template "partials/footer.html" . }}
 </body>
