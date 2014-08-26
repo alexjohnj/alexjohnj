@@ -10,6 +10,8 @@
     </header>
     {{ if .Params.screenshots }}
     <div class="image-carousel-thing" {{ if .Params.background_image }}style="background-image:url({{ .Params.background_image }});"{{ end }}>
+      <button id="next-screenshot">></button>
+      <button id="prev-screenshot"><</button>
       {{ range .Params.screenshots }}
         <div class="image-container">
           <img src="{{ . }}" />
@@ -29,5 +31,6 @@
     {{ .Content }}
   </article>
   {{ template "partials/footer.html" . }}
+  <script src="/js/image-gallery.js"></script>
 </body>
 </html>
