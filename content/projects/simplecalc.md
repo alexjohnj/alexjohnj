@@ -13,6 +13,7 @@ screenshots = [
     "/images/projects/simplecalc/simplecalc-screenshot-4.png"
 ]
 project_css_class = "project-simplecalc"
+background_image = "/images/projects/simplecalc/bg-blur.jpg"
 +++
 
 ## What is SimpleCalc?
