@@ -10,6 +10,7 @@ screenshots = [
 icon_sprite = "sprite-icons-geographyas-icon-256"
 web_url = "http://geographyas.info"
 project_css_class = "project-geographyas"
+background_image = "/images/projects/geographyas/bg-blur.jpg"
 +++
 
 ## What is Geography AS Notes?
