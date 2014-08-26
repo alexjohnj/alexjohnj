@@ -12,6 +12,7 @@ screenshots = [
 	"/images/projects/memtester/memtester-screenshot-3.png"
 ]
 project_css_class = "project-memtester"
+background_image = "/images/projects/memtester/bg-blur.jpg"
 +++
 
 ## What is Memtester?
