@@ -9,7 +9,7 @@
       {{ if .Params.version }}<h2>{{ .Params.version }}</h2>{{ end }}
     </header>
     {{ if .Params.screenshots }}
-    <div class="image-carousel-thing">
+    <div class="image-carousel-thing" {{ if .Params.background_image }}style="background-image:url({{ .Params.background_image }});"{{ end }}>
       {{ range .Params.screenshots }}
         <div class="image-container">
           <img src="{{ . }}" />
