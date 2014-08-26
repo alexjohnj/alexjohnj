@@ -11,6 +11,7 @@ screenshots = [
 ]
 icon_sprite = "sprite-icons-appcastr-icon-256"
 project_css_class = "project-appcastr"
+background_image = "/images/projects/appcastr/bg-blur.jpg"
 +++
 
 ## What is Appcastr?
