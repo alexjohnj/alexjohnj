@@ -6,7 +6,7 @@
 # browser other than IE 8.
 
 class TransformGal
-  constructor: (imageSelector, gallerySelector, nextButtonSelector, prevButtonSelector) ->
+  constructor: (imageSelector, gallerySelector, nextButtonSelector, prevButtonSelector, imageIndicatorSelector) ->
     @currentIndex = 0
     @imageSelector = imageSelector
     @numberOfImages = document.querySelectorAll(imageSelector).length
@@ -14,6 +14,7 @@ class TransformGal
     @prevButton = document.querySelector prevButtonSelector
     # Width of this element is used to calculate translateX value
     @imageGalleryElement = document.querySelector gallerySelector
+    @imageIndicators = document.querySelectorAll imageIndicatorSelector
 
   init: (nextButton, prevButton) =>
     # Create the new CSS rule and insert it at the top of the stylesheet
@@ -34,6 +35,11 @@ class TransformGal
       return
 
     @setTranslateXProperty @imageContainerRule, -@imageGalleryElement.offsetWidth * (@currentIndex + 1)
+
+    # Update Current Image Indicator
+    @imageIndicators[@currentIndex].classList.toggle 'active'
+    @imageIndicators[@currentIndex + 1].classList.toggle 'active'
+
     @currentIndex++
 
   moveToPreviousImage: =>
@@ -41,6 +47,11 @@ class TransformGal
       return
 
     @setTranslateXProperty @imageContainerRule, -@imageGalleryElement.offsetWidth * (@currentIndex - 1)
+
+    # Update Current Image Indicator
+    @imageIndicators[@currentIndex].classList.toggle 'active'
+    @imageIndicators[@currentIndex - 1].classList.toggle 'active'
+
     @currentIndex--
 
   setTranslateXProperty: (rule, distance) ->
@@ -53,5 +64,7 @@ class TransformGal
 this.transformGal = new TransformGal('.image-carousel-thing > .image-container',
                                     '.image-carousel-thing',
                                     '#next-image-button',
-                                    '#prev-image-button')
+                                    '#prev-image-button',
+                                    '.image-gallery-indicator'
+                                    )
 transformGal.init()
