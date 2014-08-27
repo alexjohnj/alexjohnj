@@ -40,6 +40,6 @@ class TransformGal
 
 this.transformGal = new TransformGal('.image-carousel-thing > .image-container',
                                     '.image-carousel-thing',
-                                    'button#next-screenshot',
-                                    'button#prev-screenshot')
+                                    '#next-image-button',
+                                    '#prev-image-button')
 transformGal.init()
