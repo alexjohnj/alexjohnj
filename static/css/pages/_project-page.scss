@@ -14,10 +14,10 @@ $image-max-height: ($max-content-width * 0.75);
   width: 100%;
   max-height: $image-max-height;
 
+  overflow: hidden;
+
   text-align: center;
   white-space: nowrap;
-
-  overflow: hidden;
 
   > .image-container {
     display: inline-block;
@@ -78,7 +78,10 @@ $image-max-height: ($max-content-width * 0.75);
 .gallery-button {
   position: absolute;
   top: 0;
+
   transition: opacity 300ms ease-in-out;
+  
+  opacity: 0;
   z-index: 99;
 
   border: 0;
@@ -88,10 +91,8 @@ $image-max-height: ($max-content-width * 0.75);
   width: 10%;
   height: 100%;
 
-  font-size: 2.5rem;
-
   color: #ffffff;
-  opacity: 0;
+  font-size: 2.5rem;
 
   > p {
     display: block;
