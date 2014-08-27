@@ -1,3 +1,10 @@
+# Created by Alex Jackson, licensed under the MIT license
+#
+# This script controls a basic image gallery that uses CSS 2D transforms
+# Using transforms makes the gallery fast and smooth since it's hardware
+# accelerated. This also means it requires a "modern" browser (a.k.a), any
+# browser other than IE 8.
+
 class TransformGal
   constructor: (imageSelector, gallerySelector, nextButtonSelector, prevButtonSelector) ->
     @currentIndex = 0
