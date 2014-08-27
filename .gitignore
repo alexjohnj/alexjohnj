@@ -14,3 +14,4 @@ static/images/cute-dog-test-image-2.jpeg
 static/css/main.min.css
 static/images/mandelbrot-test-image.png
 *.min.js
+static/css/main.css.min.map
