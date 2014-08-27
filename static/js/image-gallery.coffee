@@ -17,6 +17,11 @@ class TransformGal
     @nextButton.addEventListener 'click', @moveToNextImage
     @prevButton.addEventListener 'click', @moveToPreviousImage
 
+    # Recalculate translateX distance when the browser is resized to avoid
+    # layout issues
+    window.addEventListener 'resize', =>
+      @setTranslateXProperty @imageContainerRule, -@imageGalleryElement.offsetWidth * @currentIndex
+
   moveToNextImage: =>
     if @numberOfImages <= @currentIndex + 1
       return
