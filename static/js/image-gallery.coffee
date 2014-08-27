@@ -25,10 +25,14 @@ class TransformGal
     @nextButton.addEventListener 'click', @moveToNextImage
     @prevButton.addEventListener 'click', @moveToPreviousImage
 
+    for el in @imageIndicators
+      el.addEventListener 'click', @imageIndicatorClicked
+
     # Recalculate translateX distance when the browser is resized to avoid
     # layout issues
     window.addEventListener 'resize', =>
       @setTranslateXProperty @imageContainerRule, -@imageGalleryElement.offsetWidth * @currentIndex
+
 
   moveToNextImage: =>
     if @numberOfImages <= @currentIndex + 1
@@ -53,6 +57,16 @@ class TransformGal
     @imageIndicators[@currentIndex - 1].classList.toggle 'active'
 
     @currentIndex--
+
+  imageIndicatorClicked: (e) =>
+    selectedIndex = Array.prototype.indexOf.call(@imageIndicators, e.target)
+
+    if selectedIndex < @currentIndex
+      while selectedIndex < @currentIndex
+        @moveToPreviousImage()
+    else if selectedIndex > @currentIndex
+      while selectedIndex > @currentIndex
+        @moveToNextImage()
 
   setTranslateXProperty: (rule, distance) ->
     rule.style.setProperty 'transform', "translateX(#{distance}px)", 'important'
