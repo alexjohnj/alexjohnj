@@ -10,8 +10,8 @@
     </header>
     {{ if .Params.screenshots }}
     <div class="image-carousel-thing" {{ if .Params.background_image }}style="background-image:url({{ .Params.background_image }});"{{ end }}>
-      <button id="next-image-button" class="gallery-button">&gt;</button>
-      <button id="prev-image-button" class="gallery-button">&lt;</button>
+      <div id="next-image-button" class="gallery-button"><p>&#8594;</p></div>
+      <div id="prev-image-button" class="gallery-button"><p>&#8592;</p></div>
       <div class="image-gallery-indicator-container">
         {{ range  $index, $screen := .Params.screenshots }}
         {{ if eq $index 0 }}
