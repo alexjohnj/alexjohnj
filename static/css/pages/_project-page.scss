@@ -53,7 +53,7 @@ $image-max-height: ($max-content-width * 0.75);
 
   > .image-container {
     display: inline-block;
-    transition: transform 300ms ease-in-out;
+    transition: transform 450ms ease-in-out;
 
     width: 100%;
     max-height: $image-max-height;
