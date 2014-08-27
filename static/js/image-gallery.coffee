@@ -1,31 +1,45 @@
 class TransformGal
-  constructor: ->
+  constructor: (imageSelector, gallerySelector, nextButtonSelector, prevButtonSelector) ->
     @currentIndex = 0
-    @imageContainers = document.querySelectorAll('.image-carousel-thing > .image-container')
-    @paperCard = document.querySelector('article.paper-card')
+    @imageSelector = imageSelector
+    @numberOfImages = document.querySelectorAll(imageSelector).length
+    @nextButton = document.querySelector nextButtonSelector
+    @prevButton = document.querySelector prevButtonSelector
+    # Width of this element is used to calculate translateX value
+    @imageGalleryElement = document.querySelector gallerySelector
 
-  init: ->
-    nextButton = document.querySelector 'button#next-screenshot'
-    prevButton = document.querySelector 'button#prev-screenshot'
+  init: (nextButton, prevButton) =>
+    # Create the new CSS rule and insert it at the top of the stylesheet
+    if document.styleSheets
+      document.styleSheets[0].insertRule "#{@imageSelector}{}", 0
+      @imageContainerRule = document.styleSheets[0].cssRules[0]
 
-    nextButton.addEventListener 'click', @moveToNextImage
-    prevButton.addEventListener 'click', @moveToPreviousImage
+    @nextButton.addEventListener 'click', @moveToNextImage
+    @prevButton.addEventListener 'click', @moveToPreviousImage
 
   moveToNextImage: =>
-    if @imageContainers.length <= @currentIndex + 1
+    if @numberOfImages <= @currentIndex + 1
       return
-    @imageContainers[@currentIndex].style.transform = "translateX(#{-@paperCard.offsetWidth * (@currentIndex + 1)}px"
-    @imageContainers[@currentIndex + 1].style.transform = "translateX(#{-@paperCard.offsetWidth * (@currentIndex + 1)}px"
 
+    @setTranslateXProperty @imageContainerRule, -@imageGalleryElement.offsetWidth * (@currentIndex + 1)
     @currentIndex++
 
   moveToPreviousImage: =>
     if @currentIndex - 1 < 0
       return
-    @imageContainers[@currentIndex].style.transform = "translateX(0px)"
-    @imageContainers[@currentIndex - 1].style.transform = "translateX(#{-@paperCard.offsetWidth * (@currentIndex - 1)}px"
 
+    @setTranslateXProperty @imageContainerRule, -@imageGalleryElement.offsetWidth * (@currentIndex - 1)
     @currentIndex--
 
-this.transformGal = new TransformGal
+  setTranslateXProperty: (rule, distance) ->
+    rule.style.setProperty 'transform', "translateX(#{distance}px)", 'important'
+    rule.style.setProperty '-ms-transform', "translateX(#{distance}px)", 'important'
+    rule.style.setProperty '-moz-transform', "translateX(#{distance}px)", 'important'
+    rule.style.setProperty '-webkit-transform', "translateX(#{distance}px)", 'important'
+
+
+this.transformGal = new TransformGal('.image-carousel-thing > .image-container',
+                                    '.image-carousel-thing',
+                                    'button#next-screenshot',
+                                    'button#prev-screenshot')
 transformGal.init()
