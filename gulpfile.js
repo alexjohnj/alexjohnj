@@ -15,7 +15,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify');
 
 // Build SASS stylesheets, run the built sheet through autoprefixer and then minify it
-gulp.task('styles', function() {
+gulp.task('styles-product', function() {
   return gulp.src('./static/css/main.scss')
     .pipe(sass({ style: 'expanded' }))
     .pipe(autoprefixer('last 2 versions', 'ie 9'))
@@ -23,6 +23,16 @@ gulp.task('styles', function() {
     .pipe(minifycss())
     .pipe(gulp.dest('./static/css'));
 });
+
+gulp.task('styles-dev', function() {
+  return gulp.src('./static/css/main.scss')
+    .pipe(sass({ style: 'expanded' }).on('error', gutil.log))
+    .pipe(autoprefixer('last 2 versions', 'ie 9'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(minifycss())
+    .pipe(gulp.dest('./static/css'));
+});
+
 
 // Compiles CoffeeScript with a sourcemap and saves it as *.min.js
 // Despite the .min suffix, this JS is NOT minified
@@ -105,18 +115,18 @@ gulp.task('rsync', ['hugo', 'htmlmin', 'gzip'], function(cb) {
 
 // Watch for changes
 gulp.task('watch', function() {
-  gulp.watch('./static/css/**/*.scss', ['styles']);
+  gulp.watch('./static/css/**/*.scss', ['styles-dev']);
   gulp.watch('./static/js/**/*.coffee', ['scripts-dev'])
 });
 
 // Default task
-gulp.task('default', ['clean', 'styles', 'scripts-product'], function() {
+gulp.task('default', ['clean', 'styles-product', 'scripts-product'], function() {
   gulp.start('hugo');
   gulp.start('htmlmin'); // Will not execute until 'hugo' task is done
   gulp.start('gzip'); // Will not execute until 'hugo' and 'htmlmin' tasks are done
 });
 
-gulp.task('deploy', ['clean', 'styles', 'scripts-product'], function() {
+gulp.task('deploy', ['clean', 'styles-product', 'scripts-product'], function() {
   gulp.start('hugo');
   gulp.start('htmlmin');
   gulp.start('gzip');
