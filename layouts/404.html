@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 {{ template "partials/head.html" . }}
-<body>
-  {{ template "partials/header.html" . }}
-  <div class="content-margin-wrap">
-    <div id="four-oh-four-page-message">
-      <h1>That page doesn't exist. <small>(404!)</small></h1>
-      <h2><a href="/">KBO</a></h2>
-    </div>
+
+{{ template "partials/header.html" . }}
+<div class="content-margin-wrap">
+  <div id="four-oh-four-page-message">
+    <h1>That page doesn't exist. <small>(404!)</small></h1>
+    <h2><a href="/">KBO</a></h2>
   </div>
-  {{ template "partials/footer.html" . }}
-</body>
+</div>
+{{ template "partials/footer.html" . }}
 </html>

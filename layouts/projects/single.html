@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 {{ template "partials/head.html" . }}
 
-<body>
-  {{ template "partials/header.html" . }}
-  <article class="paper-card">
-    <header id="project-title" class="{{ .Params.project_css_class }}">
-      <h1>{{ .Title }}</h1>
-      {{ if .Params.version }}<h2>{{ .Params.version }}</h2>{{ end }}
-    </header>
-    {{ if .Params.screenshots }}
-    <div class="image-carousel-thing" {{ if .Params.background_image }}style="background-image:url({{ .Params.background_image }});"{{ end }}>
-      <div id="next-image-button" class="gallery-button"><p>&#8594;</p></div>
-      <div id="prev-image-button" class="gallery-button"><p>&#8592;</p></div>
-      <div class="image-gallery-indicator-container">
-        {{ range  $index, $screen := .Params.screenshots }}
-        {{ if eq $index 0 }}
-          <div class="image-gallery-indicator active"></div>
-        {{ else}}
-          <div class="image-gallery-indicator"></div>
-        {{ end }}
-        {{ end }}
-      </div>
-      {{ range .Params.screenshots }}
-        <div class="image-container">
-          <img src="{{ . }}" />
-        </div>
+{{ template "partials/header.html" . }}
+<article class="paper-card">
+  <header id="project-title" class="{{ .Params.project_css_class }}">
+    <h1>{{ .Title }}</h1>
+    {{ if .Params.version }}<h2>{{ .Params.version }}</h2>{{ end }}
+  </header>
+  {{ if .Params.screenshots }}
+  <div class="image-carousel-thing" {{ if .Params.background_image }}style="background-image:url({{ .Params.background_image }});"{{ end }}>
+    <div id="next-image-button" class="gallery-button"><p>&#8594;</p></div>
+    <div id="prev-image-button" class="gallery-button"><p>&#8592;</p></div>
+    <div class="image-gallery-indicator-container">
+      {{ range  $index, $screen := .Params.screenshots }}
+      {{ if eq $index 0 }}
+        <div class="image-gallery-indicator active"></div>
+      {{ else}}
+        <div class="image-gallery-indicator"></div>
+      {{ end }}
       {{ end }}
     </div>
+    {{ range .Params.screenshots }}
+      <div class="image-container">
+        <img src="{{ . }}" />
+      </div>
     {{ end }}
+  </div>
+  {{ end }}
 
-    <aside class="project-meta-links">
-      <ul>
-        {{ if .Params.dl_url }}<li><a href="{{ .Params.dl_url }}"><span class="icon-box-download"></span> Download</a></li>{{ end }}
-        {{ if .Params.web_url }}<li><a href="{{ .Params.web_url }}"><span class="icon-globe"></span> Visit</a></li>{{ end }}
-        {{ if .Params.source_url }}<li><a href="{{ .Params.source_url }}"><span class="icon-github"></span> GitHub</a></li>{{ end }}
-      </ul>
-    </aside>
-    
-    {{ .Content }}
-  </article>
-  {{ template "partials/footer.html" . }}
-  <script src="/js/image-gallery.min.js" async></script>
-</body>
+  <aside class="project-meta-links">
+    <ul>
+      {{ if .Params.dl_url }}<li><a href="{{ .Params.dl_url }}"><span class="icon-box-download"></span> Download</a></li>{{ end }}
+      {{ if .Params.web_url }}<li><a href="{{ .Params.web_url }}"><span class="icon-globe"></span> Visit</a></li>{{ end }}
+      {{ if .Params.source_url }}<li><a href="{{ .Params.source_url }}"><span class="icon-github"></span> GitHub</a></li>{{ end }}
+    </ul>
+  </aside>
+  
+  {{ .Content }}
+</article>
+{{ template "partials/footer.html" . }}
+<script src="/js/image-gallery.min.js" async></script>
 </html>

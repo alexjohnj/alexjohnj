@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 {{ template "partials/head.html" . }}
-<body>
-  {{ template "partials/header.html" . }}
-  <article class="paper-card" id="main-article">
-    <header id="post-header">
-      <h1>{{ .Title }}</h1>
-      <p><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
-    </header>
+{{ template "partials/header.html" . }}
+<article class="paper-card" id="main-article">
+  <header id="post-header">
+    <h1>{{ .Title }}</h1>
+    <p><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
+  </header>
 
-    {{ .Content }}
+  {{ .Content }}
 
-    <footer id="article-footer">
-      <div class="clearfix">
-        <section id="next-post">
-        {{ with .Prev }}{{ if eq .Type "post" }}
-          <p><a href="{{ .Permalink }}">{{ .Title }} &raquo;</a></p>
-        {{ end }}{{ end }}
-        </section>
+  <footer id="article-footer">
+    <div class="clearfix">
+      <section id="next-post">
+      {{ with .Prev }}{{ if eq .Type "post" }}
+        <p><a href="{{ .Permalink }}">{{ .Title }} &raquo;</a></p>
+      {{ end }}{{ end }}
+      </section>
 
-        <section id="previous-post">
-        {{ with .Next }}{{ if eq .Type "post" }}
-          <p><a href="{{ .Permalink }}">&laquo; {{ .Title }}</a></p>
-        {{ end }}{{ end }}
-        </section>
-      </div>
-    </footer>
-  </article>
-  
-  {{ template "partials/footer.html" . }}
-</body>
+      <section id="previous-post">
+      {{ with .Next }}{{ if eq .Type "post" }}
+        <p><a href="{{ .Permalink }}">&laquo; {{ .Title }}</a></p>
+      {{ end }}{{ end }}
+      </section>
+    </div>
+  </footer>
+</article>
+
+{{ template "partials/footer.html" . }}
 </html>
