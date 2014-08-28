@@ -2,15 +2,29 @@ body {
   text-rendering: optimizeLegibility;
   line-height: 1.5;
 
-  font-family: "Merriweather Sans", "Helvetica", "Arial", sans-serif;
   font-size: 100%;
-  font-weight: normal;
+
+  .wf-loading & {
+    font-family: "Helvetica Neue", "Arial", sans-serif;
+    font-weight: normal;    
+  }
+
+  .wf-active & {
+    font-family: "museo-sans", "Helvetica Neue", "Arial", sans-serif;
+    font-weight: 500;    
+  }
 }
 
 code {
-  // Although we don't download Inconsolata-dz/Inconsolata-g, 
-  // use them if they're available.
-  font-family: "Inconsolata-g", "Inconsolata-dz", "Inconsolata", monospace; 
+  font-family: "Inconsolata", monospace;
+  
+  .wf-loading & {
+    visibility: hidden;
+  }
+
+  .wf-active & {
+    visibility: visible;
+  }
 
   p > & {
     border: 1px solid #262626;

@@ -8,12 +8,20 @@
   <!-- Groovy Stylesheets -->
   <link href="/css/main.min.css" rel="stylesheet" type="text/css">
 
-  <!-- Get the beautiful Merriweather Sans & Inconsolata fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Inconsolata|Merriweather+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
-
   <!-- A link to the RSS feed -->
   <link href="http://feeds.uri.lv/alexjohnj" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
 
   <!-- Google Webmaster Verification-->
   <meta name="google-site-verification" content="wfHLjqY4iUR4MRo2m6nyIRXRXSv0j-vFn8ZjLbYVqao" />
+
+  <!--Get Typekit-->
+  <script type="text/javascript">
+  (function(d) {
+    var config = {
+      kitId: 'inn4hms',
+      scriptTimeout: 3000
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
 </head>
