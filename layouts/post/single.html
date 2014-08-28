@@ -13,15 +13,15 @@
     <footer id="article-footer">
       <div class="clearfix">
         <section id="next-post">
-        {{ if .Prev }}
-          <p><a href="{{ .Prev.Permalink }}">{{ .Prev.Title }} &raquo;</a></p>
-        {{ end }}
+        {{ with .Prev }}{{ if eq .Type "post" }}
+          <p><a href="{{ .Permalink }}">{{ .Title }} &raquo;</a></p>
+        {{ end }}{{ end }}
         </section>
 
         <section id="previous-post">
-        {{ if .Next }}
-          <p><a href="{{ .Next.Permalink }}">&laquo; {{ .Next.Title }}</a></p>
-        {{ end }}
+        {{ with .Next }}{{ if eq .Type "post" }}
+          <p><a href="{{ .Permalink }}">&laquo; {{ .Title }}</a></p>
+        {{ end }}{{ end }}
         </section>
       </div>
     </footer>
