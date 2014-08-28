@@ -8,52 +8,12 @@
 </script>
 
 <!--TODO: Incorporate this script into page-utils.js-->
-<script type="text/javascript">
-  (function() {
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = '/js/vendor/headroom.js';
-    script.async = 'true';
-    script.onload = script.onreadystatechange = function() {
-      var readyState = this.readyState;
-      if (readyState && readyState != 'complete' && readyState != 'loaded') return;
-      try {
-        var siteHeader = document.getElementById("site-header");
-        var headroom = new Headroom(siteHeader, {offset:70, tolerance: 10});
-        headroom.init();
-      } catch (e) {};
-    };
-    document.body.appendChild(script);
-  })();
-</script>
+<script src="/js/vendor/headroom.min.js" onload="var headroom=new Headroom(document.getElementById('site-header'),{offset:70,tolerance:10});headroom.init();" async></script>
 
 {{ if .Params.syntax_highlighting }}
-  <script type="text/javascript">
-  (function() {
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = '/js/vendor/highlight.pack.js';
-    script.async = 'true';
-    script.onload = script.onreadystatechange = function() {
-      var readyState = this.readyState;
-      if (readyState && readyState != 'complete' && readyState != 'loaded') return;
-      try {
-        hljs.initHighlightingOnLoad();
-      } catch (e) {};
-    };
-    document.body.appendChild(script);
-  })();
-  </script>
+<script src="/js/vendor/highlight.pack.min.js" onload="hljs.initHighlightingOnLoad();" async></script>
 {{ end }}
 
 {{ if .Params.math }}
-  <script type="text/javascript">
-  (function() {
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    script.async= 'true';
-    document.body.appendChild(script);
-  })();
-  </script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
 {{ end }}
