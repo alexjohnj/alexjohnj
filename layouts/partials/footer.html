@@ -1,21 +1,5 @@
-<footer id="site-footer">
-  <p>About &bull; Twitter &bull; RSS</p>
-  <p>&copy; 2012-2014 Alex Jackson.</p>
-</footer>  
-
-<script>
-(function(e,t,n,r,i,s,o){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;s=t.createElement(n),o=t.getElementsByTagName(n)[0];s.async=1;s.src=r;o.parentNode.insertBefore(s,o)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-29192170-1","alexj.org");ga("send","pageview")
-</script>
-
-<!--TODO: Incorporate this script into page-utils.js-->
-<script src="/js/vendor/headroom.min.js" onload="var headroom=new Headroom(document.getElementById('site-header'),{offset:70,tolerance:10});headroom.init();" async></script>
-
-{{ if .Params.syntax_highlighting }}
-<script src="/js/vendor/highlight.pack.min.js" onload="hljs.initHighlightingOnLoad();" async></script>
-{{ end }}
-
-{{ if .Params.math }}
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
-{{ end }}
-
+  <footer id="site-footer">
+    <p>About &bull; Twitter &bull; RSS</p>
+    <p>&copy; 2012-2014 Alex Jackson.</p>
+  </footer>  
 </body>
