@@ -74,16 +74,8 @@
   margin-top: 4px;
 }
 
-.headroom {
-  transform-origin: bottom;
-  transition: transform 250ms ease-in-out;
+
 }
 
-.headroom--pinned {
-  transform: translateY(0);
-}
-
-.headroom--unpinned {
-  transform: translateY(-100%);
 }
 
