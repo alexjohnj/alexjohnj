@@ -57,6 +57,10 @@
 
   width: $hamburger-button-width;
   height: 100%;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .hamburger-slice {
@@ -68,14 +72,84 @@
 
   width: 22px;
   height: 3px;
+
+  & + & {
+    margin-top: 4px;
+  }
 }
 
-.hamburger-slice + .hamburger-slice {
-  margin-top: 4px;
+#offscreen-nav {
+  position: fixed;
+  top: 0;
+  left: -30%;
+
+  transition: transform 300ms ease-in-out;
+  z-index: 101;
+  
+  background: $dark-lime-green;
+
+  width: 30%;
+  height: 100%;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  @media handheld, only screen and (max-width: 768px) {
+    top: -100%;
+    left: 0;
+    z-index: 100;
+
+    padding-top: $site-header-height;
+
+    width: 100%;
+  }
+
+  &.visible {
+    transform: translateX(100%);
+
+    // Fucking WebKit. The box-shadow HAS to be applied after the element is moved 
+    // onscreen otherwise the element will be invisible until the browser repaints. 
+    box-shadow: 2px 0 7px rgba(0, 0, 0, 0.3); 
+
+    @media handheld, only screen and (max-width: 768px) {
+      top: 0 !important;
+      transform: none;
+    }
+  }  
+
+  > * {
+    padding: 0 2rem;
+  }
+
+  a {
+    border-color: #ffffff;
+    color: #ffffff;
+  }
 }
 
+#close-nav-button {
+  outline: none;
+  border: 0;
+  background: none;
 
+  width: 100%;
+    
+  text-align: right;
+  font-size: 3em;
 }
 
-}
+#main-navigation {
+  font-size: 2rem;
 
+  > ul {
+    margin: 0.5em 0;
+    padding-left: 0;
+
+    list-style: none;
+
+    li + li {
+      padding-top: 10px;
+    }
+  }
+}
