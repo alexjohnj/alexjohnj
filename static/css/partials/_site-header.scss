@@ -94,6 +94,7 @@
   text-align: center;
 
   color: #ffffff;
+  transform-origin: left;
 
   @media handheld, only screen and (max-width: 768px) {
     top: -100%;
@@ -103,6 +104,8 @@
     margin-top: $site-header-height;
 
     width: 100%;
+
+    transform-origin: top;
   }
 
   &.visible {
