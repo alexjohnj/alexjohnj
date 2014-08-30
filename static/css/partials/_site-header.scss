@@ -137,6 +137,9 @@
     
   text-align: right;
   font-size: 3em;
+  @media handheld, only screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 #main-navigation {
