@@ -89,6 +89,7 @@
 
   overflow-x: hidden;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 
   text-align: center;
 
@@ -128,6 +129,24 @@
     text-transform: uppercase;
     font-size: 1.5rem;
   }
+
+  ul {
+    margin: 0.5em 0;
+    padding-left: 0;
+
+    list-style: none;
+
+    font-size: 1.4rem;
+
+    > li {
+      transition: background 250ms linear;
+      padding: 0.625em 0;
+
+      &:hover {
+        background: darken($dark-lime-green, 7%);
+      }
+    }
+  }
 }
 
 #close-nav-button {
@@ -151,25 +170,5 @@
 
   @media handheld, only screen and (max-width: 768px) {
     display: none;
-  }
-}
-
-#main-navigation {
-  font-size: 1.4rem;
-
-  > ul {
-    margin: 0.5em 0;
-    padding-left: 0;
-
-    list-style: none;
-
-    li {
-      transition: background 250ms linear;
-      padding: 0.625em 0;
-
-      &:hover {
-        background: darken($dark-lime-green, 7%);
-      }
-    }
   }
 }
