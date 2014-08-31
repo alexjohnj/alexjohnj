@@ -129,12 +129,13 @@
   border: 0;
   background: none;
 
+  padding: 0.5em 0.4em 0 0;
   padding-right: 0.4em;
 
   width: 100%;
     
   text-align: right;
-  font-size: 3em;
+  font-size: 1.5rem;
 
   &:hover {
     background: darken($dark-lime-green, 7%);
