@@ -137,12 +137,21 @@
 
     > li {
       transition: background 250ms linear;
-      padding: 0.625em 0;
 
       &:hover {
         background: darken($dark-lime-green, 7%);
       }
     }
+    
+    a {
+      display: block;
+
+      border: 0;
+      padding: 0.625em 0;
+
+      width: 100%;
+      height: 100%;
+    }   
   }
 }
 
