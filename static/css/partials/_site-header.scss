@@ -96,16 +96,9 @@
   color: #ffffff;
   transform-origin: left;
 
-  @media handheld, only screen and (max-width: 768px) {
-    top: -100%;
-    left: 0;
-    z-index: 100;
-
-    margin-top: $site-header-height;
-
+  @media handheld, only screen and (max-width: 600px) {
+    left: -100%;
     width: 100%;
-
-    transform-origin: top;
   }
 
   &.visible {
@@ -114,10 +107,6 @@
     // Fucking WebKit. The box-shadow HAS to be applied after the element is moved 
     // onscreen otherwise the element will be invisible until the browser repaints. 
     box-shadow: 2px 0 7px rgba(0, 0, 0, 0.3); 
-
-    @media handheld, only screen and (max-width: 768px) {
-      transform: translateY(100%);
-    }
   }
 
   a {
@@ -166,9 +155,5 @@
 
   &:hover {
     background: darken($dark-lime-green, 7%);
-  }
-
-  @media handheld, only screen and (max-width: 768px) {
-    display: none;
   }
 }
