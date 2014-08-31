@@ -36,10 +36,34 @@ body {
 
     width: 92%;
   }
+
+  > figure {
+    margin: 0;
+    background: $light-lime-green;
+
+    width: 100%;
+
+    > img {
+      width: auto;
+      max-width: 100%;
+    }
+
+    > figcaption {
+      margin: 0 auto;
+      padding: 0.625em 0;
+      
+      width: 95%;
+
+      overflow: auto;
+
+      text-align: center;
+    }
+  }
 }
 
 img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
 }
 
 // ATTENTION: blackfriday (the Markdown engine that Hugo uses) for some reason
