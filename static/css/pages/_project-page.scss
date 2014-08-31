@@ -69,6 +69,10 @@ $image-max-height: ($max-content-width * 0.75);
     }
   }
 
+  .image-gallery-indicator + .image-gallery-indicator {
+    margin-left: 5px;
+  }
+
   .active,
   .active:hover {
     background: #ffffff;
