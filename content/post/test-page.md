@@ -17,6 +17,8 @@ This page has only one purpose, to demonstrate how different elements look when 
 - Lists (see what I'm doing here?)
 - Probably some other stuff too
 
+---
+
 ## A Paragraph of Text
 
 Do you see what I did there? I used a heading to divide two sections of text. I _also_ used it to test what a `<h2>` element looks like. And, in describing what I just did, I also managed to incorporated _italicised_ text and `inline code`. Pretty neat! Inline code is cool and all but we really need to see a block of code (also known as "code poetry").
