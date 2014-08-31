@@ -87,6 +87,9 @@
   width: 30%;
   height: 100%;
 
+  overflow-x: hidden;
+  overflow-y: scroll;
+
   text-align: center;
 
   color: #ffffff;
@@ -120,6 +123,11 @@
     border-color: #ffffff;
     color: #ffffff;
   }
+
+  > h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
 }
 
 #close-nav-button {
@@ -147,7 +155,7 @@
 }
 
 #main-navigation {
-  font-size: 2rem;
+  font-size: 1.4rem;
 
   > ul {
     margin: 0.5em 0;
@@ -155,8 +163,13 @@
 
     list-style: none;
 
-    li + li {
-      padding-top: 10px;
+    li {
+      transition: background 250ms linear;
+      padding: 0.625em 0;
+
+      &:hover {
+        background: darken($dark-lime-green, 7%);
+      }
     }
   }
 }
