@@ -116,7 +116,7 @@ gulp.task('clean-deploy', ['hugo', 'htmlmin'], function(cb) {
 // gzip compresses the contents of ./public/**/*.{html,js,css} and saves the
 // output to *.{html,js,css}.gz
 gulp.task('gzip', ['hugo', 'htmlmin', 'clean-deploy'], function() {
-  return gulp.src('./public/**/*.{html,js,css}')
+  return gulp.src('./public/**/*.{html,js,css,svg,xml}')
     .pipe(gzip())
     .pipe(gulp.dest('./public'));
 });
