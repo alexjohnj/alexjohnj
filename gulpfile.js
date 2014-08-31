@@ -14,71 +14,86 @@ var gulp = require('gulp'),
     coffee = require('gulp-coffee'),
     uglify = require('gulp-uglify');
 
-// Build SASS stylesheets, run the built sheet through autoprefixer and then minify it
-gulp.task('styles-product', function() {
-  return gulp.src('./static/css/main.scss')
-    .pipe(sass({ style: 'expanded' }))
-    .pipe(autoprefixer('last 2 versions', 'ie 9'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(minifycss())
-    .pipe(gulp.dest('./static/css'));
-});
 
+/******************************************************************************
+                              Source Compilation
+******************************************************************************/
+
+// styles-dev compiles main.scss, runs it through autoprefixer and saves
+// the output as main.min.css. The file is NOT minified however.
 gulp.task('styles-dev', function() {
   return gulp.src('./static/css/main.scss')
-    .pipe(sass({ style: 'expanded' }).on('error', gutil.log))
+    .pipe(sass({style: 'expanded'}))
+    .pipe(autoprefixer('last 2 versions', 'ie 9'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./static/css'));
+});
+
+// styles-product compiles main.scss, runs it through autoprefixer, minifies
+// the output and saves it to the file main.min.css
+gulp.task('styles-product', function () {
+  return gulp.src('./static/css/main.scss')
+    .pipe(sass({style: 'expanded'}))
     .pipe(autoprefixer('last 2 versions', 'ie 9'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
     .pipe(gulp.dest('./static/css'));
 });
 
-
-// Compiles CoffeeScript with a sourcemap and saves it as *.min.js
-// Despite the .min suffix, this JS is NOT minified
-gulp.task('scripts-dev', function() {
+// coffee-dev compiles *.coffee in the js folder and saves the output
+// to *.min.js. The output is NOT minified however.
+gulp.task('coffee-dev', function() {
   return gulp.src('./static/js/*.coffee')
     .pipe(coffee().on('error', gutil.log))
-    .pipe(sourcemaps.write())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('./static/js'))
+    .pipe(gulp.dest('./static/js'));
 });
 
-// Minify *.js, compile *.coffee, minify output, save as *.min.js
-gulp.task('scripts-product', ['clean-scripts'], function(cb) {
-  // Compile & Minify CoffeeScript
-  gulp.src('./static/js/*.coffee')
+// coffee-product compiles *.coffee in the js folder, minifies the output
+// and saves it to *.min.js.
+gulp.task('coffee-product', function() {
+  return gulp.src('./static/js/*.coffee')
     .pipe(coffee().on('error', gutil.log))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('./static/js'))
+    .pipe(gulp.dest('./static/js'));
+});
 
-  // Minify JS
-  gulp.src('./static/js/**/*.js')
+// js-dev matches any file ending in .js but not .min.js and saves it as
+// *.min.js. It does NOT minify the file though.
+gulp.task('js-dev', function() {
+  return gulp.src('./static/js/**/!(*.min.js)+(*.js)')
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./static/js'));
+});
+
+// js-product matches any file ending in .js but not .min.js, minifies it
+// and then saves the output as *.min.js.
+gulp.task('js-product', function() {
+  return gulp.src('./static/js/**/!(*.min.js)+(*.js)')
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('./static/js'))
+    .pipe(gulp.dest('./static/js'));
 });
 
-// Clean out the ./public/ directory
+/******************************************************************************
+                            Static Site Generation
+******************************************************************************/
+
+// clean deletes everything in the ./public/ directory
 gulp.task('clean', function(cb) {
-  del(['./public/*'], cb);
+  return del(['./public/*'], cb);
 });
 
-// Deletes all *.min.js files
-gulp.task('clean-scripts', function(cb) {
-  del(['./static/js/**/*.min.js'], cb)
-});
-
-// Run hugo and rebuild the site
-gulp.task('hugo', function(cb) {
-  exec('hugo', function (err) {
+// hugo runs the hugo command and builds the site
+gulp.task('hugo', function(cb){
+  return exec('hugo', function(err) {
     if (err) return cb(err);
     cb();
   });
 });
 
-// Minify HTML files in ./public/
+// htmlmin minifies ./public/**/*.html and overwrites the original file
 gulp.task('htmlmin', ['hugo'], function() {
   return gulp.src('./public/**/*.html')
     .pipe(htmlmin({
@@ -92,15 +107,15 @@ gulp.task('htmlmin', ['hugo'], function() {
     .pipe(gulp.dest('./public'));
 });
 
-// Gzip HTML, CSS & JS files in ./public/
+// gzip compresses the contents of ./public/**/*.{html,js,css} and saves the
+// output to *.{html,js,css}.gz
 gulp.task('gzip', ['hugo', 'htmlmin'], function() {
   return gulp.src('./public/**/*.{html,js,css}')
     .pipe(gzip())
-    .pipe(gulp.dest('./public'))
+    .pipe(gulp.dest('./public'));
 });
 
-// Rsync the public directory to my server
-gulp.task('rsync', ['hugo', 'htmlmin', 'gzip'], function(cb) {
+gulp.task('rsync', ['hugo', 'htmlmin', 'gzip'], function() {
   return rsync({
     ssh: true,
     src: './public/',
@@ -113,22 +128,32 @@ gulp.task('rsync', ['hugo', 'htmlmin', 'gzip'], function(cb) {
   });
 });
 
-// Watch for changes
-gulp.task('watch', function() {
-  gulp.watch('./static/css/**/*.scss', ['styles-dev']);
-  gulp.watch('./static/js/**/*.coffee', ['scripts-dev'])
-});
+/******************************************************************************
+                                Main Tasks
+******************************************************************************/
 
-// Default task
-gulp.task('default', ['clean', 'styles-product', 'scripts-product'], function() {
+// default does everything except sync the public folder to the remote server.
+gulp.task('default', ['clean', 'styles-product', 'coffee-product', 'js-product'], function() {
   gulp.start('hugo');
-  gulp.start('htmlmin'); // Will not execute until 'hugo' task is done
-  gulp.start('gzip'); // Will not execute until 'hugo' and 'htmlmin' tasks are done
+  gulp.start('htmlmin');
+  gulp.start('gzip');
 });
 
-gulp.task('deploy', ['clean', 'styles-product', 'scripts-product'], function() {
+// deploy does everything including syncing the public folder to the remote server.
+gulp.task('deploy', ['clean', 'styles-product', 'coffee-product', 'js-product'], function() {
   gulp.start('hugo');
   gulp.start('htmlmin');
   gulp.start('gzip');
   gulp.start('rsync');
+});
+
+/******************************************************************************
+                                Watch Tasks
+******************************************************************************/
+
+gulp.task('watch', function() {
+  gulp.start('clean');
+  gulp.watch('./static/css/**/*.scss', ['styles-dev']);
+  gulp.watch('./static/js/**/!(*.min.js)+(*.js)', ['js-dev']);
+  gulp.watch('./static/js/**/*.coffee', ['coffee-dev']);
 });
