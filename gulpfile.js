@@ -107,15 +107,21 @@ gulp.task('htmlmin', ['hugo'], function() {
     .pipe(gulp.dest('./public'));
 });
 
+// clean-deploy removes all coffeescript, SASS and unminified JavaScript
+// files that get copied into the public/ folder during hugo's build.
+gulp.task('clean-deploy', ['hugo', 'htmlmin'], function(cb) {
+  return del(['./public/**/*.{scss,coffee,map}', './public/**/!(*.min.js)+(*.js)'], cb)
+});
+
 // gzip compresses the contents of ./public/**/*.{html,js,css} and saves the
 // output to *.{html,js,css}.gz
-gulp.task('gzip', ['hugo', 'htmlmin'], function() {
+gulp.task('gzip', ['hugo', 'htmlmin', 'clean-deploy'], function() {
   return gulp.src('./public/**/*.{html,js,css}')
     .pipe(gzip())
     .pipe(gulp.dest('./public'));
 });
 
-gulp.task('rsync', ['hugo', 'htmlmin', 'gzip'], function() {
+gulp.task('rsync', ['hugo', 'htmlmin', 'clean-deploy', 'gzip'], function() {
   return rsync({
     ssh: true,
     src: './public/',
@@ -136,6 +142,7 @@ gulp.task('rsync', ['hugo', 'htmlmin', 'gzip'], function() {
 gulp.task('default', ['clean', 'styles-product', 'coffee-product', 'js-product'], function() {
   gulp.start('hugo');
   gulp.start('htmlmin');
+  gulp.start('clean-deploy');
   gulp.start('gzip');
 });
 
@@ -143,6 +150,7 @@ gulp.task('default', ['clean', 'styles-product', 'coffee-product', 'js-product']
 gulp.task('deploy', ['clean', 'styles-product', 'coffee-product', 'js-product'], function() {
   gulp.start('hugo');
   gulp.start('htmlmin');
+  gulp.start('clean-deploy');
   gulp.start('gzip');
   gulp.start('rsync');
 });
