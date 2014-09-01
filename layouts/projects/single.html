@@ -39,5 +39,7 @@
   {{ .Content }}
 </article>
 {{ template "partials/footer.html" . }}
+{{if .Params.screenshots }}
 <script src="/js/image-gallery.min.js" async></script>
+{{ end }}
 </html>
