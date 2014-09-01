@@ -36,11 +36,11 @@ Another new tool I got to play around with was [gulp.js][gulp-js-site]. Gulp is 
 
 I'm pretty happy with the result. Despite being (almost) illiterate when it comes to JavaScipt[^1], writing tasks in a Gulpfile wasn't too hard. The biggest challenge was wrapping my head around the concurrency system Gulp uses. By default tasks are run concurrently so it's important to specify task dependencies to make sure things run in the right order. After rewriting my Gulpfile a few times the concurrency issues were fixed and things seemed to just work.
 
-Gulp and Hugo seem to work quite well together. Using Gulp I can recompile CoffeeScript and SASS files when they change. This, in turn, makes Hugo regenerate the site (did I mention it does this quickly?) and then the site automatically reloads in the browser. Brilliant.
+Gulp and Hugo seem to work quite well together. Using Gulp I can recompile CoffeeScript and Sass files when they change. This, in turn, makes Hugo regenerate the site (did I mention it does this quickly?) and then the site automatically reloads in the browser. Brilliant.
 
 ## Autoprefixer
 
-[Autoprefixer][autoprefixer-gh] is a useful little Node.js utility that automatically adds vendor prefixes to experimental CSS properties. It works nicely with gulp.js and helped make my SASS files cleaner. It also made development a little faster since I didn't have to spend time looking up which properties require vendor prefixes and which don't. Autoprefixer makes life easier, there's not much else to say about it.
+[Autoprefixer][autoprefixer-gh] is a useful little Node.js utility that automatically adds vendor prefixes to experimental CSS properties. It works nicely with gulp.js and helped make my Sass files cleaner. It also made development a little faster since I didn't have to spend time looking up which properties require vendor prefixes and which don't. Autoprefixer makes life easier, there's not much else to say about it.
 
 [autoprefixer-gh]: https://github.com/postcss/autoprefixer
 
