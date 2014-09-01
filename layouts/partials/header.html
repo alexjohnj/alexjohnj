@@ -1,9 +1,31 @@
-<header id="site-header" class="content-margin-wrap">
-  <h1><a href="/">{{ .Site.Title }}</a></h1>
-  <nav id="site-navigation">
+<div id="offscreen-nav">
+  <button id="close-nav-button"><span class="icon-close"></span></button>
+  <h2>Navigation</h2>
+  <nav id="main-navigation">
     <ul>
-      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="/post/">Posts</a></li>
+      <li><a href="/projects/">Projects</a></li>
     </ul>
   </nav>
+  
+  <hr>
+
+  <h2>Links</h2>
+  <ul>
+    <li><a href="http://feedpress.me/alexjohnj"><span class="icon-feed"></span> RSS Feed</a></li>
+    <li><a href="https://twitter.com/alexjohnj/"><span class="icon-twitter"></span> Twitter</a></li>
+    <li><a href="https://github.com/alexjohnj/"><span class="icon-github"></span> GitHub</a></li>
+  </ul>
+</div>
+
+<header id="site-header">
+  <div class="site-header-content">
+    <button id="hamburger-button">
+      <span class="hamburger-slice"></span>
+      <span class="hamburger-slice"></span>
+      <span class="hamburger-slice"></span>
+    </button>
+    <h1><a href="/">{{ .Site.Title }}</a></h1>
+  </div>
 </header>

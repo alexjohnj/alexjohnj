@@ -5,16 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Alex Jackson">
 
-
   <!-- Groovy Stylesheets -->
-  <link href="/css/styles.min.css" rel="stylesheet" type="text/css">
-
-  <!-- Get the beautiful Lato & Source Code Pro fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,300|Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link href="/css/main.min.css" rel="stylesheet" type="text/css">
 
   <!-- A link to the RSS feed -->
-  <link href="http://feeds.uri.lv/alexjohnj" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
+  <link href="http://feedpress.me/alexjohnj/" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed" />
+  <link rel="canonical" href="http://alexj.org" />
 
   <!-- Google Webmaster Verification-->
   <meta name="google-site-verification" content="wfHLjqY4iUR4MRo2m6nyIRXRXSv0j-vFn8ZjLbYVqao" />
+
+  <!--Get Typekit-->
+  <script type="text/javascript">
+  (function(d) {
+    var config = {
+      kitId: 'inn4hms',
+      scriptTimeout: 3000
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
 </head>
+
+<body>
+
+  {{ template "partials/async-scripts.html" . }}

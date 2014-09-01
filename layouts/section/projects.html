@@ -1,22 +1,32 @@
 <!DOCTYPE html>
   {{ template "partials/head.html" . }}
-
-<body>
-  {{ template "partials/header.html" . }}
-  <div class="content-margin-wrap">
-    <h1>{{ .Title }}</h1>
-    <div id="project-grid">
-      {{ range .Data.Pages }}
-        <a href="{{ .Permalink }}">
-          <div class="project-grid item">
-            <div class="{{ .Params.icon_sprite }}"></div>
-            <p>{{ .Title }}</p>
-          </div>
-        </a>
-      {{ end }}
-    </div>
+  
+{{ template "partials/header.html" . }}
+<section class="paper-card">
+  <h1>{{ .Title }}</h1>
+  <div id="project-grid">
+    {{ range $index, $page := .Data.Pages.ByTitle }}
+    {{ if and (eq (add $index 1) (len $.Data.Pages.ByTitle)) (eq (mod $index 2) 0) }}
+    <section class="project-grid-entry {{ $page.Params.project_css_class }} odd-last">
+    {{ else }}
+    <section class="project-grid-entry {{ $page.Params.project_css_class }}">
+    {{ end }}
+      <div class="vertical-align-wrap">
+        <h1><a href=" {{ $page.Permalink }}">{{ $page.Title }}</a></h1>
+        {{ if $page.Params.version }}<h2>{{ $page.Params.version }}</h2>{{ end }}
+        <p>{{ $page.Description }}</p>
+        <div class="project-meta-links">
+          <ul>
+            <li><a href=" {{ $page.Permalink }}"><span class="icon-text"></span> More</a></li>
+            {{ if $page.Params.source_url }}<li><a href="{{ $page.Params.source_url }}"><span class="icon-github"></span> GitHub</a></li>{{ end }}
+            {{ if $page.Params.dl_url }}<li><a href="{{ $page.Params.dl_url }}"><span class="icon-box-download"></span> Download</a></li>{{ end }}
+            {{ if $page.Params.web_url }}<li><a href="{{ $page.Params.web_url }}"><span class="icon-globe"></span> Visit</a></li>{{ end }}
+          </ul>
+        </div>
+      </div>
+    </section>
+    {{ end }}
   </div>
-  {{ template "partials/footer.html" . }}    
-</body>
-
+</section>
+{{ template "partials/footer.html" . }}    
 </html>

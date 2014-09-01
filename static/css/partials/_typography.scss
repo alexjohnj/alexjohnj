@@ -1,0 +1,128 @@
+body {
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+  font-family: "museo-sans", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 100%;
+  // font-weight: 500;
+}
+
+code {
+  font-family: "Inconsolata", monospace;
+
+  p > & {
+    border: 1px solid #262626;
+    border-radius: 5px;
+
+    background-color: #262626;
+    padding: 0 5px;
+
+    color: #cccccc;
+  }
+}
+
+blockquote {
+  position: relative;
+  background-color: #daecd8;
+  padding: 10px 0;
+
+  font-style: italic;
+
+  // This lovely little hack makes the background of the blockquote span 100%
+  // of the viewport and then some. To stop the background from spilling over
+  // the parent element, the parent's overflow property needs to be hidden.
+  // See http://css-tricks.com/full-browser-width-bars/ for the basics.
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    background: #daecd8;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &:before {
+    right: 100%;
+  }
+
+  &:after {
+    left: 100%;
+  }
+}
+
+a {
+  transition: all 200ms cubic-bezier(0.230, 1, 0.320, 1);
+ 
+  border-bottom: 2px solid $strong-green;
+
+  text-decoration: none;
+  color: $strong-green;
+
+  &:hover {
+    border-color: darken($strong-green, 4%);
+    color: darken($strong-green, 4%);
+  }
+
+  &:active {
+    border-color: darken($strong-green, 6%);
+    color: darken($strong-green, 6%);
+  }
+}
+
+// The typographic scale used here is a slightly modified version of this:
+// http://typecast.com/blog/a-more-modern-scale-for-web-typography
+
+h1 {
+  line-height: 1.5;
+  font-size: 2em;
+
+  @media (min-width: 43.75em) {
+    line-height: 1.5;
+    font-size: 2.5em;
+  }
+
+  @media (min-width: 56.25em) {
+    line-height: 1.5;
+    font-size: 3em;
+  }
+}
+
+h2 {
+  line-height: 1.15384615; // maths
+  font-size: 1.625em;
+
+  @media (min-width: 43.75em) {
+    line-height: 1.25;
+    font-size: 2em;
+  }
+
+  @media (min-width: 56.25em) {
+    line-height: 1.25;
+    font-size: 2.25em;
+  }
+}
+
+h3 {
+  line-height: 1.13636364;
+  font-size: 1.375em;
+
+  @media (min-width: 43.75em) {
+    line-height: 1.25;
+    font-size: 1.5em;
+  }
+  
+  @media (min-width: 56.25em) {
+    line-height: 1.25;
+    font-size: 1.75em;
+  }
+}
+
+h4 {
+  line-height: 1.11111111;
+  font-size: 1.125em;
+
+  @media (min-width: 43.75em) {
+    line-height: 1.22222222;
+  }
+}

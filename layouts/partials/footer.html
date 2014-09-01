@@ -1,38 +1,11 @@
-<footer id="site-footer">
-  <div class="content-margin-wrap">
-    <div id="footer-social-links">
-        <ul>
-          <li><a href="https://github.com/alexjohnj">GitHub</a></li>
-          <li><a href="https://twitter.com/alexjohnj/">Twitter</a></li>
-          <li><a href="http://feedpress.me/alexjohnj/">RSS</a></li>        
-        </ul>
-    </div>
-    <div id="footer-attributions">
-      <p>Built with <a href="http://hugo.spf13.com">Hugo</a></p>
-    </div>
-  </div>
-</footer>
+  <footer id="site-footer">
+    <ul>
+      <li><a href="http://feedpress.me/alexjohnj/">RSS</a></li>
+      <li><a href="https://twitter.com/alexjohnj/">Twitter</a></li>
+      <li><a href="https://github.com/alexjohnj/">GitHub</a></li>
+    </ul>
+    <p>&copy; 2012-2014 Alex Jackson.</p>
+  </footer>
 
-<script>
-(function(e,t,n,r,i,s,o){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;s=t.createElement(n),o=t.getElementsByTagName(n)[0];s.async=1;s.src=r;o.parentNode.insertBefore(s,o)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-29192170-1","alexj.org");ga("send","pageview")
-</script>
-
-{{ if .Params.syntax_highlighting }}
-  <link rel="stylesheet" href="/css/github-code.css">
-  <script type="text/javascript">
-  (function() {
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = '/js/vendor/highlight.pack.js';
-    script.async = 'true';
-    script.onload = script.onreadystatechange = function() {
-      var readyState = this.readyState;
-      if (readyState && readyState != 'complete' && readyState != 'loaded') return;
-      try {
-        hljs.initHighlightingOnLoad();
-      } catch (e) {};
-    };
-    document.body.appendChild(script);
-  })();
-  </script>
-{{ end }}
+  {{ template "partials/deferred-scripts.html" . }}
+</body>

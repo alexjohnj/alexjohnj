@@ -6,5 +6,6 @@ changelog = ""
 web_url = ""
 screenshots = [
 ]
-icon_sprite = "sprice-icons-PROJECT-icon-256"
+project_css_class = ""
+background_image = "/images/projects/PROJECT_NAME/bg-blur.jpg"
 +++

@@ -1,6 +1,7 @@
 +++
 title = "Appcastr"
 version = "0.1.1"
+description = "Appcastr is a utility for Mac developers that generates appcast files. It's a little bit faster than writing XML in your text editor and probably less frustrating."
 source_url = "https://github.com/alexjohnj/appcastr/"
 dl_url = "https://github.com/downloads/alexjohnj/appcastr/Appcastr-0.1.1.zip"
 changelog = "https://alexjohnj.github.io/appcastr/changelog.html"
@@ -9,6 +10,8 @@ screenshots = [
     "/images/projects/appcastr/appcastr-screenshot-2.png"
 ]
 icon_sprite = "sprite-icons-appcastr-icon-256"
+project_css_class = "project-appcastr"
+background_image = "/images/projects/appcastr/bg-blur.jpg"
 +++
 
 ## What is Appcastr?

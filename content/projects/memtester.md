@@ -1,5 +1,6 @@
 +++
 title = "Memtester"
+description = "Memtester is a native Cocoa port of a game a friend of mine wrote in Java. Try and remember an increasingly complex sequence of letters, numbers and symbols. Includes amazing features such as a high score system."
 version = "1.0"
 dl_url = "https://github.com/alexjohnj/memtester-mac/downloads/"
 source_url = "https://github.com/alexjohnj/memtester-mac"
@@ -10,6 +11,8 @@ screenshots = [
 	"/images/projects/memtester/memtester-screenshot-2.png",
 	"/images/projects/memtester/memtester-screenshot-3.png"
 ]
+project_css_class = "project-memtester"
+background_image = "/images/projects/memtester/bg-blur.jpg"
 +++
 
 ## What is Memtester?
