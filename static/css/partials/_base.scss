@@ -64,6 +64,10 @@ body {
 img {
   width: auto;
   max-width: 100%;
+
+  &.shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
 }
 
 // ATTENTION: blackfriday (the Markdown engine that Hugo uses) for some reason
