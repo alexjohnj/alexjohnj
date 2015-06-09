@@ -124,7 +124,7 @@ gulp.task('rsync', ['hugo', 'htmlmin', 'clean-deploy', 'gzip'], function() {
   return rsync({
     ssh: true,
     src: './public/',
-    dest: 'alex@stormageddon:/var/www/alexj.org/public/',
+    dest: 'alex@archer:/usr/local/www/alexj.org/',
     recursive: true,
     deleteAll: true
   }, function(error, stdout, stderr, cmd){
