@@ -7,9 +7,9 @@ source_url = "https://github.com/alexjohnj/memtester-mac"
 changelog = "http://alexjohnj.github.com/memtester-mac/changelog.html"
 icon_sprite = "sprite-icons-memtester-icon-256"
 screenshots = [
-	"/images/projects/memtester/memtester-screenshot-1.png",
-	"/images/projects/memtester/memtester-screenshot-2.png",
-	"/images/projects/memtester/memtester-screenshot-3.png"
+	"/images/projects/memtester/memtester-screenshot-1",
+	"/images/projects/memtester/memtester-screenshot-2",
+	"/images/projects/memtester/memtester-screenshot-3"
 ]
 project_css_class = "project-memtester"
 background_image = "/images/projects/memtester/bg-blur.jpg"

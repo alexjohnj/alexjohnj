@@ -6,8 +6,8 @@ source_url = "https://github.com/alexjohnj/appcastr/"
 dl_url = "https://github.com/downloads/alexjohnj/appcastr/Appcastr-0.1.1.zip"
 changelog = "https://alexjohnj.github.io/appcastr/changelog.html"
 screenshots = [
-    "/images/projects/appcastr/appcastr-screenshot-1.png",
-    "/images/projects/appcastr/appcastr-screenshot-2.png"
+    "/images/projects/appcastr/appcastr-screenshot-1",
+    "/images/projects/appcastr/appcastr-screenshot-2"
 ]
 icon_sprite = "sprite-icons-appcastr-icon-256"
 project_css_class = "project-appcastr"

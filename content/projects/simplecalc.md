@@ -7,10 +7,10 @@ dl_url = "https://code.google.com/p/simple-calc/downloads/detail?name=SimpleCalc
 changelog = "https://raw.githubusercontent.com/alexjohnj/SimpleCalc/master/Changelog.md"
 icon_sprite = "sprite-icons-simplecalc-icon-256"
 screenshots = [
-	"/images/projects/simplecalc/simplecalc-screenshot-1.png",
-	"/images/projects/simplecalc/simplecalc-screenshot-2.png",
-	"/images/projects/simplecalc/simplecalc-screenshot-3.png",
-    "/images/projects/simplecalc/simplecalc-screenshot-4.png"
+	"/images/projects/simplecalc/simplecalc-screenshot-1",
+	"/images/projects/simplecalc/simplecalc-screenshot-2",
+	"/images/projects/simplecalc/simplecalc-screenshot-3",
+    "/images/projects/simplecalc/simplecalc-screenshot-4"
 ]
 project_css_class = "project-simplecalc"
 background_image = "/images/projects/simplecalc/bg-blur.jpg"

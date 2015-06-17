@@ -22,7 +22,11 @@
     </div>
     {{ range .Params.screenshots }}
       <div class="image-container">
-        <img src="{{ . }}" />
+        <picture>
+          <source srcset="{{ . }}.webp" type="image/webp">
+          <source srcset="{{ . }}.png" type="image/png">
+          <img src="{{ . }}.png" />
+        </picture>
       </div>
     {{ end }}
   </div>
