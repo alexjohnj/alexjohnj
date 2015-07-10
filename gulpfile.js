@@ -23,6 +23,9 @@ var gulp = require('gulp'),
 gulp.task('styles-dev', function() {
   return gulp.src('./static/css/main.scss')
     .pipe(sass({style: 'expanded'}))
+    .on('error', function(e) {
+            console.error('Error!', e.message)
+        })
     .pipe(autoprefixer('last 2 versions', 'ie 9'))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./static/css'));
