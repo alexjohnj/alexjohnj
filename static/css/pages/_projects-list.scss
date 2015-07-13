@@ -17,6 +17,7 @@
   text-align: center;
 
   @media handheld, only screen and (max-width: 640px) {
+    height: 20em;
     width: 100%;
   }
 
