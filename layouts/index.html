@@ -1,21 +1,21 @@
 <!----*- engine:go -*--->
 <!DOCTYPE html>
-  {{ template "partials/head.html" . }}
+{{ template "partials/head.html" . }}
 
 {{ template "partials/header.html" . }}
 <section>
-{{range first 5 .Data.Pages }}
-{{ if eq .Type "post" }}
-  <article class="paper-card article-excerpt">
-    <header>
-      <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-      <p><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
-    </header>
-    <p>{{ .Summary }}</p>
-    <p><a href="{{ .Permalink }}">Read More</a></p>
-  </article>
-{{ end }}
-{{ end }}
+  {{range first 5 .Data.Pages }}
+    {{ if eq .Type "post" }}
+      <article class="paper-card article-excerpt">
+        <header>
+          <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+          <p><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
+        </header>
+        <p>{{ .Summary }}</p>
+        <p><a href="{{ .Permalink }}">Read More</a></p>
+      </article>
+    {{ end }}
+  {{ end }}
 </section>
 {{ template "partials/footer.html" . }}
 </html>

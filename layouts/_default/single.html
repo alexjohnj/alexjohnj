@@ -1,11 +1,11 @@
 <!----*- engine:go -*--->
 <!DOCTYPE html>
 {{ template "partials/head.html" . }}
-  {{ template "partials/header.html" . }}
-  
-  <article class="paper-card">
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
-  </article>
-  {{ template "partials/footer.html" .}}
+{{ template "partials/header.html" . }}
+
+<article class="paper-card">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+</article>
+{{ template "partials/footer.html" .}}
 </html>

@@ -9,28 +9,28 @@
     {{ if .Params.version }}<h2>{{ .Params.version }}</h2>{{ end }}
   </header>
   {{ if .Params.screenshots }}
-  <div class="image-carousel-thing" {{ if .Params.background_image }}style="background-image:url({{ .Params.background_image }});"{{ end }}>
-    <div id="next-image-button" class="gallery-button"><p>&#8594;</p></div>
-    <div id="prev-image-button" class="gallery-button"><p>&#8592;</p></div>
-    <div class="image-gallery-indicator-container">
-      {{ range  $index, $screen := .Params.screenshots }}
-      {{ if eq $index 0 }}
-        <div class="image-gallery-indicator active"></div>
-      {{ else}}
-        <div class="image-gallery-indicator"></div>
-      {{ end }}
+    <div class="image-carousel-thing" {{ if .Params.background_image }}style="background-image:url({{ .Params.background_image }});"{{ end }}>
+      <div id="next-image-button" class="gallery-button"><p>&#8594;</p></div>
+      <div id="prev-image-button" class="gallery-button"><p>&#8592;</p></div>
+      <div class="image-gallery-indicator-container">
+        {{ range  $index, $screen := .Params.screenshots }}
+          {{ if eq $index 0 }}
+            <div class="image-gallery-indicator active"></div>
+          {{ else}}
+            <div class="image-gallery-indicator"></div>
+          {{ end }}
+        {{ end }}
+      </div>
+      {{ range .Params.screenshots }}
+        <div class="image-container">
+          <picture>
+            <source srcset="{{ . }}.webp" type="image/webp">
+            <source srcset="{{ . }}.png" type="image/png">
+            <img src="{{ . }}.png" />
+          </picture>
+        </div>
       {{ end }}
     </div>
-    {{ range .Params.screenshots }}
-      <div class="image-container">
-        <picture>
-          <source srcset="{{ . }}.webp" type="image/webp">
-          <source srcset="{{ . }}.png" type="image/png">
-          <img src="{{ . }}.png" />
-        </picture>
-      </div>
-    {{ end }}
-  </div>
   {{ end }}
 
   <aside class="project-meta-links">
@@ -40,11 +40,11 @@
       {{ if .Params.source_url }}<li><a href="{{ .Params.source_url }}"><span class="icon-github"></span> GitHub</a></li>{{ end }}
     </ul>
   </aside>
-  
+
   {{ .Content }}
 </article>
 {{ template "partials/footer.html" . }}
 {{if .Params.screenshots }}
-<script src="/js/image-gallery.min.js" async></script>
+  <script src="/js/image-gallery.min.js" async></script>
 {{ end }}
 </html>
