@@ -13,9 +13,13 @@
           <section class="project-grid-entry {{ $page.Params.project_css_class }}">
       {{ end }}
       <div class="vertical-align-wrap">
-        <h1><a href=" {{ $page.Permalink }}">{{ $page.Title }}</a></h1>
+        {{ if $page.Params.web_url }}
+          <h1><a href="{{ $page.Params.web_url }}"> {{ $page.Title }}</a></h1> 
+        {{ else }}
+          <h1><a href="{{ $page.Params.source_url }}"> {{ $page.Title }}</a></h1>
+        {{ end }}
         {{ if $page.Params.version }}<h2>{{ $page.Params.version }}</h2>{{ end }}
-        <p>{{ $page.Description }}</p>
+        <p>{{ $page.Summary }}</p>
         <div class="project-meta-links">
           <ul>
             {{ if $page.Params.dl_url }}<li><a href="{{ $page.Params.dl_url }}"><span class="icon-box-download"></span> Download</a></li>{{ end }}
@@ -24,7 +28,7 @@
           </ul>
         </div>
       </div>
-          </section>
+    </section>
     {{ end }}
   </div>
 </section>
