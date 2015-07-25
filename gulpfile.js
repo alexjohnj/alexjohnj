@@ -120,19 +120,17 @@ gulp.task('gzip', ['hugo', 'htmlmin', 'clean-deploy'], function() {
     .pipe(gulp.dest('./public'));
 });
 
-//TODO: Implement rsync task
 gulp.task('rsync', ['hugo', 'htmlmin', 'clean-deploy', 'gzip'], function() {
-  console.log("TODO: Implement rsync task");
-  // return rsync({
-  //   ssh: true,
-  //   src: './public/',
-  //   dest: '',
-  //   recursive: true,
-  //   deleteAll: true
-  // }, function(error, stdout, stderr, cmd){
-  //   console.log(stdout);
-  //   console.log(stderr);
-  // });
+  return rsync({
+    ssh: true,
+    src: './public/',
+    dest: 'alex@archer:/usr/local/www/alexj.org/',
+    recursive: true,
+    deleteAll: true
+  }, function(error, stdout, stderr, cmd){
+    console.log(stdout);
+    console.log(stderr);
+  });
 });
 
 /******************************************************************************
@@ -165,3 +163,4 @@ gulp.task('watch', ['clean'], function() {
   gulp.watch('./static/js/**/!(*.min.js)+(*.js)', ['js-dev']);
   gulp.watch('./static/js/**/*.coffee', ['coffee-dev']);
 });
+
