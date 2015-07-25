@@ -1,7 +1,7 @@
 // Plugins
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
     rename = require('gulp-rename'),
@@ -22,24 +22,21 @@ var gulp = require('gulp'),
 // the output as main.min.css. The file is NOT minified however.
 gulp.task('styles-dev', function() {
   return gulp.src('./static/css/main.scss')
-    .pipe(sass({style: 'expanded'}))
-    .on('error', function(e) {
-            console.error('Error!', e.message)
-        })
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions', 'ie 9'))
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('./static/css'));
+    .pipe(gulp.dest('./static/css'))
 });
 
 // styles-product compiles main.scss, runs it through autoprefixer, minifies
 // the output and saves it to the file main.min.css
 gulp.task('styles-product', function () {
   return gulp.src('./static/css/main.scss')
-    .pipe(sass({style: 'expanded'}))
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions', 'ie 9'))
-    .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
-    .pipe(gulp.dest('./static/css'));
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./static/css'))
 });
 
 // coffee-dev compiles *.coffee in the js folder and saves the output
@@ -123,17 +120,19 @@ gulp.task('gzip', ['hugo', 'htmlmin', 'clean-deploy'], function() {
     .pipe(gulp.dest('./public'));
 });
 
+//TODO: Implement rsync task
 gulp.task('rsync', ['hugo', 'htmlmin', 'clean-deploy', 'gzip'], function() {
-  return rsync({
-    ssh: true,
-    src: './public/',
-    dest: 'alex@archer:/usr/local/www/alexj.org/',
-    recursive: true,
-    deleteAll: true
-  }, function(error, stdout, stderr, cmd){
-    console.log(stdout);
-    console.log(stderr);
-  });
+  console.log("TODO: Implement rsync task");
+  // return rsync({
+  //   ssh: true,
+  //   src: './public/',
+  //   dest: '',
+  //   recursive: true,
+  //   deleteAll: true
+  // }, function(error, stdout, stderr, cmd){
+  //   console.log(stdout);
+  //   console.log(stderr);
+  // });
 });
 
 /******************************************************************************
@@ -161,8 +160,7 @@ gulp.task('deploy', ['clean', 'styles-product', 'coffee-product', 'js-product'],
                                 Watch Tasks
 ******************************************************************************/
 
-gulp.task('watch', function() {
-  gulp.start('clean');
+gulp.task('watch', ['clean'], function() {
   gulp.watch('./static/css/**/*.scss', ['styles-dev']);
   gulp.watch('./static/js/**/!(*.min.js)+(*.js)', ['js-dev']);
   gulp.watch('./static/js/**/*.coffee', ['coffee-dev']);
