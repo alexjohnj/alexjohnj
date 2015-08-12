@@ -34,42 +34,43 @@ gulp.task('production:hugo-build', function(cb) {
 });
 
 gulp.task('development:styles', function (){
-  return gulp.src('./public/css/main.scss')
+  return gulp.src('./assets/css/main.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 2 version', 'ie 9'))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./public/css'));
+    .pipe(gulp.dest('./public/css/'));
 });
 
 gulp.task('production:styles', function() {
-  return gulp.src('./public/css/main.scss')
+  return gulp.src('./assets/css/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions', 'ie 9'))
     .pipe(minifycss())
-    .pipe(gulp.dest('./public/css'));
+    .pipe(gulp.dest('./public/css/'));
 });
 
 gulp.task('development:coffee-script', function() {
-  return gulp.src('./public/js/*.coffee')
+  return gulp.src('./assets/js/*.coffee')
     .pipe(sourcemaps.init())
     .pipe(coffee().on('error', gutil.log))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./public/js'));
+    .pipe(gulp.dest('./public/js/'));
 });
 
 gulp.task('production:coffee-script', function() {
-  return gulp.src('./public/js/*.coffee')
+  return gulp.src('./assets/js/*.coffee')
     .pipe(coffee().on('error', gutil.log))
-    .pipe(gulp.dest('./public/js'));
+    .pipe(uglify())
+    .pipe(gulp.dest('./public/js/'));
 });
 
 gulp.task('development:javascript', function() {/*Dummy task*/});
 
 gulp.task('production:javascript', function() {
-    return gulp.src('./public/js/**/*.js')
+    return gulp.src('./assets/js/**/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('./public/js'));
+    .pipe(gulp.dest('./public/js/'));
 });
 
 /*******************************************************************************
@@ -151,7 +152,7 @@ gulp.task('deploy', function() {
 gulp.task('watch', ['development:build'], function() {
   gulp.watch(['./archetypes/**/*.*', './content/**/*.*', './static/**/*.*',
               './layouts/**/*.*', './config.toml'], ['development:hugo-build']);
-  gulp.watch('./public/css/**/*.scss', ['development:styles']);
-  gulp.watch('./public/js/**/*.coffee', ['development:coffee-script']);
-  gulp.watch('./public/js/**/*.js', ['development:javascript']);
+  gulp.watch('./assets/css/**/*.scss', ['development:styles']);
+  gulp.watch('./assets/js/**/*.coffee', ['development:coffee-script']);
+  gulp.watch('./assets/js/**/*.js', ['development:javascript']);
 });
