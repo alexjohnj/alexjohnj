@@ -66,7 +66,10 @@ gulp.task('production:coffee-script', function() {
     .pipe(gulp.dest('./public/js/'));
 });
 
-gulp.task('development:javascript', function() {/*Dummy task*/});
+gulp.task('development:javascript', function() {
+  return gulp.src('./assets/js/**/*.js')
+    .pipe(gulp.dest('./public/js/'));
+});
 
 gulp.task('production:javascript', function() {
     return gulp.src('./assets/js/**/*.js')
