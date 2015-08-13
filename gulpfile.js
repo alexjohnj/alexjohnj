@@ -14,7 +14,8 @@ var gulp = require('gulp'),
     coffee = require('gulp-coffee'),
     uglify = require('gulp-uglify'),
     runSequence = require('run-sequence')
-    sourcemaps = require('gulp-sourcemaps');
+    sourcemaps = require('gulp-sourcemaps')
+    bs = require('browser-sync').create();
 
 /*******************************************************************************
                           Source Compilation
@@ -149,7 +150,17 @@ gulp.task('deploy', function() {
               'rsync');
 });
 
+gulp.task('browser-sync', function() {
+  bs.init({
+    server: './public',
+    port: 8000,
+    ui: {port: 8001},
+    files: ['./public/css/main.css', './public/js/**/*.js', './public/**/*.html', './public/images/**/*.{png,jpeg,jpg,svg,webp}']
+  });
+});
+
 gulp.task('watch', ['development:build'], function() {
+  runSequence('browser-sync');
   gulp.watch(['./archetypes/**/*.*', './content/**/*.*', './static/**/*.*',
               './layouts/**/*.*', './config.toml'], ['development:hugo-build']);
   gulp.watch('./assets/css/**/*.scss', ['development:styles']);
