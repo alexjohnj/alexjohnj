@@ -15,7 +15,10 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     runSequence = require('run-sequence')
     sourcemaps = require('gulp-sourcemaps')
-    bs = require('browser-sync').create();
+    bs = require('browser-sync').create(),
+    CacheBuster = require('gulp-cachebust');
+
+var cachebust = new CacheBuster();
 
 /*******************************************************************************
                           Source Compilation
@@ -48,6 +51,7 @@ gulp.task('production:styles', function() {
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions', 'ie 9'))
     .pipe(minifycss())
+    .pipe(cachebust.resources())
     .pipe(gulp.dest('./public/css/'));
 });
 
@@ -63,6 +67,7 @@ gulp.task('production:coffee-script', function() {
   return gulp.src('./assets/js/*.coffee')
     .pipe(coffee().on('error', gutil.log))
     .pipe(uglify())
+    .pipe(cachebust.resources())
     .pipe(gulp.dest('./public/js/'));
 });
 
@@ -74,6 +79,7 @@ gulp.task('development:javascript', function() {
 gulp.task('production:javascript', function() {
     return gulp.src('./assets/js/**/*.js')
     .pipe(uglify())
+    .pipe(cachebust.resources())
     .pipe(gulp.dest('./public/js/'));
 });
 
@@ -91,6 +97,7 @@ gulp.task('production:html', function() {
       removeRedundantAttributes: true,
       collapseBooleanAttributes: true
     }))
+    .pipe(cachebust.references())
     .pipe(gulp.dest('./public'));
 });
 
