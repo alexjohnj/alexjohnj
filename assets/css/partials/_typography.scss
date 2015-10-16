@@ -10,17 +10,7 @@ h1, h2, h3 {
 }
 
 code {
-  font-family: "Inconsolata", monospace;
-
-  p > & {
-    border: 1px solid #262626;
-    border-radius: 5px;
-
-    background-color: #262626;
-    padding: 0 5px;
-
-    color: #cccccc;
-  }
+  font-family: monospace;
 }
 
 blockquote {
