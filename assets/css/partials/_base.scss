@@ -17,7 +17,6 @@ html {
 body {
   margin: 0 0 ($site-footer-height + 30); // Needed for sticky footer to work
   background-color: #eeeeee;
-  padding-top: $site-header-height;
 }
 
 .paper-card {
