@@ -20,6 +20,7 @@ $typi-h3: (null: 0);
 html {
   @include typi-base();
   text-rendering: optimizeLegibility;
+  color: $charcoal;
   font-family: $font-stack;
 }
 
