@@ -85,3 +85,18 @@ main {
     content: "\2022";
   }
 }
+
+.article-header {
+  @media all and (min-width: 640px) {
+    padding: 0 0 vr(1);
+  }
+
+  p {
+    color: $grey;
+  }
+}
+
+img {
+  margin: vr(2) 0;
+  max-width: 100%;
+}
