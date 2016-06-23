@@ -6,11 +6,13 @@ body {
 
 main {
   margin: 0 auto;
+  padding: 0 0 vr(1);
   width: 92%;
   max-width: $content-max-width;
   flex: 1;
 
   @media all and (min-width: 640px) {
+    padding: 0 0 vr(3);
     width: 95%;
   }
 
@@ -33,4 +35,27 @@ main {
   width: 100%;
   text-align: center;
   color: $white;
+
+  p {
+    margin: vr(1) 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+
+  }
+
+  li + li::before {
+    padding: 0 3px;
+    content: "\2022";
+  }
 }
