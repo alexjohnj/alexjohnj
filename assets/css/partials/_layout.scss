@@ -122,3 +122,10 @@ img {
   margin: vr(2) 0;
   max-width: 100%;
 }
+
+pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: vr(1) vr(1)/2;
+  margin: 0 0 vr(1);
+}

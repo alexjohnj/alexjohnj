@@ -1,5 +1,9 @@
 baseurl = "https://alexj.org"
 title = "Alex J"
 
+pygmentsuseclasses = false
+pygmentscodefences = true
+pygmentsstyle = "manni"
+
 [permalinks]
 post = "/:month/:filename/"
