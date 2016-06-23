@@ -4,17 +4,19 @@
 
 {{ template "partials/header.html" . }}
 
-<section class="paper-card">
-  <h1>Posts</h1>
+{{ $posts := (where .Data.Pages "Type" "post") }}
 
-  <table id="post-archive-table">
-    {{ range .Data.Pages }}
-      <tr onclick="javascript:document.location = '{{ .Permalink }}';">
-        <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
-        <td><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 02, 2006" }}</time></td>
-      </tr>
+<main>
+  <h1>Posts</h1>
+  {{ range $posts.GroupByDate "January 2006" }}
+  <section class="archive-grouping">
+    <h2>{{ .Key }}</h2>
+    {{ range .Pages }}
+      <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
     {{ end }}
-  </table>
-</section>
+  </section>
+  {{ end }}
+</main>
+
 {{ template "partials/footer.html" . }}
 </html>

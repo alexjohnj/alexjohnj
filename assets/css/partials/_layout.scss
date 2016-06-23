@@ -135,6 +135,16 @@ main {
   text-align: right;
 }
 
+// Archive
+
+.archive-grouping {
+  padding: 0 0 vr(1);
+
+  &:last-child {
+    padding: 0;
+  }
+}
+
 // Elements
 
 img {
