@@ -99,7 +99,12 @@ main {
   }
 }
 
+.footnotes {
+  padding:0 0 vr(1);
+}
+
 .article-footer {
+  display: flex;
   width: 100%;
 
   p {
@@ -107,15 +112,13 @@ main {
   }
 }
 
-.next-post {
-  width: 45%;
-  float: right;
-  text-align: right;
+.next-post,
+.previous-post {
+  width: 50%;
 }
 
-.previous-post {
-  width: 45%;
-  float: left;
+.next-post {
+  text-align: right;
 }
 
 img {
