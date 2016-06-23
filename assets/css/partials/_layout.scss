@@ -41,8 +41,11 @@ main {
   }
 
   nav {
-    text-align: right;
     flex-grow: 1;
+
+    @media all and (min-width: 640px) {
+      text-align: right;
+    }
   }
 
   ul {
