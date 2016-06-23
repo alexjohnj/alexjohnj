@@ -96,6 +96,25 @@ main {
   }
 }
 
+.article-footer {
+  width: 100%;
+
+  p {
+    margin: 0;
+  }
+}
+
+.next-post {
+  width: 45%;
+  float: right;
+  text-align: right;
+}
+
+.previous-post {
+  width: 45%;
+  float: left;
+}
+
 img {
   margin: vr(2) 0;
   max-width: 100%;

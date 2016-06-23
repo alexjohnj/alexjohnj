@@ -12,11 +12,15 @@
   </article>
   {{ .Content }}
   <footer class="article-footer">
-    {{ with .Prev }}{{ if eq .Type "post" }}
-      <p><a href="{{ .Permalink }}">{{ .Title }} &raquo;</a></p>
-    {{ end }}{{ end }}
     {{ with .Next }}{{ if eq .Type "post" }}
-      <p><a href="{{ .Permalink }}">&laquo; {{ .Title }}</a></p>
+      <div class="previous-post">
+        <p><a href="{{ .Permalink }}">&laquo; {{ .Title }}</a></p>
+      </div>
+    {{ end }}{{ end }}
+    {{ with .Prev }}{{ if eq .Type "post" }}
+      <div class="next-post">
+        <p><a href="{{ .Permalink }}">{{ .Title }} &raquo;</a></p>
+      </div>
     {{ end }}{{ end }}
   </footer>
 </main>
