@@ -86,6 +86,23 @@ main {
   }
 }
 
+// Home Page
+
+.article-excerpt {
+  padding: 0 0 vr(2);
+}
+
+.pagination-controls {
+  display: flex;
+  width: 100%;
+
+  div {
+    width: 50%;
+  }
+}
+
+// Articles
+
 .article-header {
   @media all and (min-width: 640px) {
     padding: 0 0 vr(1);
@@ -100,7 +117,7 @@ main {
   padding:0 0 vr(1);
 }
 
-.article-footer {
+.page-controls {
   display: flex;
   width: 100%;
 
@@ -117,6 +134,8 @@ main {
 .next-post {
   text-align: right;
 }
+
+// Elements
 
 img {
   margin: vr(2) 0;

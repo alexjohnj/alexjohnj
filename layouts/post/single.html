@@ -11,7 +11,7 @@
     </header>
   </article>
   {{ .Content }}
-  <footer class="article-footer">
+  <footer class="article-footer page-controls">
     {{ with .Next }}{{ if eq .Type "post" }}
       <div class="previous-post">
         <p><a href="{{ .Permalink }}">&laquo; {{ .Title }}</a></p>

@@ -1,6 +1,8 @@
 baseurl = "https://alexj.org"
 title = "Alex J"
 
+paginate = 5
+
 pygmentsuseclasses = false
 pygmentscodefences = true
 pygmentsstyle = "manni"
