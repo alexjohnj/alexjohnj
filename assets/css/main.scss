@@ -1,3 +1,7 @@
 @import "../../node_modules/typi/scss/typi";
 @import "../../node_modules/modularscale-sass/stylesheets/modular-scale";
 @import "../../node_modules/normalize.css/normalize";
+
+@import "./partials/base";
+@import "./partials/layout";
+@import "./partials/typography";
