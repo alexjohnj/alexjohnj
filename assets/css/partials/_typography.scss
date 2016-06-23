@@ -53,6 +53,12 @@ a {
   font-weight: $font-heavy;
 }
 
+pre,
+code {
+  font-family: $mono-font-stack;
+  font-size: 0.90rem;
+}
+
 ul {
   margin: 0 0 vr(1);
 }
