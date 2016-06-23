@@ -22,11 +22,37 @@ main {
 }
 
 .site-header {
+  display: flex;
   margin: 0 auto;
   width: 92%;
+  align-items: baseline;
 
   @media all and (min-width: 640px) {
     margin: vr(1) 0 0 vr(1);
+  }
+
+  h1 {
+    flex-shrink: 0;
+
+    a {
+      text-decoration: none;
+      color: $dark-slate-blue;
+    }
+  }
+
+  nav {
+    text-align: right;
+    flex-grow: 1;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    padding-left: vr(1);
+    text-transform: uppercase;
   }
 }
 
