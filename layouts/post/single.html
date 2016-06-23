@@ -2,30 +2,24 @@
 <!DOCTYPE html>
 {{ template "partials/head.html" . }}
 {{ template "partials/header.html" . }}
-<article class="paper-card" id="main-article">
-  <header id="post-header">
-    <h1>{{ .Title }}</h1>
-    <p><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
-  </header>
 
+<main>
+  <article>
+    <header class="article-header">
+      <h1>{{ .Title }}</h1>
+      <p>ON <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ upper (.Date.Format "January 2, 2006") }}</time></p>
+    </header>
+  </article>
   {{ .Content }}
-
-  <footer id="article-footer">
-    <div class="clearfix">
-      <section id="next-post">
-        {{ with .Prev }}{{ if eq .Type "post" }}
-          <p><a href="{{ .Permalink }}">{{ .Title }} &raquo;</a></p>
-        {{ end }}{{ end }}
-      </section>
-
-      <section id="previous-post">
-        {{ with .Next }}{{ if eq .Type "post" }}
-          <p><a href="{{ .Permalink }}">&laquo; {{ .Title }}</a></p>
-        {{ end }}{{ end }}
-      </section>
-    </div>
+  <footer class="article-footer">
+    {{ with .Prev }}{{ if eq .Type "post" }}
+      <p><a href="{{ .Permalink }}">{{ .Title }} &raquo;</a></p>
+    {{ end }}{{ end }}
+    {{ with .Next }}{{ if eq .Type "post" }}
+      <p><a href="{{ .Permalink }}">&laquo; {{ .Title }}</a></p>
+    {{ end }}{{ end }}
   </footer>
-</article>
+</main>
 
 {{ template "partials/footer.html" . }}
 </html>
