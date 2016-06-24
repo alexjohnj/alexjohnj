@@ -59,6 +59,10 @@ p {
 a {
   color: $perano;
   font-weight: $font-heavy;
+
+  &:hover {
+    color: $dark-slate-blue;
+  }
 }
 
 pre,
