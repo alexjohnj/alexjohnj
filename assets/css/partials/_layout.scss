@@ -145,6 +145,20 @@ main {
   }
 }
 
+// Projects Page
+.project-entry {
+  padding: 0 0 vr(2);
+
+  &:last-child {
+    padding: 0;
+  }
+}
+
+.project-links {
+  width: 100%;
+  text-align: center;
+}
+
 // Elements
 
 img {
