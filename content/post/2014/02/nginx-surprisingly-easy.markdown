@@ -7,6 +7,8 @@ Out of curiosity I spent my Sunday afternoon moving this blog from Amazon S3 to 
 
 [digital-ocean-link]: https://www.digitalocean.com/?refcode=755d29c48c8c
 
+<!--more-->
+
 I'm running Ubuntu 12.04 LTS on the VPS since Ubuntu's the Linux distribution I have the most experience with[^1]. Nginx is acting as the web server and seems to be fast. It's not like I have anything to compare it with though. The VPS is DigitalOcean's cheapest droplet---512 MB of RAM and a 20 GB SSD.
 
 Given my lack of experience with web servers, I was expecting Nginx to be a pain to set up. Surprisingly, it wasn't. Within 30 minutes I had a test page up and within an hour I was serving a mirror of this site from a subdomain of this site. Granted, this is a purely static site, so I didn't have to set up the full LEMP stack.
@@ -17,7 +19,7 @@ I won't go into detail about how I set up the VPS but I'll share a few resources
 
 [digital-ocean-lemp]: https://www.digitalocean.com/community/articles/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-12-04
 
-A very useful resource I found for learning about Nginx was [Martin Fjordvald's blog][martin-blog]. He's written several useful and interesting articles especially ["Nginx Configuration Primer"][config-primer]. He's also [written a short book][martin-book] that goes into a bit more detail. It's a quick read and definitely worth the ~£6.00 if you're new to Nginx. 
+A very useful resource I found for learning about Nginx was [Martin Fjordvald's blog][martin-blog]. He's written several useful and interesting articles especially ["Nginx Configuration Primer"][config-primer]. He's also [written a short book][martin-book] that goes into a bit more detail. It's a quick read and definitely worth the ~£6.00 if you're new to Nginx.
 
 [martin-blog]: http://blog.martinfjordvald.com
 [config-primer]: http://blog.martinfjordvald.com/2010/07/nginx-primer/

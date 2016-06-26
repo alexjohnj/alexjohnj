@@ -7,6 +7,8 @@ Besides the [project page][julius-project-page], I haven't written about julius 
 
 [julius-project-page]: /projects/julius/
 
+<!--more-->
+
 Everyone knows that the Caesar cipher is unbelievably weak which is why nobody in their right mind uses it for anything serious. Version 0.2.0 of julius highlights this weakness by adding the `brute` subcommand. Using this command, julius will try every possible key for an encrypted message and output the plaintext. Because there's only 25 possible keys, this takes next to no time to run even on very modest hardware.
 
 As an example, here's some benchmarks performed on a Raspberry Pi Model B+ running ArchLinux:

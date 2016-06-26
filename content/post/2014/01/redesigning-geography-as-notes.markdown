@@ -6,17 +6,19 @@ date: "2014-01-08T21:45:00Z"
 Just under a month ago, I [wrote about][project-changes] which projects I'd be
 focusing my time on in the coming year. The main takeaway from the post was
 that [Geography AS Notes][gas-project-page] was going to get some love. Well,
-here's my first packet of love[^1], a redesign. 
+here's my first packet of love[^1], a redesign.
 
 [project-changes]: /12/project-updates/
 
 [gas-project-page]: /projects/geographyas/
 
+<!--more-->
+
 It's been nearly two years since I last refreshed _Geography AS Notes'_ design
 and in that time its grown boring and stale. The website's design has never
 been eye catching---one frequent piece of feedback I get is that the site is
 boring to look at---but for the past two years I've taken the function over
-form approach. This needed to change. 
+form approach. This needed to change.
 
 If a site is boring to look at, the reader is more likely to perceive the
 content as boring which isn't good if you want them to study using it.
@@ -63,7 +65,7 @@ since I couldn't use `height:auto` on the divs and have CSS3 transitions work.
 In the new design, a (pseudo) segmented control is used to control the visible
 topic. This works better on mobiles and doesn't have any problems with
 truncated content as I'm only toggling the div's (well, `<section>` now)
-`visibility` and `display` properties. 
+`visibility` and `display` properties.
 
 The next objective to strike off was legibility. I played around with a few
 font combinations from Google Fonts and ended up combining
@@ -82,7 +84,7 @@ functionality. Since the site's Jekyll powered, implementing search has a few
 challenges. Mainly, it needs to be handled client-side. I [toyed
 with][old-site-search] writing a search engine back in January last year. It
 worked---surprisingly efficiently may I add---but it needed _a lot_ of work and
-I never got around to finishing it. 
+I never got around to finishing it.
 
 [old-site-search]: https://github.com/alexjohnj/geographyas/tree/super-experimental-search
 
@@ -90,7 +92,7 @@ I tried again to implement client-side site search, this time using
 [lunr.js][lunr-js] so I didn't have to handle the actual searching. Lunr.js is
 simple to set up but, in my limited testing, it proved too slow at indexing
 full text content for every page. It was unreasonable of me to expect it to
-handle such a large index but it was worth a shot. 
+handle such a large index but it was worth a shot.
 
 Ultimately, I offloaded site search to a third party service. I tried
 [Tapir][tapir-go] but the service seems to have shut down[^3]. I ended up using
@@ -106,14 +108,14 @@ The final design ended up looking like this:
 <picture>
   <source srcset="/images/posts/redesigning-geography-as-notes/geography-as-new.webp" type="image/webp">
   <source srcset="/images/posts/redesigning-geography-as-notes/geography-as-new.png" type="image/png">
-  <img class="shadow" src="/images/posts/redesigning-geography-as-notes/geography-as-new.png" alt="Screenshot of the new design"> 
+  <img class="shadow" src="/images/posts/redesigning-geography-as-notes/geography-as-new.png" alt="Screenshot of the new design">
 </picture>
 
 
 <picture>
   <source srcset="/images/posts/redesigning-geography-as-notes/geography-as-new-article.webp" type="image/webp">
   <source srcset="/images/posts/redesigning-geography-as-notes/geography-as-new-article.png" type="image/png">
-  <img class="shadow" src="/images/posts/redesigning-geography-as-notes/geography-as-new-article.png" alt="Screenshot of an article with the new design."> 
+  <img class="shadow" src="/images/posts/redesigning-geography-as-notes/geography-as-new-article.png" alt="Screenshot of an article with the new design.">
 </picture>
 
 For reference, the old design:
@@ -121,13 +123,13 @@ For reference, the old design:
 <picture>
   <source srcset="/images/posts/redesigning-geography-as-notes/geography-as-old.webp" type="image/webp">
   <source srcset="/images/posts/redesigning-geography-as-notes/geography-as-old.png" type="image/png">
-  <img class="shadow" src="/images/posts/redesigning-geography-as-notes/geography-as-old.png" alt="Screenshot of the old design"> 
+  <img class="shadow" src="/images/posts/redesigning-geography-as-notes/geography-as-old.png" alt="Screenshot of the old design">
 </picture>
 
 <picture>
   <source srcset="/images/posts/redesigning-geography-as-notes/geography-as-old-article.webp" type="image/webp">
   <source srcset="/images/posts/redesigning-geography-as-notes/geography-as-old-article.png" type="image/png">
-  <img class="shadow" src="/images/posts/redesigning-geography-as-notes/geography-as-old-article.png" alt="Screenshot of an article with the old design."> 
+  <img class="shadow" src="/images/posts/redesigning-geography-as-notes/geography-as-old-article.png" alt="Screenshot of an article with the old design.">
 </picture>
 
 I made a few smaller changes while working on the redesign. All the topics now

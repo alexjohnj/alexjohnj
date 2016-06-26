@@ -5,6 +5,8 @@ date = "2014-09-01T21:43:00+01:00"
 
 I've spent the past week working on a new design for this site which _should_ be live right now. The site wasn't in desperate need for a redesign to begin with but I wanted to try out some new tools and figured a redesign was the best way to do it.
 
+<!--more-->
+
 The new design is "inspired" by Google's [Material Design UI][material-design-ui]. I've sprinkled plenty of shadows and animations throughout the site to give it a sense of depth and fluidity. If you get chance, check out one of the [projects][projects-page] with screenshots. The screenshot gallery is built with vanilla JavaScript and all the animations are done with CSS 2D transforms so they run at 60FPS even on low end devices.
 
 [material-design-ui]: http://www.google.com/design/
@@ -24,13 +26,13 @@ Hugo also offers a more flexible way of organising content than Jekyll. Jekyll p
 
 Unfortunately, Hugo is still young and is missing a few features that Jekyll has. This hasn't been much of a problem with this site but it is stopping me from moving Geography AS Notes over to it. One very simple feature that is missing is the ability to get the next/previous piece of content _of a certain type_. Hugo currently provides the `{{ .Next }}` and `{{ .Prev }}` template variables for the next/previous piece of content but they ignore the type of the content (for example mixing blog posts with project pages) and there's no way to specify the sorting that determines what the next/previous content is.
 
-Other issues I ran into include a lack of plugin support (Hugo has "shortcodes" which are similar to Jekyll's custom liquid filters but can't run external commands), a lack of an asset pipeline and a pretty bare bones `{{ .Summary }}` variable for generating post summaries. The generated summaries are processed by Markdown but the resulting HTML is stripped leaving a blob of plaintext. 
+Other issues I ran into include a lack of plugin support (Hugo has "shortcodes" which are similar to Jekyll's custom liquid filters but can't run external commands), a lack of an asset pipeline and a pretty bare bones `{{ .Summary }}` variable for generating post summaries. The generated summaries are processed by Markdown but the resulting HTML is stripped leaving a blob of plaintext.
 
-Despite these shortcomings, I still love Hugo. It's fast, it's stable and it has, in my opinion, a superior way of organising content. I've been watching the project on GitHub for the past couple of weeks and it's very active so I have a lot of hope for the future of this project. I'll definitely be using Hugo for new projects going forwards. 
+Despite these shortcomings, I still love Hugo. It's fast, it's stable and it has, in my opinion, a superior way of organising content. I've been watching the project on GitHub for the past couple of weeks and it's very active so I have a lot of hope for the future of this project. I'll definitely be using Hugo for new projects going forwards.
 
 ## Gulp.js
 
-Another new tool I got to play around with was [gulp.js][gulp-js-site]. Gulp is a task runner written in JavaScript that proved to be super useful in working around Hugo's lack of an asset pipeline. Initially I didn't want to use Gulp and instead wanted to use Make as a task runner, my main reason being the Node.js dependency. Ten minutes of trying to figure out Make's syntax though and I gave Gulp a go. 
+Another new tool I got to play around with was [gulp.js][gulp-js-site]. Gulp is a task runner written in JavaScript that proved to be super useful in working around Hugo's lack of an asset pipeline. Initially I didn't want to use Gulp and instead wanted to use Make as a task runner, my main reason being the Node.js dependency. Ten minutes of trying to figure out Make's syntax though and I gave Gulp a go.
 
 [gulp-js-site]: http://gulpjs.com/
 
@@ -46,7 +48,7 @@ Gulp and Hugo seem to work quite well together. Using Gulp I can recompile Coffe
 
 ## Open Source
 
-Because this site is built using Hugo and because Hugo is still quite a young project, I've decided to put the source for the site [up on GitHub][site-repo]. Previously I kept it in a private repository but I think it's for the greater good to make the source publicly available as a potential learning resource for people new to Hugo. Just a small point, the repository was private in the past and I may have been a bit neglectful when it came to commit messages. Don't judge. 
+Because this site is built using Hugo and because Hugo is still quite a young project, I've decided to put the source for the site [up on GitHub][site-repo]. Previously I kept it in a private repository but I think it's for the greater good to make the source publicly available as a potential learning resource for people new to Hugo. Just a small point, the repository was private in the past and I may have been a bit neglectful when it came to commit messages. Don't judge.
 
 [site-repo]: https://github.com/alexjohnj/alexjohnj
 

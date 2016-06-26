@@ -5,7 +5,7 @@ date: "2013-12-11T01:22:00Z"
 
 This is a boring updated on the status of several of my projects. If you don't care about them then just give this post a miss. There'll be a new post in a couple of months which may be more interesting.
 
----
+<!--more-->
 
 My situation's changed a lot in the past couple of months. I'm now at university, living away from my parents, studying what I want to study with some great people. It's pretty awesome. It's also a lot of work which is why I'm changing what projects I'm focusing on in my spare time.
 
@@ -21,7 +21,7 @@ Work on beta 3 of SymSteam started in April 2013 and the most recent commit was 
 
 ## [Appcastr](/projects/appcastr/)
 
-**It's dead**. Appcastr's a funny project. I enjoyed making it despite the constant headaches autolayout gave me but for some reason, I completely lost interest in it. It's annoying because I still have ideas for features to add but I don't want to set aside the time to work on them when there's other things I can be doing. 
+**It's dead**. Appcastr's a funny project. I enjoyed making it despite the constant headaches autolayout gave me but for some reason, I completely lost interest in it. It's annoying because I still have ideas for features to add but I don't want to set aside the time to work on them when there's other things I can be doing.
 
 The project page for Appcastr has, for almost a year, said that it's not dead and that version 0.2 will be released some day. That's not happening. If you want to try out version 0.2, compile it from the 0.2 branch in the [git repository][appcastr-repo]. Otherwise, you can [download][appcastr-download] a 'stable' and usable build of version 0.1.1.
 
@@ -38,11 +38,11 @@ Currently, I'm converting diagrams to the SVG format so that they look good at a
 
 Although my main focus for the coming months is going to be my degree and Geography AS Notes, I recently started prototyping an application that I may or may not develop further. I don't want to reveal too much about it as it's something that I'm considering making for profit but let's just say it'd be my first proper attempt at iOS & graphics programming[^4] and it'd be related to my degree...
 
-[^1]: I've had a 4,000 word draft for a post sitting uncommitted in the git repository for nearly 18 months.   
+[^1]: I've had a 4,000 word draft for a post sitting uncommitted in the git repository for nearly 18 months.
 
 [^2]: OK, I did ask [one question](http://stackoverflow.com/questions/11811119/cocoa-application-crashing-when-launched-on-login) on SO when I couldn't figure out why SymSteam was crashing when started on login but I ended up solving that my self any way.
 
-[^3]: The feedback on the rewrite's been great by the way. Thanks to everyone who's emailed me with comments and suggestions. It's really nice.   
+[^3]: The feedback on the rewrite's been great by the way. Thanks to everyone who's emailed me with comments and suggestions. It's really nice.
 
 [^4]: It isn't a game.
 
