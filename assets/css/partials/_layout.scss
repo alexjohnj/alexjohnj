@@ -167,8 +167,31 @@ img {
 }
 
 pre {
+  margin: 0 0 vr(1);
+  padding: vr(1) vr(1) / 2;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  padding: vr(1) vr(1)/2;
-  margin: 0 0 vr(1);
+}
+
+table {
+  margin: 0 auto vr(1);
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  border-bottom: 2px solid $dark-slate-blue;
+  background-color: $perano;
+  padding: vr(1) * 0.7 vr(1) * 0.5;
+
+  color: $white;
+  font-weight: $font-heavy;
+}
+
+tr:nth-child(even) {
+  background-color: $lavender;
+}
+
+td {
+  padding: vr(1) / 2;
 }
