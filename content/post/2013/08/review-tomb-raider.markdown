@@ -1,6 +1,7 @@
 ---
 title: Review - Tomb Raider
 date: "2013-08-10T23:00:00Z"
+tags: [games, reviews]
 ---
 
 The newest entry in the Tomb Raider franchise is a much needed reboot of an ageing series. Published by Square Enix & developed by Crystal Dynamics, the game is a major improvement over past titles in the series with the developers focusing a significant amount of their resources on creating an engaging and enjoyable solo experience.

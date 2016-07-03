@@ -2,6 +2,7 @@
 title = "Using Ledger With an Encrypted Journal"
 date = "2015-10-15T17:00:00-06:00"
 syntax_highlighting = true
+tags = ["ledger"]
 +++
 
 I'm a pretty big fan of [Ledger][ledger-homepage], a command line

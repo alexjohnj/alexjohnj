@@ -1,6 +1,7 @@
 +++
 title = "Always Switch Sockets off Before Plugging in"
 date = 2015-01-20T09:00:00Z
+tags = ["misc"]
 +++
 
 Oh, and make sure your stuff is on a surge protector.
@@ -10,7 +11,7 @@ Granddad was an electrician and taught me about it. The other night though, in
 a lapse of consciousness, I plugged my laptop's charger into a power strip that
 was still switched on at the mains. Or, should I say, started to plug in the
 charger because as the plug went in, the air between it and the power strip
-ignited in a decent explosion. 
+ignited in a decent explosion.
 
 <!--more-->
 

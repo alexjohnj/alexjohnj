@@ -1,6 +1,7 @@
 ---
 title: "SymSteam 0.1.5 Released"
 date: "2012-02-18"
+tags: [symsteam, projects]
 ---
 
 SymSteam, [my small project I released just a few weeks ago](/02/symsteam), received its first major update today. Version 0.1.5 was pushed to the GitHub repo a few hours ago and with it came an important new feature and some bug fixes.

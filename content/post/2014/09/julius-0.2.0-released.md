@@ -1,6 +1,7 @@
 +++
 date = "2014-09-09T14:02:51+01:00"
 title = "julius 0.2.0 Released"
+tags = ["julius", "projects"]
 +++
 
 Besides the [project page][julius-project-page], I haven't written about julius on this blog before so here's a quick overview. julius is a stupidly simple command line tool for encrypting and decrypting text using the Caesar Cipher. It's designed to play nicely with Unix redirections so you can use it to easily encrypt/decrypt the output of commands.

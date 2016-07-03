@@ -1,6 +1,7 @@
 ---
 title: SymSteam Beta 2 Released
 date: 2012-12-31
+tags: [symsteam, projects]
 ---
 
 It may have taken nearly 9 months but beta 2 of SymSteam is finally available for download. This is a _huge_ update for SymSteam that completely changes how it works and fixes many bugs as a result. SymSteam no longer manages drives based on their names, rather, it relies on the UUID of a drive to determine if the drive is the Steam drive. This makes SymSteam more reliable in situations where you have drives with the same name but it does introduce a new requirement. The drive you're storing your games on must have a UUID which essentially means that the drive must be HFS+ formatted[^1].

@@ -1,7 +1,8 @@
----
-title: "Recent Projects"
-date: 2012-06-13
----
++++
+title = "Recent Projects"
+date = "2012-06-13"
+tags = ["projects"]
++++
 
 It would seem that pretty much the only thing I use this blog for is announcements. Guess what's in this post, some more announcements, specifically regarding some new projects that I've started in the past month (and a bit).
 

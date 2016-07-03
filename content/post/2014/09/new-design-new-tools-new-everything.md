@@ -1,6 +1,7 @@
 +++
 title = "New Design, New Tools, New Everything"
 date = "2014-09-01T21:43:00+01:00"
+tags = ["meta"]
 +++
 
 I've spent the past week working on a new design for this site which _should_ be live right now. The site wasn't in desperate need for a redesign to begin with but I wanted to try out some new tools and figured a redesign was the best way to do it.

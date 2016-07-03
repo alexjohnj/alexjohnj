@@ -1,6 +1,7 @@
 +++
 title = "Spotijack 0.6 Released"
 date = "2015-07-24T23:00:00Z"
+tags = ["spotijack", "projects"]
 +++
 
 After sitting on the project for a few months, I've just released the

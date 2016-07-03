@@ -1,6 +1,7 @@
 +++
 title = "Moving from 1Password To LastPass to 1Password Again"
 date = "2012-02-14"
+tags = ["security"]
 +++
 
 In the past few weeks I've had a bit of an epiphany. I've become incredibly security and privacy conscious. I've closed my Facebook account, started moving away from Google and begun using far stronger, unique passwords. In the past, for websites, I've had one strong password which would be impossible to guess and then used that on every website (except my bank, which doesn't allow special characters in a password). I know, shoot me. That's the worst thing you can do in terms of passwords next to having 123456 as your password. Every website had the same password and email and (normally) username. If you got the password to one website, you had it to all of them. I've realised this security flaw and over the past couple of weeks, changed all of my passwords so that they are unique to each website and totally unintelligible to humans. 30 characters of random, well, characters. How the hell was I meant to remember them? I used a password manager. In the past, I'd been using [1Password](https://agilebits.com/onepassword) to “manage” my passwords. I'd really been using 1Password, not because I couldn't remember my passwords, but rather to reduce the number of keystrokes needed when entering a password.

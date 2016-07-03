@@ -1,7 +1,8 @@
----
-title: Redesigning Geography AS Notes
-date: "2014-01-08T21:45:00Z"
----
++++
+title = "Redesigning Geography AS Notes"
+date = "2014-01-08T21:45:00Z"
+tags = ["projects", "webdev"]
++++
 
 Just under a month ago, I [wrote about][project-changes] which projects I'd be
 focusing my time on in the coming year. The main takeaway from the post was

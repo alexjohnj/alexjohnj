@@ -1,6 +1,7 @@
 ---
 title: SymSteam Beta 1 Released
 date: 2012-04-11
+tags: [symsteam, projects]
 ---
 
 Good news! Just the other day, SymSteam, my small pet project, received a pretty major update.  In fact, this update is so major, I've labelled it Beta 1. Pretty much everything to do with SymSteam has changed.

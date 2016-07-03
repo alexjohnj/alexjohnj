@@ -1,6 +1,7 @@
 ---
 title: "Thoughts on WWDC 2012"
 date: 2012-06-12
+tags: [apple]
 ---
 
 Yesterday (June 11th) marked the first day of Apple's famous WWDC event. As per usual, Apple opened the event with the only part of the event that isn't under NDA (and hence the only part that I've actually been able to see so far), the keynote. The keynote was a blast with lots of new, exciting things announced. Here's my thoughts on a couple of those things that were announced.

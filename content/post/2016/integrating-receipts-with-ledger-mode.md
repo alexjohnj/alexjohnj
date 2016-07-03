@@ -1,7 +1,7 @@
 +++
 title = "Integrating Receipts with ledger-mode"
 date = "2016-07-02T16:00:00Z"
-tags = ["Emacs", "Ledger"]
+tags = ["emacs", "ledger"]
 +++
 
 I've written a couple of functions for Emacs' ledger-mode that make working with

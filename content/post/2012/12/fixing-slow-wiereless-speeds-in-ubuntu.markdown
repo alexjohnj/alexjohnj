@@ -2,6 +2,7 @@
 title = "Fixing Slow Wireless Speeds in Ubuntu 12.10"
 date = "2012-12-31"
 syntax_highlighting = true
+tags = ["linux"]
 +++
 
 After building a new computer recently I went ahead and installed Ubuntu 12.10 on it alongside Windows. Since the computer doesn't have a wireless card and isn't anywhere near a router, I bought a cheap Wireless USB adapter so that I could connect to my wireless network. I actually bought the adapter several years ago and used it on a computer running Ubuntu 10.04 that was in a similar situation. The adapter I bought was a [Belkin F5D8053][wireless-adapter-amazon-page], the v6 revision. I bought this adapter because I'd been told that it had good compatibility with Linux and I remember it working perfectly well in Ubuntu 10.04. I was surprised to find then that when I used the adapter with my new installation of Ubuntu 12.10 it was very unreliable. The adapter worked but after arround five minutes of usage, the connection speed would drop substantially and anything, be it on the internet or my local network, was incredibly slow.

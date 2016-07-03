@@ -2,6 +2,7 @@
 title = "S3 Deployment Script Mk 2"
 date = "2013-02-17T16:16:00Z"
 syntax_highlighting = true
+tags = ["webdev", "jekyll"]
 +++
 
 Since releasing the first version of the script I use to deploy this blog to S3, I've iterated on the script a little bit and made a few changes. Most of the changes in version 2 of the script are syntax changes to the script itself that make it a little bit easier to read[^1] however there are a couple of functionality changes.
