@@ -7,5 +7,8 @@ pygmentsuseclasses = false
 pygmentscodefences = true
 pygmentsstyle = "manni"
 
+[taxonomies]
+tag = "tags"
+
 [permalinks]
 post = "/:month/:filename/"

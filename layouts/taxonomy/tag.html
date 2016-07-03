@@ -1,0 +1,17 @@
+<!----*- engine:go -*--->
+<!DOCTYPE html>
+
+{{ template "partials/head.html" . }}
+
+{{ template "partials/header.html" . }}
+
+<main>
+  <h1>Posts Tagged in <a>{{ .Title }}</a></h1>
+
+  {{ range .Data.Pages }}
+    <p><a href ="{{ .Permalink }}">{{ .Title }}</a> on <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
+  {{ end }}
+</main>
+
+{{ template "partials/footer.html" . }}
+</html>
