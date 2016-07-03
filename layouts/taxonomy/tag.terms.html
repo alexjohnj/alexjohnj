@@ -1,0 +1,12 @@
+<!----*- engine:go -*--->
+<!DOCTYPE html>
+{{ template "partials/head.html" . }}
+{{ template "partials/header.html" . }}
+<main>
+  <h1>Tags</h1>
+  {{ range $key, $value := .Data.Terms }}
+    <p><a href="/tags/{{ $key }}">{{ $key }}</a> ({{ len $value }})</p>
+  {{ end }}
+</main>
+{{ template "partials/footer.html" . }}
+</html>
