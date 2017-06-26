@@ -192,6 +192,11 @@ tr:nth-child(even) {
   background-color: $lavender;
 }
 
+tr:last-child {
+  border-bottom: 1px solid $dark-slate-blue;
+}
+
+
 td {
   padding: vr(1) / 2;
 }
