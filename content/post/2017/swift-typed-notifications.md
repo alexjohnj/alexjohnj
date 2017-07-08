@@ -1,7 +1,7 @@
 +++
 title = "Strongly Typed Notifications in Swift"
 author = "Alex Jackson"
-date = 2017-07-05T15:00:00Z
+date = 2017-07-07T14:48:00Z
 tags = ["swift"]
 +++
 
