@@ -8,12 +8,12 @@
   {{range $paginator.Pages }}
     <article class="article-excerpt">
       <header class="article-header">
-        <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+        <h1><a href="{{ .URL }}">{{ .Title }}</a></h1>
         <p><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">ON {{ upper (.Date.Format "January 2, 2006") }}</time>{{ if .Params.tags }} IN{{ range .Params.tags}} <a href="/tags/{{ . | urlize }}">{{ upper . }}</a>{{ end }}{{ end }}</p>
       </header>
       {{ .Summary }}
       {{ if .Truncated }}
-        <p><a href="{{ .Permalink }}">Read More&hellip;</a></p>
+        <p><a href="{{ .URL }}">Read More&hellip;</a></p>
       {{ end }}
     </article>
   {{ end }}

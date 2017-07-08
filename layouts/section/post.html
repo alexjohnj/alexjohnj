@@ -12,7 +12,7 @@
   <section class="archive-grouping">
     <h2>{{ .Key }}</h2>
     {{ range .Pages }}
-      <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+      <p><a href="{{ .URL }}">{{ .Title }}</a></p>
     {{ end }}
   </section>
   {{ end }}

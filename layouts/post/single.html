@@ -14,12 +14,12 @@
   <footer class="article-footer page-controls">
     {{ with .Next }}{{ if eq .Type "post" }}
       <div class="previous-post">
-        <p><a href="{{ .Permalink }}">&laquo; {{ .Title }}</a></p>
+        <p><a href="{{ .URL }}">&laquo; {{ .Title }}</a></p>
       </div>
     {{ end }}{{ end }}
     {{ with .Prev }}{{ if eq .Type "post" }}
       <div class="next-post">
-        <p><a href="{{ .Permalink }}">{{ .Title }} &raquo;</a></p>
+        <p><a href="{{ .URL }}">{{ .Title }} &raquo;</a></p>
       </div>
     {{ end }}{{ end }}
   </footer>
