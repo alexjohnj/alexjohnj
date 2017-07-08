@@ -7,8 +7,12 @@ pygmentsuseclasses = false
 pygmentscodefences = true
 pygmentsstyle = "manni"
 
+[author]
+  name = "Alex Jackson"
+  email = "alex@alexj.org"
+
 [taxonomies]
-tag = "tags"
+  tag = "tags"
 
 [permalinks]
-post = "/:month/:filename/"
+  post = "/:month/:filename/"
