@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/alexjohnj
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://alexj.org
+  * I am alexjohnj (https://keybase.io/alexjohnj) on keybase.
+  * I have a public key ASAABAhSnp1HcvLjWxFiTYJxwMY27AfbSw-jYJq0ddlOrQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120000408529e9d4772f2e35b11624d8271c0c636ec07db4b0fa3609ab475d94ead0a",
+      "host": "keybase.io",
+      "kid": "0120000408529e9d4772f2e35b11624d8271c0c636ec07db4b0fa3609ab475d94ead0a",
+      "uid": "a23ee67614254505e3c2717908340119",
+      "username": "alexjohnj"
+    },
+    "merkle_root": {
+      "ctime": 1507213845,
+      "hash": "5a9f46afcf893147134d61cd6820d243edaab83aaa030ca1b7712d4b81749aeaead2aa78f9826749403e5a998313f3706ea1b16ce6309d7db2123a69dcf15bb3",
+      "hash_meta": "b37aa2bc8ce4648184059172d85969cfc8c13ca0293b1976aa64e18108125f5b",
+      "seqno": 1513693
+    },
+    "service": {
+      "hostname": "alexj.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.33"
+  },
+  "ctime": 1507213853,
+  "expire_in": 504576000,
+  "prev": "7f26919dd635a92bd838f83b10ab6edd1ef2b9fb537690378f314a57707a2dc8",
+  "seqno": 10,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgAAQIUp6dR3Ly41sRYk2CccDGNuwH20sPo2CatHXZTq0Kp3BheWxvYWTFA0N7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMDAwNDA4NTI5ZTlkNDc3MmYyZTM1YjExNjI0ZDgyNzFjMGM2MzZlYzA3ZGI0YjBmYTM2MDlhYjQ3NWQ5NGVhZDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMDAwNDA4NTI5ZTlkNDc3MmYyZTM1YjExNjI0ZDgyNzFjMGM2MzZlYzA3ZGI0YjBmYTM2MDlhYjQ3NWQ5NGVhZDBhIiwidWlkIjoiYTIzZWU2NzYxNDI1NDUwNWUzYzI3MTc5MDgzNDAxMTkiLCJ1c2VybmFtZSI6ImFsZXhqb2huaiJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUwNzIxMzg0NSwiaGFzaCI6IjVhOWY0NmFmY2Y4OTMxNDcxMzRkNjFjZDY4MjBkMjQzZWRhYWI4M2FhYTAzMGNhMWI3NzEyZDRiODE3NDlhZWFlYWQyYWE3OGY5ODI2NzQ5NDAzZTVhOTk4MzEzZjM3MDZlYTFiMTZjZTYzMDlkN2RiMjEyM2E2OWRjZjE1YmIzIiwiaGFzaF9tZXRhIjoiYjM3YWEyYmM4Y2U0NjQ4MTg0MDU5MTcyZDg1OTY5Y2ZjOGMxM2NhMDI5M2IxOTc2YWE2NGUxODEwODEyNWY1YiIsInNlcW5vIjoxNTEzNjkzfSwic2VydmljZSI6eyJob3N0bmFtZSI6ImFsZXhqLm9yZyIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjMzIn0sImN0aW1lIjoxNTA3MjEzODUzLCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6IjdmMjY5MTlkZDYzNWE5MmJkODM4ZjgzYjEwYWI2ZWRkMWVmMmI5ZmI1Mzc2OTAzNzhmMzE0YTU3NzA3YTJkYzgiLCJzZXFubyI6MTAsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAlmH5dunUdb1vuVz6VPsQ4I8CDTBZI74ZqvYgQ8hYp3Qo3dYd5CKe2DesetSPPvNiGa1xaKICj5JM11X+wAaZC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINeA9IEiH1ltdBxzI4gVfDh9SdRBGypFFJCxAiocgivEo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/alexjohnj
+
+==================================================================
