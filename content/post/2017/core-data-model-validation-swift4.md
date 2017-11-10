@@ -2,7 +2,7 @@
 title = "Core Data Property-Level Model Validation in Swift 4"
 author = "Alex Jackson"
 date = 2017-09-25T19:00:00+01:00
-tags = ["swift"]
+tags = ["swift", "core-data"]
 +++
 
 I ran into an issue while writing property validation methods for a Core Data
