@@ -12,7 +12,7 @@ sourced][banner-view-gh] for anybody to use.
 
 [^fn:tweetbot]: I haven't used Tweetbot for almost a year but I know it _used_ to have these banners.
 
-<!--MORE-->
+<!--more-->
 
 The banner view uses the new [safe area layout guides][doc-safe-area] introduced
 in iOS 11 to lay itself out correctly when navigation bars are present. The top
@@ -21,7 +21,7 @@ iPhone X[^fn:iphone-x]:
 
 [^fn:iphone-x]: At least, it does in the simulator. I can only imagine what it looks like on an actual device.
 
-<video loop autoplay>
+<video loop autoplay muted>
     <source src="/videos/banner-view/no-nav.webm" type="video/webm">
     <source src="/videos/banner-view/no-nav.mp4" type="video/mp4">
     Ack! Your browser doesn't support WebM or MP4 videos! What is this, the 3DS browser?
