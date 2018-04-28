@@ -1,33 +1,18 @@
 {
-  "name": "reviseabit",
+  "name": "alexjohnj",
   "version": "1.0.0",
-  "dependencies": {},
-  "devDependencies": {
-    "browser-sync": "^2.23.5",
-    "del": "^3.0.0",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "4.1.0",
-    "gulp-cachebust": "0.0.9",
-    "gulp-coffee": "^3.0.2",
-    "gulp-exec": "^3.0.1",
-    "gulp-gzip": "1.4.1",
-    "gulp-htmlmin": "^4.0.0",
-    "gulp-minify-css": "^1.2.0",
-    "gulp-notify": "^3.2.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.3",
-    "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.6",
-    "modularscale-sass": "^3.0.4",
-    "normalize.css": "^7.0.0",
-    "rsyncwrapper": "^2.0.1",
-    "run-sequence": "^2.2.1",
-    "typi": "^3.1.2"
+  "dependencies": {
+    "autoprefixer": "^8.4.0",
+    "html-minifier": "^3.5.0",
+    "modularscale-sass": "^3.0.0",
+    "npm": "^6.0.1",
+    "postcss-cli": "^5.0.0",
+    "sass": "^1.3.0",
+    "typi": "^2.3.0"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/alexjohnj/alexjohnj.git"
   },
   "author": "Alex Jackson",
   "license": "MIT"

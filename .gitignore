@@ -1,4 +1,7 @@
-# Node.JS 
+# Build files
+static/main.css
+
+# Node.JS
 node_modules
 
 # Hugo
