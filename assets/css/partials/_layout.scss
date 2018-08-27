@@ -33,7 +33,7 @@ main {
 
     a {
       text-decoration: none;
-      color: $dark-slate-blue;
+      color: $accent-color;
     }
   }
 
@@ -57,10 +57,10 @@ main {
 }
 
 .site-footer {
-  background-color: $medium-purple;
+  background-color: $accent-color;
   width: 100%;
   text-align: center;
-  color: $white;
+  color: $filled-bg-text-color;
 
   p {
     margin: vr(1) 0;
@@ -68,7 +68,7 @@ main {
 
   a {
     text-decoration: none;
-    color: $white;
+    color: $filled-bg-text-color;
   }
 
   ul {
@@ -104,13 +104,19 @@ main {
 // Articles
 
 .article-header {
+
+  a {
+    color: $text-body-color;
+    text-decoration: none;
+  }
+
   @media all and (min-width: 640px) {
     padding: 0 0 vr(1) * 0.5;
   }
 
   p {
     font-size: 0.9rem;
-    color: $grey;
+    color: $aside-text-color;
   }
 }
 
@@ -162,6 +168,14 @@ main {
 
 // Elements
 
+hr {
+  margin: vr(1) auto;
+  max-width: 70%;
+  background-color: $accent-color;
+  height: 1px;
+  border: none;
+}
+
 img {
   margin: vr(2) 0;
   max-width: 100%;
@@ -186,20 +200,20 @@ table {
 }
 
 th {
-  border-bottom: 2px solid $dark-slate-blue;
-  background-color: $perano;
+  border-bottom: 2px solid $accent-selected-color;
+  background-color: $accent-color;
   padding: vr(1) * 0.7 vr(1) * 0.5;
 
-  color: $white;
+  color: $filled-bg-text-color;
   font-weight: $font-heavy;
 }
 
 tr:nth-child(even) {
-  background-color: $lavender;
+  background-color: $accent-highlight-color;
 }
 
 tr:last-child {
-  border-bottom: 1px solid $dark-slate-blue;
+  border-bottom: 1px solid $accent-selected-color;
 }
 
 

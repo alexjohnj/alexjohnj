@@ -5,14 +5,15 @@ $content-max-width: 624px;
 $font-stack: "Avenir Next", "Avenir", "Arial", sans-serif;
 $mono-font-stack: "Consolas", "Inconsolas", monospace;
 $font-normal: 400;
+$font-medium: 600;
 $font-heavy: 700;
 
-// Colours
-$medium-purple: #7d61d7;
-$lavender: #e5dff7;
-$perano: #b1a0e7;
-$dark-slate-blue: #4b3a81;
-$violent-violet: #261d41;
-$charcoal: #4a4a4a;
-$grey: #828282;
-$white: #ffffff;
+// Accent Colours
+$accent-color: #8d74db;
+$accent-selected-color: #4b3a81;
+$accent-highlight-color: #bfb1eb;
+
+// Text Colours
+$text-body-color: #000000; // Main text colour
+$aside-text-color: #828282; // Colour for aside text (e.g., article subheader).
+$filled-bg-text-color: #ffffff; // Contrasting colour for text on a filled background.
