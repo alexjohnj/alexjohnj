@@ -7,7 +7,7 @@
   <article>
     <header class="article-header">
       <h1>{{ .Title }}</h1>
-      <p>ON <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ upper (.Date.Format "January 2, 2006") }}</time>{{ if .Params.tags }} IN{{ range .Params.tags}} <a href="/tags/{{ . | urlize }}">{{ upper . }}</a>{{ end }}{{ end }}</p>
+      <p><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ upper (.Date.Format "January 2, 2006") }}</time></p>
     </header>
   </article>
   {{ .Content }}

@@ -14,10 +14,6 @@ $typi-ms: (
   large: $golden
 );
 
-$typi-h1: (null: 2);
-$typi-h2: (null: 1);
-$typi-h3: (null: 0);
-
 html {
   @include typi-base();
   text-rendering: optimizeLegibility;
@@ -42,15 +38,7 @@ h4 {
 }
 
 h1 {
-  @include typi($typi-h1);
-}
-
-h2 {
-  @include typi($typi-h2);
-}
-
-h3 {
-  @include typi($typi-h3);
+  line-height: 1.2;
 }
 
 p {
