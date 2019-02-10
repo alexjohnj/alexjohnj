@@ -23,9 +23,9 @@ main {
 
 .site-header {
   display: flex;
-  margin: vr(1) auto 0;
+  margin: vr(1) auto vr(1);
   width: 92%;
-  max-width: 1200px;
+  max-width: $content-max-width;
   align-items: baseline;
 
   h1 {
