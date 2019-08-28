@@ -2,7 +2,7 @@
   "name": "alexjohnj",
   "version": "1.0.0",
   "dependencies": {
-    "autoprefixer": "^8.4.0",
+    "autoprefixer": "^9.6.1",
     "html-minifier": "^3.5.0",
     "modularscale-sass": "^3.0.0",
     "npm": "^6.0.1",
