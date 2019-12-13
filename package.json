@@ -5,7 +5,7 @@
     "autoprefixer": "^9.6.1",
     "html-minifier": "~4",
     "modularscale-sass": "^3.0.8",
-    "npm": "^6.11.2",
+    "npm": "^6.13.4",
     "postcss-cli": "~6",
     "sass": "^1.22.10",
     "typi": "^2.3.0"
