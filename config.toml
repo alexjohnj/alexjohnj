@@ -16,3 +16,6 @@ pygmentsstyle = "manni"
 
 [permalinks]
   post = "/:month/:filename/"
+
+[markup.goldmark.renderer]
+  unsafe = true
