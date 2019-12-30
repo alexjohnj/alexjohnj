@@ -3,10 +3,6 @@ title = "Alex J"
 
 paginate = 5
 
-pygmentsuseclasses = false
-pygmentscodefences = true
-pygmentsstyle = "manni"
-
 [author]
   name = "Alex Jackson"
   email = "alex@alexj.org"
@@ -19,3 +15,6 @@ pygmentsstyle = "manni"
 
 [markup.goldmark.renderer]
   unsafe = true
+
+[markup.highlight]
+  style = "manni"
