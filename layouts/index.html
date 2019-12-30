@@ -3,7 +3,7 @@
 {{ template "partials/head.html" . }}
 
 {{ template "partials/header.html" . }}
-{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") }}
 <main>
   {{range $paginator.Pages }}
     <article class="article-excerpt">
