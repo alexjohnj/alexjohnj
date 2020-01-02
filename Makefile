@@ -35,4 +35,4 @@ deploy: post
 
 .PHONY: serve
 serve: static/main.css
-	$(HUGO) server
+	$(HUGO) server --buildDrafts
