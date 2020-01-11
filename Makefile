@@ -29,7 +29,7 @@ post: public
 
 .PHONY: deploy
 deploy: post
-	rsync -rz --delete 'public/' 'alex@archer:/usr/local/www/alexj.org/'
+	rsync --recursive --compress --delete 'public/' 'alex@archer:/usr/local/www/alexj.org/'
 
 .PHONY: serve
 serve: static/main.css
