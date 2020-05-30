@@ -11,18 +11,6 @@
     </header>
   </article>
   {{ .Content }}
-  <footer class="article-footer page-controls">
-    <div class="previous-post">
-      {{ with .Next }}{{ if eq .Type "post" }}
-        <p><a href="{{ .URL }}">&laquo; {{ .Title }}</a></p>
-      {{ end }}{{ end }}
-    </div>
-      <div class="next-post">
-        {{ with .Prev }}{{ if eq .Type "post" }}
-          <p><a href="{{ .URL }}">{{ .Title }} &raquo;</a></p>
-        {{ end }}{{ end }}
-      </div>
-  </footer>
 </main>
 
 {{ template "partials/footer.html" . }}
