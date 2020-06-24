@@ -184,6 +184,12 @@ hr {
 img {
   margin: vr(2) 0;
   max-width: 100%;
+
+  &.centred {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 video {
