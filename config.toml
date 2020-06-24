@@ -18,3 +18,7 @@ paginate = 5
 
 [markup.highlight]
   style = "manni"
+
+[outputs]
+home = ["RSS", "HTML"]
+section = ["HTML"]
