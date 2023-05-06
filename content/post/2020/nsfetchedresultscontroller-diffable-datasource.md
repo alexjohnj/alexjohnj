@@ -1,5 +1,5 @@
 +++
-title = "NSFetchedResultsController & NSDiffableDataSourceSnapshot Issues"
+title = "Fetched Results Controller & Diffable Data Source Snapshot Issues"
 author = "Alex Jackson"
 date = 2020-01-02T13:00:00+01:00
 tags = ["swift", "core-data"]
