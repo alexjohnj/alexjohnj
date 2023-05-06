@@ -6,7 +6,8 @@
     "modularscale-sass": "^3.0.10",
     "npm": "^9.6.6",
     "sass": "^1.24.0",
-    "typi": "^2.3.0"
+    "typi": "^2.3.0",
+    "wrangler": "^2.19.0"
   },
   "repository": {
     "type": "git",
