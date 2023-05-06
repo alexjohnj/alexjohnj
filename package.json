@@ -4,7 +4,7 @@
   "dependencies": {
     "html-minifier": "~4",
     "modularscale-sass": "^3.0.10",
-    "npm": "^6.13.4",
+    "npm": "^9.6.6",
     "sass": "^1.24.0",
     "typi": "^2.3.0"
   },
