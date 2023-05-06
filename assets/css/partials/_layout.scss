@@ -199,7 +199,7 @@ video {
 
 pre {
   margin: 0 0 vr(1);
-  padding: vr(1) vr(1) / 2;
+  padding: vr(1) vr(1) * 0.5;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -229,5 +229,5 @@ tr:last-child {
 
 
 td {
-  padding: vr(1) / 2;
+  padding: vr(1) * 0.5;
 }
