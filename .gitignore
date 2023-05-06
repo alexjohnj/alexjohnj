@@ -120,3 +120,6 @@ tramp
 Session.vim
 .netrwhist
 *~
+
+### Hugo ###
+/.hugo_build.lock
