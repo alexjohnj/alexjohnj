@@ -1,6 +1,7 @@
 HUGO = hugo
-SASS = node_modules/sass/sass.js
-HTMLMIN = node_modules/html-minifier/cli.js
+SASS = npx sass
+HTMLMIN = npx html-minifier
+WRANGLER = npx wrangler
 
 SASS_FLAGS = --style=compressed
 HTMLMIN_FLAGS = --collapse-whitespace --collapse-boolean-attributes --remove-comments --remove-empty-attributes --remove-redundant-attributes
@@ -29,7 +30,7 @@ post: public
 
 .PHONY: deploy
 deploy: post
-	rsync --recursive --compress --delete 'public/' 'alex@archer:/usr/local/www/alexj.org/'
+	$(WRANGLER) pages publish --project-name alexj public
 
 .PHONY: serve
 serve: static/main.css
